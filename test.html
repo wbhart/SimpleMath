@@ -3,18 +3,18 @@ layout: default
 title: Blogging Like a Hacker
 ---
 
-<definition>The ''integers'' are the counting numbers,  positive, negative and zero, i.e. 
+<definition>The <i>integers<.i> are the counting numbers,  positive, negative and zero, i.e. 
 \(\ldots, -2, -1, 0, 1, 2, \ldots\). We denote the set of integers by \(\mathbb{Z}\).</definition>
 
-<definition> For integers \(a\) and \(b \neq 0\) we say that \(a\) is ''divisible'' by \(b\) (or that 
-\(b\) ''divides'' \(a\)) if there is an integer \(c\) such that \(a = bc\). We write \(b \;|\; a\)
+<definition> For integers \(a\) and \(b \neq 0\) we say that \(a\) is <i>divisible</i> by \(b\) (or that 
+\(b\) <i>divides</i> \(a\)) if there is an integer \(c\) such that \(a = bc\). We write \(b \;|\; a\)
 </definition>
 
 <definition> For \(a \in \mathbb{Z}\) we define \(|a|\) to be \(-a\) if \(a < 0\) and to be \(a\) otherwise. 
-We call \(|a|\) the ''absolute value'' of \(a\). Note that for all \(a \in \mathbb{Z}\) we have \(|a| \geq 0\).
+We call \(|a|\) the <i>absolute value</i> of \(a\). Note that for all \(a \in \mathbb{Z}\) we have \(|a| \geq 0\).
 </definition> 
 
-<definition> The ''natural numbers'' are the positive integers \(1, 2, 3, \ldots\). We denote the set of natural
+<definition> The <i>natural numbers</i> are the positive integers \(1, 2, 3, \ldots\). We denote the set of natural
 numbers by \(\mathbb{N}\).
 </definition> 
 
@@ -28,7 +28,7 @@ and \(a = b + (c-1)b > b\).
 <theorem> If \(a, b \in \mathbb{N}\) and \(b \;|\; a\) and \(a \;|\; b\) then \(a = b\).
 </theorem> 
 
-<proof> We see from Theorem 1.6 that \(a \geq b\) and \(b \geq a\). Thus \(a = b\).
+<proof> We see from the previous theorem that \(a \geq b\) and \(b \geq a\). Thus \(a = b\).
 </proof> 
 
 <theorem> If \(a \;|\; b\) and \(b \;|\; c\) then \(a \;|\; c\).
@@ -38,7 +38,7 @@ and \(a = b + (c-1)b > b\).
 is a multiple of \(a\). 
 </proof> 
 
-<theorem> (Division algorithm):''' If \(a, b \in \mathbb{N}\) with \(b \neq 0\) then there exist 
+<theorem> (Division algorithm) If \(a, b \in \mathbb{N}\) with \(b \neq 0\) then there exist 
 \(q, r \in \mathbb{Z}\) such that \(a = bq + r\), \(q \geq 0\) and \(0 \leq r < b\).
 </theorem> 
 
@@ -48,16 +48,15 @@ is a multiple of \(a\).
 is a larger multiple of \(b\) not exceeding \(a\) than \(bq\), which is a contradiction. Thus \(r < b\) after all.
 </proof> 
 
-<definition> The ''greatest common divisor'' of two natural numbers \(b\) and \(c\), denoted \(\gcd(b, c)\) is the 
+<definition> The <i>greatest common divisor</i> of two natural numbers \(b\) and \(c\), denoted \(\gcd(b, c)\) is the 
 largest natural number which divides both \(b\) and \(c\). If \(\gcd(b, c) = 1\) we say that \(b\) and \(c\) are 
-''coprime''. 
+<i>coprime</i>. 
 
-By convention we can also define the gcd of \(b, c \in \mathbb{Z}\). We define \(\gcd(b, 0) = b\) and 
-\(\gcd(0, c) = c\) for all \(b, c\). If \(b\) and \(c\) are both positive we define \(\gcd(-b, -c) = -\gcd(b, c)\) 
-and \(\gcd(-b, c) = \gcd(b, -c) = \gcd(b, c)\).  
+By convention we also define \(\gcd(b, 0) = b\), \(\gcd(0, c) = c\) and \(\gcd(0, 0) = 0\) for all 
+\(b, c \in \mathbb{N}\). If \(b\) and \(c\) are both positive we define \(\gcd(-b, -c) = -\gcd(b, c)\).  
 </definition> 
 
-<definition> The ''lowest common multiple'' of two natural numbers \(b\) and \(c\), denoted \(\mbox{lcm}(b, c)\) is 
+<definition> The <i>lowest common multiple</i> of two natural numbers \(b\) and \(c\), denoted \(\mbox{lcm}(b, c)\) is 
 the smallest natural number which both \(b\) and \(c\) divide.
 </definition> 
 
@@ -81,7 +80,7 @@ For the first implication, if \(c \;|\; a\) then \(a/c\) is a natural number, th
 Similarly \(ab/c\) is a multiple of \(a\). Conversely, if \(a \;|\; ab/c\) then \(b/c\) is an integer. Similarly 
 \(a/c\) is an integer. Thus \(c \;|\; a, b\).
 
-The second implication is given by Theorem 1.14. For the converse, as \(a, b \;|\; \mbox{lcm}(a, b)\) by definition 
+The second implication is given by the previous theorem. For the converse, as \(a, b \;|\; \mbox{lcm}(a, b)\) by definition 
 then \(a, b \;|\; ab/c\)
 
 For the third implication, we can write \(ab/c = \mbox{lcm}(a, b)u\) for some natural number \(u\), i.e. 
@@ -96,7 +95,7 @@ is a common divisor of \(a\) and \(b\). Thus it must be the greatest common divi
 <theorem> Any common divisor of \(a\) and \(b\) is a divisor of \(\gcd(a, b)\).
 </theorem> 
 
-<proof> In the proof of Theorem 1.15 we showed that \(c \;|\; a, b \leftrightarrow c \;|\; ab/\mbox{lcm}(a, b)\). But 
+<proof> In the proof of the previous theorem we showed that \(c \;|\; a, b \leftrightarrow c \;|\; ab/\mbox{lcm}(a, b)\). But 
 we also showed \(\gcd(a, b) = ab/\mbox{lcm}(a, b)\). Combining these facts the result follows immediately.
 </proof> 
 
@@ -105,15 +104,15 @@ we also showed \(\gcd(a, b) = ab/\mbox{lcm}(a, b)\). Combining these facts the r
 
 <proof> Let \(d = \gcd(b, c)\). As \(d\) divides \(b\) we can write \(b = sd\) for some natural number \(s\). Similarly 
 we can write \(c = td\) for some natural number \(t\). Thus \(|b - c| = |sd - td| = |s - t|d\). Thus \(d\) divides 
-\(|b - c|\). As we already have that \(d\) divides \(b\), Theorem 1.16 says that \(d\) divides \(\gcd(b, b - c)\), 
+\(|b - c|\). As we already have that \(d\) divides \(b\), the previous theorem says that \(d\) divides \(\gcd(b, b - c)\), 
 i.e. \(\gcd(b, c)\) divides \(\gcd(b, b - c)\).
 
 Conversely, if \(g = \gcd(b, b - c)\) then we can write \(b = gu\) and \(|b - c| = gv\) for some integers \(u\) and 
 \(v\). If \(b - c = 0\) then \(g = b\) and we see that \(g \;|\; \gcd(b, c)\). Otherwise \(u\) and \(v\) are natural 
 numbers. But now \(c = b - (b - c) = gu \pm gv = g(u \pm v)\) and so \(g \;|\; c\). We already have that \(g \;|\; b\), 
-thus by Theorem 1.16 we have that \(g \;|\; \gcd(b, c)\), i.e. \(\gcd(b, |b - c|)\) divides \(\gcd(b, c)\).
+thus by the previous theorem we have that \(g \;|\; \gcd(b, c)\), i.e. \(\gcd(b, |b - c|)\) divides \(\gcd(b, c)\).
 
-But now \(d = \gcd(b, c)\) divides \(g = \gcd(b, |b - c|)\) and conversely, thus by Theorem 1.9 we have 
+But now \(d = \gcd(b, c)\) divides \(g = \gcd(b, |b - c|)\) and conversely, thus by an earlier theorem we have 
 \(\gcd(b, c) = \gcd(b, |b - c|)\).
 </proof> 
 
