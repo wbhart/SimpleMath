@@ -100,11 +100,20 @@ h6 {
   font-size: 16px;
 }
 
-h2 {
+subtitle {
   padding-bottom: 10px;
   font-size: 32px;
   background: url('../images/bg_hr.png') repeat-x bottom;
 }
+
+reference {
+  visibility:hidden;
+}
+
+reference::before {
+  content: "" counter(section) "." counter(subsection) ": ";
+}
+
 
 p {
   margin: 10px 0 15px 0;
