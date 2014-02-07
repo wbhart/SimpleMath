@@ -108,6 +108,7 @@ subtitle {
 
 reference {
   visibility:hidden;
+  display:none;
 }
 
 reference::before {
