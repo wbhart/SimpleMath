@@ -56,6 +56,7 @@ body {
   font-family: 'Myriad Pro', Calibri, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+  counter-reset: section;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -75,7 +76,7 @@ h2 {
   padding-bottom: 10px;
   font-size: 32px;
   background: url('../images/bg_hr.png') repeat-x bottom;
-  counter-reset: section;
+  counter-reset: subsection;
 }
 
 h2::before {
@@ -274,7 +275,30 @@ definition {
 }
 
 definition:before {
-  content: "Definition. ";
+  content: "Definition" counter(section) "." counter(subsection) ": ";
+  counter-increment: subsection;
+  font-weight: bold;
+  font-style: normal;
+}
+
+example {
+  font-style: italic;
+}
+
+example:before {
+  content: "Example" counter(section) "." counter(subsection) ": ";
+  counter-increment: subsection;
+  font-weight: bold;
+  font-style: normal;
+}
+
+exercise {
+  font-style: italic;
+}
+
+exercise:before {
+  content: "Exercise" counter(section) "." counter(subsection) ": ";
+  counter-increment: subsection;
   font-weight: bold;
   font-style: normal;
 }
@@ -284,7 +308,8 @@ theorem {
 }
 
 theorem:before {
-  content: "Theorem. ";
+  content: "Theorem" counter(section) "." counter(subsection) ": ";
+  counter-increment: subsection;
   font-weight: bold;
   font-style: normal;
 }
