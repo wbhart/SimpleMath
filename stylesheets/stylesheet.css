@@ -255,6 +255,45 @@ form {
 }
 
 /*******************************************************************************
+Math Styles
+*******************************************************************************/
+
+theorem, proof, definition {
+  display: block;
+  margin: 12px 0;
+}
+
+definition {
+  font-style: italic;
+}
+
+definition:before {
+  content: "Definition. ";
+  font-weight: bold;
+  font-style: normal;
+}
+
+theorem {
+  font-style: italic;
+}
+
+theorem:before {
+  content: "Theorem. ";
+  font-weight: bold;
+  font-style: normal;
+}
+
+proof:before {
+  content: "Proof.";
+  font-style: italic;
+}
+
+proof:after {
+  content: "\25FB";
+  float:right;
+}
+
+/*******************************************************************************
 Full-Width Styles
 *******************************************************************************/
 
