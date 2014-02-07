@@ -6,7 +6,10 @@ title: Blogging Like a Hacker
 <h2>Divisibility</h2>
 
 <definition>The <u>integers</u> are the counting numbers,  positive, negative and zero, i.e. 
-\(\ldots, -2, -1, 0, 1, 2, \ldots\). We denote the set of integers by \(\mathbb{Z}\).</definition>
+\(\ldots, -2, -1, 0, 1, 2, \ldots\). We denote the set of integers by \(\mathbb{Z}\). We sometimes write 
+\(\mathbb{Z}_{\geq 0}\) or \(\mathbb{Z}_{< 0}\) for the set of integers greater than or equal to zero
+or less than zero, respectively, and so on.
+</definition>
 
 <definition> For integers \(a\) and \(b \neq 0\) we say that \(a\) is <u>divisible</u> by \(b\) (or that 
 \(b\) <u>divides</u> \(a\)) if there is an integer \(c\) such that \(a = bc\). We write \(b \;|\; a\)
@@ -40,8 +43,8 @@ and \(a = b + (c-1)b > b\).
 is a multiple of \(a\). 
 </proof> 
 
-<theorem> (Division algorithm) If \(a, b \in \mathbb{N}\) with \(b \neq 0\) then there exist 
-\(q, r \in \mathbb{Z}\) such that \(a = bq + r\), \(q \geq 0\) and \(0 \leq r < b\).
+<theorem> (Division algorithm) If \(a, b \in \mathbb{Z}_{\geq 0}\) with \(b \neq 0\) then there exist 
+\(q, r \in \mathbb{Z}_{\geq 0}\) such that \(a = bq + r\), and \(0 \leq r < b\).
 </theorem> 
 
 <proof> We let \(qb\) be the largest non-negative multiple of \(b\) which does not exceed \(a\). We then set 
@@ -57,7 +60,7 @@ largest natural number which divides both \(b\) and \(c\). If \(\gcd(b, c) = 1\)
 <u>coprime</u>. 
 
 By convention we also define \(\gcd(b, 0) = b\), \(\gcd(0, c) = c\) and \(\gcd(0, 0) = 0\) for all 
-\(b, c \in \mathbb{N}\). If \(b\) and \(c\) are both positive we define \(\gcd(-b, -c) = -\gcd(b, c)\).  
+\(b, c \in \mathbb{N}\).  
 </definition> 
 
 <definition> The <u>lowest common multiple</u> of two natural numbers \(b\) and \(c\), denoted \(\mbox{lcm}(b, c)\) is 
