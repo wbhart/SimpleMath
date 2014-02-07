@@ -100,7 +100,7 @@ have \(\gcd(a, b) \;|\; ab/\mbox{lcm}(a, b)\). Setting \(c = ab/\mbox{lcm}(a, b)
 is a common divisor of \(a\) and \(b\). Thus it must be the greatest common divisor.
 </proof> 
 
-<theorem> <reference id="divgcd"></reference> Any common divisor of \(a\) and \(b\) is a divisor of \(\gcd(a, b)\).
+<theorem> Any common divisor of \(a\) and \(b\) is a divisor of \(\gcd(a, b)\).
 </theorem> 
 
 <proof> In the proof of the previous theorem we showed that \(c \;|\; a, b \;\;\mbox{iff}\;\; c \;|\; ab/\mbox{lcm}(a, b)\). But 
@@ -119,7 +119,7 @@ i.e. \(\gcd(b, c)\) divides \(\gcd(b, b - c)\). </br></br>
 Conversely, if \(g = \gcd(b, b - c)\) then we can write \(b = gu\) and \(|b - c| = gv\) for some integers \(u\) and 
 \(v\). If \(b - c = 0\) then \(g = b\) and we see that \(g \;|\; \gcd(b, c)\). Otherwise \(u\) and \(v\) are natural 
 numbers. But now \(c = b - (b - c) = gu \pm gv = g(u \pm v)\) and so \(g \;|\; c\). We already have that \(g \;|\; b\), 
-thus by Theorem <script>document.write(window.getComputedStyle(document.getElementById("divgcd"),':before').getPropertyValue("content"));</script> we have that \(g \;|\; \gcd(b, c)\), i.e. \(\gcd(b, |b - c|)\) divides \(\gcd(b, c)\). 
+thus by the previous theorem we have that \(g \;|\; \gcd(b, c)\), i.e. \(\gcd(b, |b - c|)\) divides \(\gcd(b, c)\). 
 </br></br>
 
 But now \(d = \gcd(b, c)\) divides \(g = \gcd(b, |b - c|)\) and conversely, thus by an earlier theorem we have 
