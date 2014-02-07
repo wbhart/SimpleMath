@@ -326,7 +326,7 @@ proof:before {
 }
 
 proof:after {
-  content: "\2610";
+  content: "\220E";
   float:right;
 }
 
