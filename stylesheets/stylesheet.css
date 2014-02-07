@@ -106,14 +106,6 @@ subtitle {
   background: url('../images/bg_hr.png') repeat-x bottom;
 }
 
-reference {
-}
-
-reference::before {
-  content: "" counter(section) "." counter(subsection) ": ";
-}
-
-
 p {
   margin: 10px 0 15px 0;
 }
