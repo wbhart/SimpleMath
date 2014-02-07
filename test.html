@@ -82,18 +82,18 @@ must divide \(d\) after all.
 
 <proof> We first show that 
 \[c \;|\; a, b \;\;\mbox{iff}\;\;; a, b \;|\; ab/c \;\;\mbox{iff}\;\; \mbox{lcm}(a, b) \;|\; ab/c 
-\;\;\mbox{iff}\;\; c \;|\; ab/\mbox{lcm}(a, b).\] </br>
+\;\;\mbox{iff}\;\; c \;|\; ab/\mbox{lcm}(a, b).\] </br></br>
 
 For the first implication, if \(c \;|\; a\) then \(a/c\) is a natural number, thus \(ab/c\) is a multiple of \(b\). 
 Similarly \(ab/c\) is a multiple of \(a\). Conversely, if \(a \;|\; ab/c\) then \(b/c\) is an integer. Similarly 
-\(a/c\) is an integer. Thus \(c \;|\; a, b\). </br>
+\(a/c\) is an integer. Thus \(c \;|\; a, b\). </br></br>
 
 The second implication is given by the previous theorem. For the converse, as \(a, b \;|\; \mbox{lcm}(a, b)\) by definition 
-then \(a, b \;|\; ab/c\). </br>
+then \(a, b \;|\; ab/c\). </br></br>
 
 For the third implication, we can write \(ab/c = \mbox{lcm}(a, b)u\) for some natural number \(u\), i.e. 
 \(ab/\mbox{lcm}(a, b) = cu\) which implies \(c\) divides \(ab/\mbox{lcm}(a, b)\). The converse follows by reversing 
-the argument. </br>
+the argument. </br></br>
 
 We have shown \(c \;|\; a, b \;\;\mbox{iff}\;\; c \;|\; ab/\mbox{lcm}(a, b)\). If we set \(c = \gcd(a, b)\) then we 
 have \(\gcd(a, b) \;|\; ab/\mbox{lcm}(a, b)\). Setting \(c = ab/\mbox{lcm}(a, b)\) we see that \(ab/\mbox{lcm}(a, b)\) 
@@ -114,12 +114,13 @@ we also showed \(\gcd(a, b) = ab/\mbox{lcm}(a, b)\). Combining these facts the r
 <proof> Let \(d = \gcd(b, c)\). As \(d\) divides \(b\) we can write \(b = sd\) for some natural number \(s\). Similarly 
 we can write \(c = td\) for some natural number \(t\). Thus \(|b - c| = |sd - td| = |s - t|d\). Thus \(d\) divides 
 \(|b - c|\). As we already have that \(d\) divides \(b\), the previous theorem says that \(d\) divides \(\gcd(b, b - c)\), 
-i.e. \(\gcd(b, c)\) divides \(\gcd(b, b - c)\). </br>
+i.e. \(\gcd(b, c)\) divides \(\gcd(b, b - c)\). </br></br>
 
 Conversely, if \(g = \gcd(b, b - c)\) then we can write \(b = gu\) and \(|b - c| = gv\) for some integers \(u\) and 
 \(v\). If \(b - c = 0\) then \(g = b\) and we see that \(g \;|\; \gcd(b, c)\). Otherwise \(u\) and \(v\) are natural 
 numbers. But now \(c = b - (b - c) = gu \pm gv = g(u \pm v)\) and so \(g \;|\; c\). We already have that \(g \;|\; b\), 
-thus by the previous theorem we have that \(g \;|\; \gcd(b, c)\), i.e. \(\gcd(b, |b - c|)\) divides \(\gcd(b, c)\). </br>
+thus by the previous theorem we have that \(g \;|\; \gcd(b, c)\), i.e. \(\gcd(b, |b - c|)\) divides \(\gcd(b, c)\). 
+</br></br>
 
 But now \(d = \gcd(b, c)\) divides \(g = \gcd(b, |b - c|)\) and conversely, thus by an earlier theorem we have 
 \(\gcd(b, c) = \gcd(b, |b - c|)\).
