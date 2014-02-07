@@ -76,12 +76,13 @@ division algorithm, \(d = qc + r\) with \(0 \leq r < c\). As \(a\) and \(b\) bot
 must divide \(d\) after all.
 </proof> 
 
-<theorem> If \(a, b \in \mathbb{N}\) then \(ab = \gcd(a, b)\mbox{lcm}(a, b)\).
+<theorem> If \(a, b \in \mathbb{N}\) then 
+\[ab = \gcd(a, b)\mbox{lcm}(a, b).\]
 </theorem> 
 
 <proof> We first show that 
-\[c \;|\; a, b \leftrightarrow a, b \;|\; ab/c \leftrightarrow \mbox{lcm}(a, b) \;|\; ab/c 
-\leftrightarrow c \;|\; ab/\mbox{lcm}(a, b).\]
+\[c \;|\; a, b \;\mbox{iff}\; a, b \;|\; ab/c \;\mbox{iff}\; \mbox{lcm}(a, b) \;|\; ab/c 
+\;\mbox{iff}\; c \;|\; ab/\mbox{lcm}(a, b).\]
 
 For the first implication, if \(c \;|\; a\) then \(a/c\) is a natural number, thus \(ab/c\) is a multiple of \(b\). 
 Similarly \(ab/c\) is a multiple of \(a\). Conversely, if \(a \;|\; ab/c\) then \(b/c\) is an integer. Similarly 
@@ -106,13 +107,14 @@ is a common divisor of \(a\) and \(b\). Thus it must be the greatest common divi
 we also showed \(\gcd(a, b) = ab/\mbox{lcm}(a, b)\). Combining these facts the result follows immediately.
 </proof> 
 
-<theorem> For \(b, c \in \mathbb{N}\) we have that \(\gcd(b, c) = \gcd(b, |b - c|)\).
+<theorem> For \(b, c \in \mathbb{N}\) we have that 
+\[\gcd(b, c) = \gcd(b, |b - c|).\]
 </theorem> 
 
-<proof> Let \(d = \gcd(b, c)\). As \(d\) divides \(b\) we can write \(b = sd\) for some natural number \(s\). Similarly 
+<proof> <p>Let \(d = \gcd(b, c)\). As \(d\) divides \(b\) we can write \(b = sd\) for some natural number \(s\). Similarly 
 we can write \(c = td\) for some natural number \(t\). Thus \(|b - c| = |sd - td| = |s - t|d\). Thus \(d\) divides 
 \(|b - c|\). As we already have that \(d\) divides \(b\), the previous theorem says that \(d\) divides \(\gcd(b, b - c)\), 
-i.e. \(\gcd(b, c)\) divides \(\gcd(b, b - c)\).
+i.e. \(\gcd(b, c)\) divides \(\gcd(b, b - c)\).</p>
 
 Conversely, if \(g = \gcd(b, b - c)\) then we can write \(b = gu\) and \(|b - c| = gv\) for some integers \(u\) and 
 \(v\). If \(b - c = 0\) then \(g = b\) and we see that \(g \;|\; \gcd(b, c)\). Otherwise \(u\) and \(v\) are natural 
