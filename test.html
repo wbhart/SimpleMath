@@ -7,15 +7,14 @@ title: Blogging Like a Hacker
 
 <definition>The <u>integers</u> are the counting numbers,  positive, negative and zero, i.e. 
 \(\ldots, -2, -1, 0, 1, 2, \ldots\). We denote the set of integers by \(\mathbb{Z}\). We sometimes write 
-\(\mathbb{Z}_{\geq 0}\) or \(\mathbb{Z}_{< 0}\) for the set of integers greater than or equal to zero
-or less than zero, respectively, and so on.
+\(\mathbb{Z}_{\geq 0}\) for the set of integers greater than or equal to zero, etc.
 </definition>
 
 <definition> For integers \(a\) and \(b \neq 0\) we say that \(a\) is <u>divisible</u> by \(b\) (or that 
-\(b\) <u>divides</u> \(a\)) if there is an integer \(c\) such that \(a = bc\). We write \(b \;|\; a\)
+\(b\) <u>divides</u> \(a\)) if there is an integer \(c\) such that \(a = bc\). We write \(b \;|\; a\).
 </definition>
 
-<definition> For \(a \in \mathbb{Z}\) we define \(|a|\) to be \(-a\) if \(a < 0\) and to be \(a\) otherwise. 
+<definition> For \(a \in \mathbb{Z}\) we define \(|a|\) to be \(-a\) if \(a < 0\) and \(a\) if \(a \geq 0\). 
 We call \(|a|\) the <u>absolute value</u> of \(a\). Note that for all \(a \in \mathbb{Z}\) we have \(|a| \geq 0\).
 </definition> 
 
@@ -27,7 +26,7 @@ numbers by \(\mathbb{N}\).
 </theorem>
 
 <proof> We have that \(a = bc\) for some natural number \(c\). If \(c = 1\) then \(a = b\). Otherwise \(c > 1\) 
-and \(a = b + (c-1)b > b\). 
+and \(a = b + (c-1)b > b\), as \(c-1) \geq 0\). 
 </proof> 
 
 <theorem> If \(a, b \in \mathbb{N}\) and \(b \;|\; a\) and \(a \;|\; b\) then \(a = b\).
@@ -85,8 +84,8 @@ must divide \(d\) after all.
 \;\;\mbox{iff}\;\; c \;|\; ab/\mbox{lcm}(a, b).\]
 
 For the first implication, if \(c \;|\; a\) then \(a/c\) is a natural number, thus \(ab/c\) is a multiple of \(b\). 
-Similarly \(ab/c\) is a multiple of \(a\). Conversely, if \(a \;|\; ab/c\) then \(b/c\) is an integer. Similarly 
-\(a/c\) is an integer. Thus \(c \;|\; a, b\). </br></br>
+Similarly if \(c \;|\; b\) then \(ab/c\) is a multiple of \(a\). Conversely, if \(a \;|\; ab/c\) then \(b/c\) is an 
+integer. Similarly if \(b \;|\; ab/c\) then \(a/c\) is an integer. Thus \(c \;|\; a, b\). </br></br>
 
 The second implication is given by the previous theorem. For the converse, as \(a, b \;|\; \mbox{lcm}(a, b)\) by definition 
 then \(a, b \;|\; ab/c\). </br></br>
@@ -96,8 +95,10 @@ For the third implication, we can write \(ab/c = \mbox{lcm}(a, b)u\) for some na
 the argument. </br></br>
 
 We have shown \(c \;|\; a, b \;\;\mbox{iff}\;\; c \;|\; ab/\mbox{lcm}(a, b)\). If we set \(c = \gcd(a, b)\) then we 
-have \(\gcd(a, b) \;|\; ab/\mbox{lcm}(a, b)\). Setting \(c = ab/\mbox{lcm}(a, b)\) we see that \(ab/\mbox{lcm}(a, b)\) 
-is a common divisor of \(a\) and \(b\). Thus it must be the greatest common divisor.
+have \(\gcd(a, b) \;|\; ab/\mbox{lcm}(a, b)\) so that \(ab/\mbox{lcm}(a, b) \geq \gcd(a, b)\). Setting 
+\(c = ab/\mbox{lcm}(a, b)\) we see that \(ab/\mbox{lcm}(a, b)\) is a common divisor of \(a\) and \(b\), and so 
+\(ab/\mbox{lcm}(a, b) \leq \gcd(a, b)\) by definition of the greatest common divisor. Combining the two inequalities
+we see that \(ab/\mbox{lcm}(a, b) = \gcd(a, b)\).
 </proof> 
 
 <theorem> Any common divisor of \(a\) and \(b\) is a divisor of \(\gcd(a, b)\).
@@ -113,10 +114,10 @@ we also showed \(\gcd(a, b) = ab/\mbox{lcm}(a, b)\). Combining these facts the r
 
 <proof> Let \(d = \gcd(b, c)\). As \(d\) divides \(b\) we can write \(b = sd\) for some natural number \(s\). Similarly 
 we can write \(c = td\) for some natural number \(t\). Thus \(|b - c| = |sd - td| = |s - t|d\). Thus \(d\) divides 
-\(|b - c|\). As we already have that \(d\) divides \(b\), the previous theorem says that \(d\) divides \(\gcd(b, b - c)\), 
-i.e. \(\gcd(b, c)\) divides \(\gcd(b, b - c)\). </br></br>
+\(|b - c|\). As we already have that \(d\) divides \(b\), the previous theorem says that \(d\) divides \(\gcd(b, |b - c|)\), 
+i.e. \(\gcd(b, c)\) divides \(\gcd(b, |b - c|)\). </br></br>
 
-Conversely, if \(g = \gcd(b, b - c)\) then we can write \(b = gu\) and \(|b - c| = gv\) for some integers \(u\) and 
+Conversely, if \(g = \gcd(b, |b - c|)\) then we can write \(b = gu\) and \(|b - c| = gv\) for some integers \(u\) and 
 \(v\). If \(b - c = 0\) then \(g = b\) and we see that \(g \;|\; \gcd(b, c)\). Otherwise \(u\) and \(v\) are natural 
 numbers. But now \(c = b - (b - c) = gu \pm gv = g(u \pm v)\) and so \(g \;|\; c\). We already have that \(g \;|\; b\), 
 thus by the previous theorem we have that \(g \;|\; \gcd(b, c)\), i.e. \(\gcd(b, |b - c|)\) divides \(\gcd(b, c)\). 
