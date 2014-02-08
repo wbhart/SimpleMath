@@ -148,11 +148,11 @@ both \(a\) and \(b\) and thus divides their gcd, \(g\). </br></br>
 By a previous result, as \(d\) divides \(g\) and conversely, \(d = g\), which is what we wanted to show.
 </proof>
 
-<theorem> (Euclid's algorithm) Given \(a, \b \in \mathbb{Z}_{\geq 0}\) with \(b \neq 0\), we can compute \(\gcd(a, b\)
+<theorem> (Euclid's algorithm) Given \(a, b \in \mathbb{Z}_{\geq 0}\) with \(b \neq 0\), we can compute \(\gcd(a, b\)
 in finitely many steps by repeated application of the previous theorem.
 </theorem>
 
-<proof> Write \(r_{-1} = a, r_0 = b\). Given \(r_{i-1}, r_i \in \mathbb{Z}_{\geq 0}\) with \(r_i \neq 0\} we can use
+<proof> Write \(r_{-1} = a, r_0 = b\). Given \(r_{i-1}, r_i \in \mathbb{Z}_{\geq 0}\) with \(r_i \neq 0\) we can use
 the division algorithm to find \(q_{i+1}, r_{i+1}\) \in \mathbb{Z}_{\geq 0\} such that
 \[r_{i-1} = q_{i+1}r_i + r_{i+1},\]
 with \(r_{i+1} < r_i\). </br></br>
@@ -165,8 +165,8 @@ remainders in turn, we see that \(\gcd(a, b) = \gcd(r_k, 0) = r_k\). In other wo
 sequence is the gcd of \(a\) and \(b\). Thus we can compute \(\gcd(a, b\) in finitely many steps. </br></br>
 </proof>
 
-<theorem> (Extended euclidean algorithm) Given \(a, \b \in \mathbb{Z}_{\geq 0}\) with \(b \neq 0\), if \(d = \gcd(a, b)\)
-then we can find \(s, \t \in \mathbb{Z}\) such that
+<theorem> (Extended euclidean algorithm) Given \(a, b \in \mathbb{Z}_{\geq 0}\) with \(b \neq 0\), if \(d = \gcd(a, b)\)
+then we can find \(s, t \in \mathbb{Z}\) such that
 \[d = as + bt.\]
 </theorem>
 
