@@ -134,13 +134,13 @@ But now \(d = \gcd(b, c)\) divides \(g = \gcd(b, |b - c|)\) and conversely, thus
 </proof> 
 
 <theorem> For \(a, b \in \mathbb{Z}_{\geq 0}\) with \(b \neq 0\), if \(a = bq + r\) for \(q, r \in \mathbb{Z}_{\geq 0}\)
-with \(r < b\) then \(\gcd(a, b) = \gcd(b, r)\).
+with \(r < b\) we have \(\gcd(a, b) = \gcd(b, r)\).
 </theorem>
 
-<proof> By definition \(g = \gcd(a, b)\) divides \(a\) and \(b\). Therefore it divides \(r = a - bq\). Thus \(g\) divides
-both \(b\) and \(r\) and thus by a previous theorem it divides their gcd, \(d\) say.
+<proof> Let \(g = \gcd(a, b)\) and \(d  = \gcd(b, r)\). As \(g\) divides \(a\) and \(b\), it also divides \(r = a - bq\).
+Thus \(g\) divides both \(b\) and \(r\) and thus by a previous theorem it divides their gcd, \(d\).
 
-Again by definition \(d = \gcd(b, r)\) divides \(b\) and \(r\). Therefore it divides \(a = bq + r\). Thus \(d\) divides
+Again by definition \(d\) divides \(b\) and \(r\). Therefore it divides \(a = bq + r\). Thus \(d\) divides
 both \(a\) and \(b\) and thus divides their gcd, \(g\). 
 
 By a previous result, as \(d\) divides \(g\) and conversely, \(d = g\), which is what we wanted to show.
