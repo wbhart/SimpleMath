@@ -298,6 +298,17 @@ example:before {
   font-style: normal;
 }
 
+corollary {
+  font-style: italic;
+}
+
+corollary:before {
+  content: "Corollary " counter(section) "." counter(subsection) ": ";
+  counter-increment: subsection;
+  font-weight: bold;
+  font-style: normal;
+}
+
 exercise {
   font-style: italic;
 }
