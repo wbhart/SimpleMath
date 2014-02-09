@@ -253,9 +253,21 @@ inequalities we see that both sides are equal.
 </corollary>
 
 <theorem> If \(a_1, a_2, \ldots a_n \in \mathbb{Z}_{\geq 0}\) then for any \(0 < r \leq n\)
-\[\gcd((\gcd(a_1, a_2, \ldots, a_r), \gcd(a_{r+1}, a_{r+2}, \ldots a_n)) = 
-\gcd((\gcd(a_1, a_2, \ldots, a_{r-1}), \gcd(a_r, a_{r+1}, \ldots a_n)).\]
+\[\gcd(\gcd(a_1, a_2, \ldots, a_r), \gcd(a_{r+1}, a_{r+2}, \ldots a_n)) = 
+\gcd(\gcd(a_1, a_2, \ldots, a_{r-1}), \gcd(a_r, a_{r+1}, \ldots a_n)).\]
 </theorem>
+
+<proof> The case \(r = n\) is precisely the corollary above (assuming we define \(\gcd(a_n) = a_n\)). Let us assume the 
+result is proven for \(r = k\) for some \(1 < k \leq n\). We will show it holds for \(r = k-1\). </br></br>
+
+Let 
+\[d = \gcd(\gcd(a_1, a_2, \ldots, a_k), \gcd(a_{k+1}, a_{k+2}, \ldots a_n)).\] Now in turn, by previous results we have 
+\[d = \gcd(\gcd(\gcd(a_1, a_2, \ldots, a_{k-1}), a_k), \gcd(a_{k+1}, a_{k+2}, \ldots a_n)),\] then
+\[d = \gcd(\gcd(a_1, a_2, \ldots, a_{k-1}), a_k, \gcd(a_{k+1}, a_{k+2}, \ldots a_n)),\] then
+\[d = \gcd(\gcd(a_1, a_2, \ldots, a_{k-1}), \gcd(a_k, \gcd(a_{k+1}, a_{k+2}, \ldots a_n))),\] observing that, by the 
+definition of the gcd, reordering the terms does not change its value. Thus finally
+\[d = \gcd(\gcd(a_1, a_2, \ldots, a_{k-1}), \gcd(a_k, a_{k+1}, \ldots a_n)).\]
+</proof>
 
 <theorem> If \(a_1, a_2, \ldots a_n \in \mathbb{N}\) then for any fixed \(0 < r < n\)
 \[a_1a_2\ldots a_n = \gcd(a_1a_2\cdots a_r, a_2a_2\cdots a_{r-1}a_{r+1}, \ldots)
