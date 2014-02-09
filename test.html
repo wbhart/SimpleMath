@@ -220,3 +220,21 @@ are nonzero we define their least common multiple to be the smallest natural num
 <theorem>If \(a_1, a_2, \ldots a_n \in \mathbb{Z}_{\geq 0}\) then
 \[\gcd(a_1, a_2, \ldots, a_n) = \gcd(\ldots \gcd(\gcd(a_1, a_2), a_3), \ldots a_n).\]
 </theorem>
+
+<proof> Any divisor of the right side divides \(a_n\) and \(\gcd(\ldots \gcd(\gcd(a_1, a_2), a_3), \ldots a_{n-1})\). 
+Thus it divides \(a_{n-1}\), and so on. In fact it divides all of the \(a_i\). The right hand side itself thus divides 
+all the \(a_i\). The right hand side is therefore less than or equal to the left hand side, which is the largest such
+number. </br></br>
+
+But any divisor of the left hand side divides all the \(a_i\). We will show that it divides the right hand side. As it
+divides \(a_n\) it suffices to show it divides \(\gcd(\ldots \gcd(\gcd(a_1, a_2), a_3), \ldots a_{n-1})\). But again, as
+it divides \(a_{n-1}\) it suffices to show it divides \(\gcd(\ldots \gcd(\gcd(a_1, a_2), a_3), \ldots a_{n-2})\), etc. 
+Eventually it suffices to show it divides \(\gcd(a_1, a_2)\), which it does as it divides \(a_1\) and \(a_2\). </br></br>
+
+Thus the left hand side itself divides the right hand side and is thus less than or equal to it. Combining the two 
+inequalities we see that both sides are equal.
+</proof>
+
+<corollary> If \(a_1, a_2, \ldots a_n \in \mathbb{Z}_{\geq 0}\) then
+\[\gcd(a_1, a_2, \ldots, a_n) = \gcd(\gcd(a_1, a_2, \ldots, a_{n-1}), a_n).\]
+</corollary>
