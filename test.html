@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Blogging Like a Hacker
+title: Simplemath
 ---
 
 <h2>Divisibility</h2>
@@ -238,3 +238,13 @@ inequalities we see that both sides are equal.
 <corollary> If \(a_1, a_2, \ldots a_n \in \mathbb{Z}_{\geq 0}\) then
 \[\gcd(a_1, a_2, \ldots, a_n) = \gcd(\gcd(a_1, a_2, \ldots, a_{n-1}), a_n).\]
 </corollary>
+
+<theorem>If \(a_1, a_2, \ldots a_n \in \mathbb{N}\) then
+\[\lcm(a_1, a_2, \ldots, a_n) = \lcm(\ldots \lcm(\lcm(a_1, a_2), a_3), \ldots a_n).\]
+</theorem>
+
+<proof> The theorem is dual to the previous one and follows by replacing "gcd" with "lcm", "divisor of" with 
+"multiple of", "divides" with "is divisible by" and "less than or equal to" with "greater than or equal to" and 
+"largest such" with "smallest such".
+</proof>
+
