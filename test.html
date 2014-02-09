@@ -314,3 +314,19 @@ Rearranging and cancelling \(abc\) from both sides gives us the result.
 where the gcd is of all products of the \(a_i\) taken \(r\) at a time and the lcm is of all products of the \(a_i\) taken
 \(n-r\) at a time.
 </theorem>
+
+<proof> By a previous theorem the result is true for \(n = 2\). Let us assume it is proved for \(n = k-1\). </br></br>
+
+Let us denote the gcd on the right side of the theorem with \(n = k\) by \(\gcd_r(a_1, \ldots, a_k)\) and the lcm by 
+\(\mbox{lcm}_{n-r}(a_1, \ldots, a_k)\). </br></br>
+
+With this notation, note that
+\[\gcd_r(a_1, \ldots, a_k)\) = \gcd(\gcd_r(a_1, \ldots, a_{k-1}), a_n\gcd_{r-1}(a_1, \ldots a_{k-1})).\]
+If we multiply this by \(L = \mbox{lcm}_{k-r-1}(a_1, \ldots, a_{k-1})\) then by the assumption we obtain the value
+\[\gcd(a_1\ldots a_{k-1}, a_n\gcd_{r-1}(a_1, \ldots a_{k-1}) \mbox{lcm}_{k-r-1}(a_1, \ldots, a_{k-1}).\] </br></br>
+
+Similarly, if we multiply the lcm on the right side of the theorem by \(G = \gcd_{r-1}(a_1, ..., a_{n-1})\), we obtain
+\[\mbox{lcm}(a_1\ldots a_{k-1}, a_n\gcd_{r-1}(a_1, \ldots a_{k-1}) \mbox{lcm}_{k-r-1}(a_1, \ldots, a_{k-1}).\] </br></br>
+
+Multiplying these we obtain \(LG\) times the left side of the theorem, from which the result follows.
+</proof>
