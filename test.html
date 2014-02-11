@@ -6,253 +6,253 @@ title: Simplemath
 <h2>Divisibility</h2>
 
 <definition>The <u>integers</u> are the counting numbers,  positive, negative and zero, i.e. 
-\(\ldots, -2, -1, 0, 1, 2, \ldots\). We denote the set of integers by \(\mathbb{Z}\). We sometimes write 
-\(\mathbb{Z}_{\geq 0}\) for the set of integers greater than or equal to zero, etc.
+$\ldots, -2, -1, 0, 1, 2, \ldots$. We denote the set of integers by $\mathbb{Z}$. We sometimes write 
+$\mathbb{Z}_{\geq 0}$ for the set of integers greater than or equal to zero, etc.
 </definition>
 
-<definition> For integers \(a\) and \(b \neq 0\) we say that \(a\) is <u>divisible</u> by \(b\) (or that 
-\(b\) <u>divides</u> \(a\) or \(a\) is a <u>multiple</u> of \(b\)) if there is an integer \(c\) such that \(a = bc\).
-We write \(b \;|\; a\).
+<definition> For integers $a$ and $b \neq 0$ we say that $a$ is <u>divisible</u> by $b$ (or that 
+$b$ <u>divides</u> $a$ or $a$ is a <u>multiple</u> of $b$) if there is an integer $c$ such that $a = bc$.
+We write $b \;|\; a$.
 </definition>
 
-<definition> For \(a \in \mathbb{Z}\) we define \(|a|\) to be \(-a\) if \(a < 0\) and \(a\) if \(a \geq 0\). 
-We call \(|a|\) the <u>absolute value</u> of \(a\). Note that for all \(a \in \mathbb{Z}\) we have \(|a| \geq 0\).
+<definition> For $a \in \mathbb{Z}$ we define $|a|$ to be $-a$ if $a < 0$ and $a$ if $a \geq 0$. 
+We call $|a|$ the <u>absolute value</u> of $a$. Note that for all $a \in \mathbb{Z}$ we have $|a| \geq 0$.
 </definition> 
 
-<definition> The <u>natural numbers</u> are the positive integers \(1, 2, 3, \ldots\). We denote the set of natural
-numbers by \(\mathbb{N}\).
+<definition> The <u>natural numbers</u> are the positive integers $1, 2, 3, \ldots$. We denote the set of natural
+numbers by $\mathbb{N}$.
 </definition> 
 
-<theorem> If \(a, b \in \mathbb{N}\) and \(b \;|\; a\) then \(a \geq b\).
+<theorem> If $a, b \in \mathbb{N}$ and $b \;|\; a$ then $a \geq b$.
 </theorem>
 
-<proof> We have that \(a = bc\) for some natural number \(c\). If \(c = 1\) then \(a = b\). Otherwise \(c > 1\) 
-and \(a = b + (c-1)b > b\), as \(c-1) \geq 0\). 
+<proof> We have that $a = bc$ for some natural number $c$. If $c = 1$ then $a = b$. Otherwise $c > 1$ 
+and $a = b + (c-1)b > b$, as $c-1) \geq 0$. 
 </proof> 
 
-<theorem> If \(a, b \in \mathbb{N}\) and \(b \;|\; a\) and \(a \;|\; b\) then \(a = b\).
+<theorem> If $a, b \in \mathbb{N}$ and $b \;|\; a$ and $a \;|\; b$ then $a = b$.
 </theorem> 
 
-<proof> We see from the previous theorem that \(a \geq b\) and \(b \geq a\). Thus \(a = b\).
+<proof> We see from the previous theorem that $a \geq b$ and $b \geq a$. Thus $a = b$.
 </proof> 
 
-<theorem> If \(a \;|\; b\) and \(b \;|\; c\) then \(a \;|\; c\).
+<theorem> If $a \;|\; b$ and $b \;|\; c$ then $a \;|\; c$.
 </theorem> 
 
-<proof> We can write \(b = ua\) and \(c = vb\) for some integers \(u, v\). But then \(c = vb = vua\), i.e. \(c\) 
-is a multiple of \(a\). 
+<proof> We can write $b = ua$ and $c = vb$ for some integers $u, v$. But then $c = vb = vua$, i.e. $c$ 
+is a multiple of $a$. 
 </proof> 
 
-<theorem> If \(a, b, n \in \mathbb{Z}\) and \(n\) divides \(a\) and \(b\) then \(n\) divides \(as + bt\) for all integers
-\(s\) and \(t\).
+<theorem> If $a, b, n \in \mathbb{Z}$ and $n$ divides $a$ and $b$ then $n$ divides $as + bt$ for all integers
+$s$ and $t$.
 </theorem>
 
-<proof> By assumption there exist \(c, d \in \mathbb{Z}\) such that \(a = cn\) and \(b = dn\). Thus 
-\(as + bt = cns + dnt = n(cs + dt).\) In other words \(as + bt\) is divisible by \(n\).
+<proof> By assumption there exist $c, d \in \mathbb{Z}$ such that $a = cn$ and $b = dn$. Thus 
+$as + bt = cns + dnt = n(cs + dt).$ In other words $as + bt$ is divisible by $n$.
 </proof>
 
-<corollary> If \(a, b, n \in \mathbb{Z}\) and \(n\) divides \(a\) and \(b\) then \(n\) divides \(a + b\) and \(a - b\).
+<corollary> If $a, b, n \in \mathbb{Z}$ and $n$ divides $a$ and $b$ then $n$ divides $a + b$ and $a - b$.
 </corollary>
 
-<theorem> (Division algorithm) If \(a, b \in \mathbb{Z}_{\geq 0}\) with \(b \neq 0\) then there exist 
-\(q, r \in \mathbb{Z}_{\geq 0}\) such that \(a = bq + r\), and \(0 \leq r < b\).
+<theorem> (Division algorithm) If $a, b \in \mathbb{Z}_{\geq 0}$ with $b \neq 0$ then there exist 
+$q, r \in \mathbb{Z}_{\geq 0}$ such that $a = bq + r$, and $0 \leq r < b$.
 </theorem> 
 
-<proof> We let \(qb\) be the largest non-negative multiple of \(b\) which does not exceed \(a\). We then set 
-\(r = a - bq\). Clearly \(r \geq 0\). But we also have \(r < b\). Otherwise, let \(r = b + r'\) for some 
-\(r' \geq 0\). Then \(b + r' = a - bq\), i.e. \(r' = a - b(q + 1)\). But as \(r' \geq 0\) we have that \(b(q + 1)\) 
-is a larger multiple of \(b\) not exceeding \(a\) than \(bq\), which is a contradiction. Thus \(r < b\) after all.
+<proof> We let $qb$ be the largest non-negative multiple of $b$ which does not exceed $a$. We then set 
+$r = a - bq$. Clearly $r \geq 0$. But we also have $r < b$. Otherwise, let $r = b + r'$ for some 
+$r' \geq 0$. Then $b + r' = a - bq$, i.e. $r' = a - b(q + 1)$. But as $r' \geq 0$ we have that $b(q + 1)$ 
+is a larger multiple of $b$ not exceeding $a$ than $bq$, which is a contradiction. Thus $r < b$ after all.
 </proof> 
 
 <h2>GCD and LCM</h2>
 
-<definition> The <u>greatest common divisor</u> of two natural numbers \(b\) and \(c\), denoted \(\gcd(b, c)\) is the 
-largest natural number which divides both \(b\) and \(c\). If \(\gcd(b, c) = 1\) we say that \(b\) and \(c\) are 
+<definition> The <u>greatest common divisor</u> of two natural numbers $b$ and $c$, denoted $\gcd(b, c)$ is the 
+largest natural number which divides both $b$ and $c$. If $\gcd(b, c) = 1$ we say that $b$ and $c$ are 
 <u>coprime</u>. 
 
-By convention we also define \(\gcd(b, 0) = b\), \(\gcd(0, c) = c\) and \(\gcd(0, 0) = 0\) for all 
-\(b, c \in \mathbb{N}\).  
+By convention we also define $\gcd(b, 0) = b$, $\gcd(0, c) = c$ and $\gcd(0, 0) = 0$ for all 
+$b, c \in \mathbb{N}$.  
 </definition> 
 
-<definition> The <u>least common multiple</u> of two natural numbers \(b\) and \(c\), denoted \(\lcm(b, c)\) is 
-the smallest natural number which is divisible by both \(b\) and \(c\).
+<definition> The <u>least common multiple</u> of two natural numbers $b$ and $c$, denoted $\lcm(b, c)$ is 
+the smallest natural number which is divisible by both $b$ and $c$.
 </definition> 
 
-<theorem> If \(c = \lcm(a, b)\) then \(c\) divides any common multiple of \(a\) and \(b\).
+<theorem> If $c = \lcm(a, b)$ then $c$ divides any common multiple of $a$ and $b$.
 </theorem> 
 
-<proof> Assume \(d\) is a common multiple of \(a\) and \(b\) such that \(c\) does not divide \(d\). Then by the 
-division algorithm, \(d = qc + r\) with \(0 \leq r < c\). As \(a\) and \(b\) both divide \(c\) and \(d\) we see that 
-\(r\) is also a common multiple of \(a\) and \(b\). But as \(r < c = \lcm(a, b)\) we have a contradiction. Thus \(c\) 
-must divide \(d\) after all.
+<proof> Assume $d$ is a common multiple of $a$ and $b$ such that $c$ does not divide $d$. Then by the 
+division algorithm, $d = qc + r$ with $0 \leq r < c$. As $a$ and $b$ both divide $c$ and $d$ we see that 
+$r$ is also a common multiple of $a$ and $b$. But as $r < c = \lcm(a, b)$ we have a contradiction. Thus $c$ 
+must divide $d$ after all.
 </proof> 
 
-<theorem> If \(a, b \in \mathbb{N}\) then 
-\[c \;|\; a, b \;\;\mbox{iff}\;\; a, b \;|\; ab/c \;\;\mbox{iff}\;\; \lcm(a, b) \;|\; ab/c 
-\;\;\mbox{iff}\;\; c \;|\; ab/\lcm(a, b).\]
+<theorem> If $a, b \in \mathbb{N}$ then 
+$$c \;|\; a, b \;\;\mbox{iff}\;\; a, b \;|\; ab/c \;\;\mbox{iff}\;\; \lcm(a, b) \;|\; ab/c 
+\;\;\mbox{iff}\;\; c \;|\; ab/\lcm(a, b).$$
 </theorem> 
 
-<proof> For the first implication, if \(c \;|\; a\) then \(a/c\) is a natural number, thus \(ab/c\) is a multiple of 
-\(b\). Similarly if \(c \;|\; b\) then \(ab/c\) is a multiple of \(a\). Conversely, if \(a \;|\; ab/c\) then \(b/c\) 
-is an integer. Similarly if \(b \;|\; ab/c\) then \(a/c\) is an integer. Thus \(c \;|\; a, b\). </br></br>
+<proof> For the first implication, if $c \;|\; a$ then $a/c$ is a natural number, thus $ab/c$ is a multiple of 
+$b$. Similarly if $c \;|\; b$ then $ab/c$ is a multiple of $a$. Conversely, if $a \;|\; ab/c$ then $b/c$ 
+is an integer. Similarly if $b \;|\; ab/c$ then $a/c$ is an integer. Thus $c \;|\; a, b$. </br></br>
 
-The second implication is given by the previous theorem. For the converse, as \(a, b \;|\; \lcm(a, b)\) by definition 
-then \(a, b \;|\; ab/c\). </br></br>
+The second implication is given by the previous theorem. For the converse, as $a, b \;|\; \lcm(a, b)$ by definition 
+then $a, b \;|\; ab/c$. </br></br>
 
-For the third implication, we can write \(ab/c = \lcm(a, b)u\) for some natural number \(u\), i.e. 
-\(ab/\lcm(a, b) = cu\) which implies \(c\) divides \(ab/\lcm(a, b)\). The converse follows by reversing 
+For the third implication, we can write $ab/c = \lcm(a, b)u$ for some natural number $u$, i.e. 
+$ab/\lcm(a, b) = cu$ which implies $c$ divides $ab/\lcm(a, b)$. The converse follows by reversing 
 the argument. </br></br>
 </proof>
 
-<theorem> If \(a, b \in \mathbb{N}\) then 
-\[ab = \gcd(a, b)\lcm(a, b).\]
+<theorem> If $a, b \in \mathbb{N}$ then 
+$$ab = \gcd(a, b)\lcm(a, b).$$
 </theorem> 
 
-<proof> By the previous theorem \(c \;|\; a, b \;\;\mbox{iff}\;\; c \;|\; ab/\lcm(a, b)\). 
+<proof> By the previous theorem $c \;|\; a, b \;\;\mbox{iff}\;\; c \;|\; ab/\lcm(a, b)$. 
 
-If we set \(c = \gcd(a, b)\) then we have \(\gcd(a, b) \;|\; ab/\lcm(a, b)\) which implies
-\(ab/\lcm(a, b) \geq \gcd(a, b)\). 
+If we set $c = \gcd(a, b)$ then we have $\gcd(a, b) \;|\; ab/\lcm(a, b)$ which implies
+$ab/\lcm(a, b) \geq \gcd(a, b)$. 
 
-On the othe hand, setting \(c = ab/\lcm(a, b)\) we see that \(ab/\lcm(a, b)\) is a common divisor of 
-\(a\) and \(b\), which implies \(ab/\lcm(a, b) \leq \gcd(a, b)\) by definition of the greatest common divisor.
+On the othe hand, setting $c = ab/\lcm(a, b)$ we see that $ab/\lcm(a, b)$ is a common divisor of 
+$a$ and $b$, which implies $ab/\lcm(a, b) \leq \gcd(a, b)$ by definition of the greatest common divisor.
 
-Combining the two inequalities we see that \(ab/\lcm(a, b) = \gcd(a, b)\).
+Combining the two inequalities we see that $ab/\lcm(a, b) = \gcd(a, b)$.
 </proof> 
 
-<theorem> Any common divisor of \(a\) and \(b\) is a divisor of \(\gcd(a, b)\).
+<theorem> Any common divisor of $a$ and $b$ is a divisor of $\gcd(a, b)$.
 </theorem> 
 
 <proof> From the previous two theorems we have respectively that 
-\(c \;|\; a, b \;\;\mbox{iff}\;\; c \;|\; ab/\lcm(a, b)\) and \(\gcd(a, b) = ab/\lcm(a, b)\). Combining 
+$c \;|\; a, b \;\;\mbox{iff}\;\; c \;|\; ab/\lcm(a, b)$ and $\gcd(a, b) = ab/\lcm(a, b)$. Combining 
 these facts the result follows immediately.
 </proof> 
 
-<theorem> For \(b, c \in \mathbb{N}\) we have that 
-\[\gcd(b, c) = \gcd(b, |b - c|).\]
+<theorem> For $b, c \in \mathbb{N}$ we have that 
+$$\gcd(b, c) = \gcd(b, |b - c|).$$
 </theorem> 
 
-<proof> Let \(d = \gcd(b, c)\). As \(d\) divides \(b\) we can write \(b = sd\) for some natural number \(s\). Similarly 
-we can write \(c = td\) for some natural number \(t\). Thus \(|b - c| = |sd - td| = |s - t|d\). Thus \(d\) divides 
-\(|b - c|\). As we already have that \(d\) divides \(b\), the previous theorem says that \(d\) divides \(\gcd(b, |b - c|)\), 
-i.e. \(\gcd(b, c)\) divides \(\gcd(b, |b - c|)\). </br></br>
+<proof> Let $d = \gcd(b, c)$. As $d$ divides $b$ we can write $b = sd$ for some natural number $s$. Similarly 
+we can write $c = td$ for some natural number $t$. Thus $|b - c| = |sd - td| = |s - t|d$. Thus $d$ divides 
+$|b - c|$. As we already have that $d$ divides $b$, the previous theorem says that $d$ divides $\gcd(b, |b - c|)$, 
+i.e. $\gcd(b, c)$ divides $\gcd(b, |b - c|)$. </br></br>
 
-Conversely, if \(g = \gcd(b, |b - c|)\) then we can write \(b = gu\) and \(|b - c| = gv\) for some integers \(u\) and 
-\(v\). If \(b - c = 0\) then \(g = b\) and we see that \(g \;|\; \gcd(b, c)\). Otherwise \(u\) and \(v\) are natural 
-numbers. But now \(c = b - (b - c) = gu \pm gv = g(u \pm v)\) and so \(g \;|\; c\). We already have that \(g \;|\; b\), 
-thus by the previous theorem we have \(g \;|\; \gcd(b, c)\), i.e. \(\gcd(b, |b - c|)\) divides \(\gcd(b, c)\). </br></br>
+Conversely, if $g = \gcd(b, |b - c|)$ then we can write $b = gu$ and $|b - c| = gv$ for some integers $u$ and 
+$v$. If $b - c = 0$ then $g = b$ and we see that $g \;|\; \gcd(b, c)$. Otherwise $u$ and $v$ are natural 
+numbers. But now $c = b - (b - c) = gu \pm gv = g(u \pm v)$ and so $g \;|\; c$. We already have that $g \;|\; b$, 
+thus by the previous theorem we have $g \;|\; \gcd(b, c)$, i.e. $\gcd(b, |b - c|)$ divides $\gcd(b, c)$. </br></br>
 
-But now \(d = \gcd(b, c)\) divides \(g = \gcd(b, |b - c|)\) and conversely, thus by an earlier theorem we have 
-\(\gcd(b, c) = \gcd(b, |b - c|)\).
+But now $d = \gcd(b, c)$ divides $g = \gcd(b, |b - c|)$ and conversely, thus by an earlier theorem we have 
+$\gcd(b, c) = \gcd(b, |b - c|)$.
 </proof> 
 
-<theorem> For \(a, b \in \mathbb{Z}_{\geq 0}\) with \(b \neq 0\), if 
-\[a = bq + r\] 
-for \(q, r \in \mathbb{Z}_{\geq 0}\) with \(r < b\) then we have 
-\[\gcd(a, b) = \gcd(b, r).\]
+<theorem> For $a, b \in \mathbb{Z}_{\geq 0}$ with $b \neq 0$, if 
+$$a = bq + r$$ 
+for $q, r \in \mathbb{Z}_{\geq 0}$ with $r < b$ then we have 
+$$\gcd(a, b) = \gcd(b, r).$$
 </theorem>
 
-<proof> Let \(g = \gcd(a, b)\) and \(d  = \gcd(b, r)\). As \(g\) divides \(a\) and \(b\), it also divides \(r = a - bq\).
-Thus \(g\) divides both \(b\) and \(r\) and thus by a previous theorem it divides their gcd, \(d\). </br></br>
+<proof> Let $g = \gcd(a, b)$ and $d  = \gcd(b, r)$. As $g$ divides $a$ and $b$, it also divides $r = a - bq$.
+Thus $g$ divides both $b$ and $r$ and thus by a previous theorem it divides their gcd, $d$. </br></br>
 
-Again by definition \(d\) divides \(b\) and \(r\). Therefore it divides \(a = bq + r\). Thus \(d\) divides
-both \(a\) and \(b\) and thus divides their gcd, \(g\). </br></br>
+Again by definition $d$ divides $b$ and $r$. Therefore it divides $a = bq + r$. Thus $d$ divides
+both $a$ and $b$ and thus divides their gcd, $g$. </br></br>
 
-By a previous result, as \(d\) divides \(g\) and conversely, \(d = g\), which is what we wanted to show.
+By a previous result, as $d$ divides $g$ and conversely, $d = g$, which is what we wanted to show.
 </proof>
 
-<theorem> (Euclid's algorithm) Given \(a, b \in \mathbb{Z}_{\geq 0}\) with \(b \neq 0\), we can compute \(\gcd(a, b)\)
+<theorem> (Euclid's algorithm) Given $a, b \in \mathbb{Z}_{\geq 0}$ with $b \neq 0$, we can compute $\gcd(a, b)$
 in finitely many steps.
 </theorem>
 
-<proof> Write \(r_{-1} = a, r_0 = b\). Given \(r_{i-1}, r_i \in \mathbb{Z}_{\geq 0}\) with \(r_i \neq 0\) we can use
-the division algorithm to find \(q_{i+1}, r_{i+1} \in \mathbb{Z}_{\geq 0}\) such that
-\[r_{i-1} = q_{i+1}r_i + r_{i+1},\]
-with \(r_{i+1} < r_i\). </br></br>
+<proof> Write $r_{-1} = a, r_0 = b$. Given $r_{i-1}, r_i \in \mathbb{Z}_{\geq 0}$ with $r_i \neq 0$ we can use
+the division algorithm to find $q_{i+1}, r_{i+1} \in \mathbb{Z}_{\geq 0}$ such that
+$$r_{i-1} = q_{i+1}r_i + r_{i+1},$$
+with $r_{i+1} < r_i$. </br></br>
 
-As the sequence \(r_{-1}, r_0, r_1, \ldots\) is stricly decreasing and starts at a finite value, and every \(r_i \geq 0\)
-we must eventually reach \(0\). </br></br>
+As the sequence $r_{-1}, r_0, r_1, \ldots$ is stricly decreasing and starts at a finite value, and every $r_i \geq 0$
+we must eventually reach $0$. </br></br>
 
-If \(r_k\) is the final nonzero remainder in the sequence then applying the previous theorem to each pair of consecutive
-remainders in turn, we see that \(\gcd(a, b) = \gcd(r_k, 0) = r_k\). In other words, the last nonzero remainder in the
-sequence is the gcd of \(a\) and \(b\). Thus we can compute \(\gcd(a, b)\) in finitely many steps. </br></br>
+If $r_k$ is the final nonzero remainder in the sequence then applying the previous theorem to each pair of consecutive
+remainders in turn, we see that $\gcd(a, b) = \gcd(r_k, 0) = r_k$. In other words, the last nonzero remainder in the
+sequence is the gcd of $a$ and $b$. Thus we can compute $\gcd(a, b)$ in finitely many steps. </br></br>
 </proof>
 
-<theorem> (Extended euclidean algorithm) Given \(a, b \in \mathbb{Z}_{\geq 0}\) with \(b \neq 0\), if \(d = \gcd(a, b)\)
-then we can find \(s, t \in \mathbb{Z}\) such that
-\[d = as + bt.\]
+<theorem> (Extended euclidean algorithm) Given $a, b \in \mathbb{Z}_{\geq 0}$ with $b \neq 0$, if $d = \gcd(a, b)$
+then we can find $s, t \in \mathbb{Z}$ such that
+$$d = as + bt.$$
 </theorem>
 
-<proof> Let \(r_k\) be the last nonzero remainder in the sequence given by the euclidean algorithm, i.e. 
-\(r_k = \gcd(a,b)\). Thus the final application of the division algorithm before we reached a nonzero remainder yielded
-\[r_{k-2} = q_kr_{k-1} + r_k.\]
+<proof> Let $r_k$ be the last nonzero remainder in the sequence given by the euclidean algorithm, i.e. 
+$r_k = \gcd(a,b)$. Thus the final application of the division algorithm before we reached a nonzero remainder yielded
+$$r_{k-2} = q_kr_{k-1} + r_k.$$
 
-Rewriting this we have \(r_k = r_{k-2} - q_kr_{k-1}\). But the previous application of the division algorithm can also
-be rewritten, giving \(r_{k-1}\) in terms of \(r_{k-2}\) and \(r_{k-3}\). Thus we can replace \(r_{k-1}\) in the
-expression for \(r_k\) yielding an expression for \(r_k\) in terms of \(r_{k-2}\) and \(r_{k-3}\) only. </br></br>
+Rewriting this we have $r_k = r_{k-2} - q_kr_{k-1}$. But the previous application of the division algorithm can also
+be rewritten, giving $r_{k-1}$ in terms of $r_{k-2}$ and $r_{k-3}$. Thus we can replace $r_{k-1}$ in the
+expression for $r_k$ yielding an expression for $r_k$ in terms of $r_{k-2}$ and $r_{k-3}$ only. </br></br>
 
 Rewriting each of the equations from previous applications of the division algorithm in turn and substituting, we
-eventually obtain an expression for \(r_k\) in terms of \(r_{-1}\) and \(r_0\) only, i.e. in terms of \(a\) and \(b\).
+eventually obtain an expression for $r_k$ in terms of $r_{-1}$ and $r_0$ only, i.e. in terms of $a$ and $b$.
 </br></br>
 
-As \(r_k = \gcd(a, b)\) we have an expression of the form \(\gcd(a, b) = as + bt\) for some \(s, t \in \mathbb{Z}\).
+As $r_k = \gcd(a, b)$ we have an expression of the form $\gcd(a, b) = as + bt$ for some $s, t \in \mathbb{Z}$.
 </proof>
 
-<corollary> Given \(a, b \in \mathbb{N}\) that are coprime, there exist \(s, t \in \mathbb{Z}\) such that
-\[as + bt = 1.\]
+<corollary> Given $a, b \in \mathbb{N}$ that are coprime, there exist $s, t \in \mathbb{Z}$ such that
+$$as + bt = 1.$$
 </corollary>
 
-<theorem> Given \(a, b\) as in the previous theorem with \(d = \gcd(a, b)\) we can find \(s, t \in \mathbb{Z}\) such that
-\[d = as + bt\]
-with either \(s = 0\), \(t = 1\) or \(s = 1\), \(t = 0\) or \(s\) and \(t\) have opposite signs and \(|s| < b\) and
-\(|t| < a\).
+<theorem> Given $a, b$ as in the previous theorem with $d = \gcd(a, b)$ we can find $s, t \in \mathbb{Z}$ such that
+$$d = as + bt$$
+with either $s = 0$, $t = 1$ or $s = 1$, $t = 0$ or $s$ and $t$ have opposite signs and $|s| < b$ and
+$|t| < a$.
 </theorem>
 
-<proof> If \(s = 0\) then \(d = bt\). As \(d \;|\; b\) then \(d = b\) and \(t = 1\). By symmetry if \(t = 0\), \(s = 1\).
+<proof> If $s = 0$ then $d = bt$. As $d \;|\; b$ then $d = b$ and $t = 1$. By symmetry if $t = 0$, $s = 1$.
 </br></br>
 
-If \(s, t \neq 0\) they aren't both negative, as \(d\) is not. And they can't both be positive, else \(d \geq a + b\) and
-\(a = 0\) or \(b = 0\). If so, pick \(s = 0\) or \(t = 0\). Otherwise \(s\) and \(t\) have opposite signs. </br></br>
+If $s, t \neq 0$ they aren't both negative, as $d$ is not. And they can't both be positive, else $d \geq a + b$ and
+$a = 0$ or $b = 0$. If so, pick $s = 0$ or $t = 0$. Otherwise $s$ and $t$ have opposite signs. </br></br>
 
-Without loss of generality, suppose \(s > 0\). If \(s \geq b\) we can decrease \(s\) by \(b\) and increase \(t\) by 
-\(a\). We can keep doing this until \(0 \leq s < b\). </br></br>
+Without loss of generality, suppose $s > 0$. If $s \geq b$ we can decrease $s$ by $b$ and increase $t$ by 
+$a$. We can keep doing this until $0 \leq s < b$. </br></br>
 
-Suppose that we still don't have either \(s = 0\) or \(t = 0\). As \(s < b\) we have \(as < ab\). As \(as\) and \(ab\)
-are both multiples of \(d\) we must have \(as \leq ab - d\). Suppose that \(-t > a\). Then \(-bt > ab\). But then \(as\)
-and \(-bt\) differ by more than \(d\), which is a contradiction. Thus \(-t \leq a\). </br></br>
+Suppose that we still don't have either $s = 0$ or $t = 0$. As $s < b$ we have $as < ab$. As $as$ and $ab$
+are both multiples of $d$ we must have $as \leq ab - d$. Suppose that $-t > a$. Then $-bt > ab$. But then $as$
+and $-bt$ differ by more than $d$, which is a contradiction. Thus $-t \leq a$. </br></br>
 
-If \(-t = a\) then \(a \;|\; d\) and \(a = d\). But then we take \(s = 1\), \(t = 0\). In the remaining case \(-t < a\).
+If $-t = a$ then $a \;|\; d$ and $a = d$. But then we take $s = 1$, $t = 0$. In the remaining case $-t < a$.
 </proof>
 
-<definition> Given \(n\) values \(a_1, a_2, \ldots a_n \in \mathbb{Z}_{\geq 0}\) we define their greatest common divisor
-to be the largest integer dividing all of them. We write \(\gcd(a_1, a_2, \ldots, a_n)\). Similarly if all the \(a_i\) 
+<definition> Given $n$ values $a_1, a_2, \ldots a_n \in \mathbb{Z}_{\geq 0}$ we define their greatest common divisor
+to be the largest integer dividing all of them. We write $\gcd(a_1, a_2, \ldots, a_n)$. Similarly if all the $a_i$ 
 are nonzero we define their least common multiple to be the smallest natural number which is divisible by all of the 
-\(a_i\). We write \(\lcm(a_1, a_2, \ldots, a_n)\).
+$a_i$. We write $\lcm(a_1, a_2, \ldots, a_n)$.
 </definition>
 
-<theorem>If \(a_1, a_2, \ldots a_n \in \mathbb{Z}_{\geq 0}\) then
-\[\gcd(a_1, a_2, \ldots, a_n) = \gcd(\ldots \gcd(\gcd(a_1, a_2), a_3), \ldots a_n).\]
+<theorem>If $a_1, a_2, \ldots a_n \in \mathbb{Z}_{\geq 0}$ then
+$$\gcd(a_1, a_2, \ldots, a_n) = \gcd(\ldots \gcd(\gcd(a_1, a_2), a_3), \ldots a_n).$$
 </theorem>
 
-<proof> Any divisor of the right side divides \(a_n\) and \(\gcd(\ldots \gcd(\gcd(a_1, a_2), a_3), \ldots a_{n-1})\). 
-Thus it divides \(a_{n-1}\), and so on. In fact it divides all of the \(a_i\). The right hand side itself thus divides 
-all the \(a_i\). The right hand side is therefore less than or equal to the left hand side, which is the largest such
+<proof> Any divisor of the right side divides $a_n$ and $\gcd(\ldots \gcd(\gcd(a_1, a_2), a_3), \ldots a_{n-1})$. 
+Thus it divides $a_{n-1}$, and so on. In fact it divides all of the $a_i$. The right hand side itself thus divides 
+all the $a_i$. The right hand side is therefore less than or equal to the left hand side, which is the largest such
 number. </br></br>
 
-But any divisor of the left hand side divides all the \(a_i\). We will show that it divides the right hand side. As it
-divides \(a_n\) it suffices to show it divides \(\gcd(\ldots \gcd(\gcd(a_1, a_2), a_3), \ldots a_{n-1})\). But again, as
-it divides \(a_{n-1}\) it suffices to show it divides \(\gcd(\ldots \gcd(\gcd(a_1, a_2), a_3), \ldots a_{n-2})\), etc. 
-Eventually it suffices to show it divides \(\gcd(a_1, a_2)\), which it does as it divides \(a_1\) and \(a_2\). </br></br>
+But any divisor of the left hand side divides all the $a_i$. We will show that it divides the right hand side. As it
+divides $a_n$ it suffices to show it divides $\gcd(\ldots \gcd(\gcd(a_1, a_2), a_3), \ldots a_{n-1})$. But again, as
+it divides $a_{n-1}$ it suffices to show it divides $\gcd(\ldots \gcd(\gcd(a_1, a_2), a_3), \ldots a_{n-2})$, etc. 
+Eventually it suffices to show it divides $\gcd(a_1, a_2)$, which it does as it divides $a_1$ and $a_2$. </br></br>
 
 Thus the left hand side itself divides the right hand side and is thus less than or equal to it. Combining the two 
 inequalities we see that both sides are equal.
 </proof>
 
-<corollary> If \(a_1, a_2, \ldots a_n \in \mathbb{Z}_{\geq 0}\) then
-\[\gcd(a_1, a_2, \ldots, a_n) = \gcd(\gcd(a_1, a_2, \ldots, a_{n-1}), a_n).\]
+<corollary> If $a_1, a_2, \ldots a_n \in \mathbb{Z}_{\geq 0}$ then
+$$\gcd(a_1, a_2, \ldots, a_n) = \gcd(\gcd(a_1, a_2, \ldots, a_{n-1}), a_n).$$
 </corollary>
 
-<theorem>If \(a_1, a_2, \ldots a_n \in \mathbb{N}\) then
-\[\lcm(a_1, a_2, \ldots, a_n) = \lcm(\ldots \lcm(\lcm(a_1, a_2), a_3), \ldots a_n).\]
+<theorem>If $a_1, a_2, \ldots a_n \in \mathbb{N}$ then
+$$\lcm(a_1, a_2, \ldots, a_n) = \lcm(\ldots \lcm(\lcm(a_1, a_2), a_3), \ldots a_n).$$
 </theorem>
 
 <proof> The theorem is dual to the previous one and follows by replacing "gcd" with "lcm", "divisor of" with 
@@ -260,147 +260,147 @@ inequalities we see that both sides are equal.
 "largest such" with "smallest such".
 </proof>
 
-<corollary> If \(a_1, a_2, \ldots a_n \in \mathbb{N}\) then
-\[\lcm(a_1, a_2, \ldots, a_n) = \lcm(\lcm(a_1, a_2, \ldots, a_{n-1}), a_n).\]
+<corollary> If $a_1, a_2, \ldots a_n \in \mathbb{N}$ then
+$$\lcm(a_1, a_2, \ldots, a_n) = \lcm(\lcm(a_1, a_2, \ldots, a_{n-1}), a_n).$$
 </corollary>
 
-<theorem> If \(a_1, a_2, \ldots a_n \in \mathbb{Z}_{\geq 0}\) then for any \(0 < r \leq n\)
-\[\gcd(\gcd(a_1, a_2, \ldots, a_r), \gcd(a_{r+1}, a_{r+2}, \ldots a_n)) = 
-\gcd(\gcd(a_1, a_2, \ldots, a_{r-1}), \gcd(a_r, a_{r+1}, \ldots a_n)).\]
+<theorem> If $a_1, a_2, \ldots a_n \in \mathbb{Z}_{\geq 0}$ then for any $0 < r \leq n$
+$$\gcd(\gcd(a_1, a_2, \ldots, a_r), \gcd(a_{r+1}, a_{r+2}, \ldots a_n)) = 
+\gcd(\gcd(a_1, a_2, \ldots, a_{r-1}), \gcd(a_r, a_{r+1}, \ldots a_n)).$$
 </theorem>
 
-<proof> The case \(r = n\) is precisely the corollary above (assuming we define \(\gcd(a_n) = a_n\)). Let us assume the 
-result is proven for \(r = k\) for some \(1 < k \leq n\). We will show it holds for \(r = k-1\). </br></br>
+<proof> The case $r = n$ is precisely the corollary above (assuming we define $\gcd(a_n) = a_n$). Let us assume the 
+result is proven for $r = k$ for some $1 < k \leq n$. We will show it holds for $r = k-1$. </br></br>
 
 Let 
-\[d = \gcd(\gcd(a_1, a_2, \ldots, a_k), \gcd(a_{k+1}, a_{k+2}, \ldots a_n)).\] 
+$$d = \gcd(\gcd(a_1, a_2, \ldots, a_k), \gcd(a_{k+1}, a_{k+2}, \ldots a_n)).$$ 
 Now in turn, by previous results we have 
-\[d = \gcd(\gcd(\gcd(a_1, a_2, \ldots, a_{k-1}), a_k), \gcd(a_{k+1}, a_{k+2}, \ldots a_n)),\]
-\[d = \gcd(\gcd(a_1, a_2, \ldots, a_{k-1}), a_k, \gcd(a_{k+1}, a_{k+2}, \ldots a_n)),\]
-\[d = \gcd(\gcd(a_1, a_2, \ldots, a_{k-1}), \gcd(a_k, \gcd(a_{k+1}, a_{k+2}, \ldots a_n))),\] 
+$$d = \gcd(\gcd(\gcd(a_1, a_2, \ldots, a_{k-1}), a_k), \gcd(a_{k+1}, a_{k+2}, \ldots a_n)),$$
+$$d = \gcd(\gcd(a_1, a_2, \ldots, a_{k-1}), a_k, \gcd(a_{k+1}, a_{k+2}, \ldots a_n)),$$
+$$d = \gcd(\gcd(a_1, a_2, \ldots, a_{k-1}), \gcd(a_k, \gcd(a_{k+1}, a_{k+2}, \ldots a_n))),$$ 
 observing that, by the definition of the gcd, reordering the terms does not change its value. Thus finally
-\[d = \gcd(\gcd(a_1, a_2, \ldots, a_{k-1}), \gcd(a_k, a_{k+1}, \ldots a_n)).\]
+$$d = \gcd(\gcd(a_1, a_2, \ldots, a_{k-1}), \gcd(a_k, a_{k+1}, \ldots a_n)).$$
 </proof>
 
-<theorem> If \(a_1, a_2, \ldots a_n \in \mathbb{N}\) then for any \(0 < r \leq n\)
-\[\lcm(\lcm(a_1, a_2, \ldots, a_r), \lcm(a_{r+1}, a_{r+2}, \ldots a_n)) = 
-\lcm(\lcm(a_1, a_2, \ldots, a_{r-1}), \lcm(a_r, a_{r+1}, \ldots a_n)).\]
+<theorem> If $a_1, a_2, \ldots a_n \in \mathbb{N}$ then for any $0 < r \leq n$
+$$\lcm(\lcm(a_1, a_2, \ldots, a_r), \lcm(a_{r+1}, a_{r+2}, \ldots a_n)) = 
+\lcm(\lcm(a_1, a_2, \ldots, a_{r-1}), \lcm(a_r, a_{r+1}, \ldots a_n)).$$
 </theorem>
 
 <proof> The proof is the same as that of the previous theorem with gcd replaced by lcm.
 </proof>
 
-<theorem> If \(a, b, c \in \mathbb{Z}_{\geq 0}\) then
-\[\gcd(ac, bc) = c\gcd(a, b).\]
+<theorem> If $a, b, c \in \mathbb{Z}_{\geq 0}$ then
+$$\gcd(ac, bc) = c\gcd(a, b).$$
 </theorem>
 
-<proof> If \(c = 0\) then both sides of the equality are zero. Thus it suffices to show the result for \(c > 0\). 
+<proof> If $c = 0$ then both sides of the equality are zero. Thus it suffices to show the result for $c > 0$. 
 </br></br>
 
-If \(a = bq + r\) with \(r < b\) from the division algorithm, then multiplying through by \(c\) we have 
-\(ac = (bc)q + (rc)\) with \(rc < bc\). Thus every remainder in the sequence of remainders of the euclidean algorithm
-will be multiplied by \(c\). In particular, the final nonzero remainder will be multiplied by \(c\), which is precisely
+If $a = bq + r$ with $r < b$ from the division algorithm, then multiplying through by $c$ we have 
+$ac = (bc)q + (rc)$ with $rc < bc$. Thus every remainder in the sequence of remainders of the euclidean algorithm
+will be multiplied by $c$. In particular, the final nonzero remainder will be multiplied by $c$, which is precisely
 the statement of the theorem.
 </proof>
 
-<corollary> If \(a_1, a_2, \ldots a_n, c \in \mathbb{Z}_{\geq 0}\) then
-\[\gcd(a_1c, a_2c, \ldots, a_nc) = c\gcd(a_1, a_2, \ldots, a_n).\]
+<corollary> If $a_1, a_2, \ldots a_n, c \in \mathbb{Z}_{\geq 0}$ then
+$$\gcd(a_1c, a_2c, \ldots, a_nc) = c\gcd(a_1, a_2, \ldots, a_n).$$
 </corollary>
 
-<theorem> If \(a, b, c \in \mathbb{N}\) then
-\[\lcm(ac, bc) = c\;\lcm(a, b).\]
+<theorem> If $a, b, c \in \mathbb{N}$ then
+$$\lcm(ac, bc) = c\;\lcm(a, b).$$
 </theorem>
 
-<proof> We recall that \(ab = \gcd(a, b)\lcm(a, b)\). Thus the previous theorem is equivalent to
-\[(ac)(bc)/\lcm(ac, bc) = abc/\lcm(a, b).\]
-Rearranging and cancelling \(abc\) from both sides gives us the result.
+<proof> We recall that $ab = \gcd(a, b)\lcm(a, b)$. Thus the previous theorem is equivalent to
+$$(ac)(bc)/\lcm(ac, bc) = abc/\lcm(a, b).$$
+Rearranging and cancelling $abc$ from both sides gives us the result.
 </proof>
 
-<corollary> If \(a_1, a_2, \ldots a_n, c \in \mathbb{N}\) then
-\[\lcm(a_1c, a_2c, \ldots, a_nc) = c\;\lcm(a_1, a_2, \ldots, a_n).\]
+<corollary> If $a_1, a_2, \ldots a_n, c \in \mathbb{N}$ then
+$$\lcm(a_1c, a_2c, \ldots, a_nc) = c\;\lcm(a_1, a_2, \ldots, a_n).$$
 </corollary>
 
-<theorem> If \(a_1, a_2, \ldots a_n \in \mathbb{N}\) then for any fixed \(0 < r < n\)
-\[a_1a_2\ldots a_n = \gcd(a_1a_2\cdots a_r, a_1a_2\cdots a_{r-1}a_{r+1}, \ldots)
-\lcm(a_1a_2\cdots a_{n-r}, a_1a_2\cdots a_{n-r-1}a_{n-r+1}, \ldots),\]
-where the gcd is of all products of the \(a_i\) taken \(r\) at a time and the lcm is of all products of the \(a_i\) taken
-\(n-r\) at a time.
+<theorem> If $a_1, a_2, \ldots a_n \in \mathbb{N}$ then for any fixed $0 < r < n$
+$$a_1a_2\ldots a_n = \gcd(a_1a_2\cdots a_r, a_1a_2\cdots a_{r-1}a_{r+1}, \ldots)
+\lcm(a_1a_2\cdots a_{n-r}, a_1a_2\cdots a_{n-r-1}a_{n-r+1}, \ldots),$$
+where the gcd is of all products of the $a_i$ taken $r$ at a time and the lcm is of all products of the $a_i$ taken
+$n-r$ at a time.
 </theorem>
 
-<proof> By a previous theorem the result is true for \(n = 2\). Let us assume it is proved for \(n = k-1\). </br></br>
+<proof> By a previous theorem the result is true for $n = 2$. Let us assume it is proved for $n = k-1$. </br></br>
 
-Let us denote the gcd on the right side of the theorem with \(n = k\) by \(\gcd_r(a_1, \ldots, a_k)\) and the lcm by 
-\(\lcm_{n-r}(a_1, \ldots, a_k)\). With this notation, note that
-\[\mbox{gcd}_r(a_1, \ldots, a_k) = 
-\mbox{gcd}(\mbox{gcd}_r(a_1, \ldots, a_{k-1}), a_n\;\mbox{gcd}_{r-1}(a_1, \ldots, a_{k-1})).\]
+Let us denote the gcd on the right side of the theorem with $n = k$ by $\gcd_r(a_1, \ldots, a_k)$ and the lcm by 
+$\lcm_{n-r}(a_1, \ldots, a_k)$. With this notation, note that
+$$\mbox{gcd}_r(a_1, \ldots, a_k) = 
+\mbox{gcd}(\mbox{gcd}_r(a_1, \ldots, a_{k-1}), a_n\;\mbox{gcd}_{r-1}(a_1, \ldots, a_{k-1})).$$
 
-If we multiply this by \(L = \lcm_{k-r-1}(a_1, \ldots, a_{k-1})\) then by the assumption we obtain the value
-\[\mbox{gcd}(a_1a_2\ldots a_{k-1}, a_k\;\mbox{gcd}_{r-1}(a_1, \ldots a_{k-1})\lcm_{k-r-1}(a_1, \ldots, a_{k-1})).\] 
+If we multiply this by $L = \lcm_{k-r-1}(a_1, \ldots, a_{k-1})$ then by the assumption we obtain the value
+$$\mbox{gcd}(a_1a_2\ldots a_{k-1}, a_k\;\mbox{gcd}_{r-1}(a_1, \ldots a_{k-1})\lcm_{k-r-1}(a_1, \ldots, a_{k-1})).$$ 
 
-Similarly, if we multiply the lcm on the right side of the theorem by \(G = \gcd_{r-1}(a_1, ..., a_{k-1})\), we obtain
-\[\lcm(a_1a_2\ldots a_{k-1}, a_k\;\mbox{gcd}_{r-1}(a_1, \ldots a_{k-1})\lcm_{k-r-1}(a_1, \ldots, a_{k-1})).\] 
+Similarly, if we multiply the lcm on the right side of the theorem by $G = \gcd_{r-1}(a_1, ..., a_{k-1})$, we obtain
+$$\lcm(a_1a_2\ldots a_{k-1}, a_k\;\mbox{gcd}_{r-1}(a_1, \ldots a_{k-1})\lcm_{k-r-1}(a_1, \ldots, a_{k-1})).$$ 
 
-Multiplying these we obtain \(LG\) times the left side of the theorem for \(n = k\), from which the result follows.
+Multiplying these we obtain $LG$ times the left side of the theorem for $n = k$, from which the result follows.
 </proof>
 
-<theorem> (Distributive law) Let \(a, b, c \in \mathbb{N}\), then
-\[\lcm(a, \gcd(b, c)) = \gcd(\lcm(a, b), \lcm(a, c)).\]
+<theorem> (Distributive law) Let $a, b, c \in \mathbb{N}$, then
+$$\lcm(a, \gcd(b, c)) = \gcd(\lcm(a, b), \lcm(a, c)).$$
 </theorem>
 
-<proof> Note \(a\) divides both \(\lcm(a, b)\) and \(\lcm(a, c)\). Thus it divides their gcd, which is the 
-right side of the identity. Similarly \(\gcd(b, c)\) divides \(b\) and hence \(\lcm(a, b)\), and \(c\) and hence
-\(\lcm(a, c)\). Thus \(\gcd(b, c)\) divides the right side of the identity. But as \(a\) and \(\gcd(b, c)\) both
+<proof> Note $a$ divides both $\lcm(a, b)$ and $\lcm(a, c)$. Thus it divides their gcd, which is the 
+right side of the identity. Similarly $\gcd(b, c)$ divides $b$ and hence $\lcm(a, b)$, and $c$ and hence
+$\lcm(a, c)$. Thus $\gcd(b, c)$ divides the right side of the identity. But as $a$ and $\gcd(b, c)$ both
 divide the right side, then so must their lcm. Thus the left side of the identity divides the right. </br></br>
 
-Any divisor of the right side must divide both \(\lcm(a, b)\) and \(\lcm(a, c)\), i.e. it must divide 
-\(ab/\gcd(a, b)\) and \(ac/\gcd(a, c)\). Thus it must divide \(a\gcd(b/\gcd(a, b), c/\gcd(a, c))\). It then certainly 
-divides \(a\gcd(b/\gcd(a, b, c), c/\gcd(a, b, c)) = a\gcd(b, c)/\gcd(a, b, c)\). However, this is precisely the left hand 
+Any divisor of the right side must divide both $\lcm(a, b)$ and $\lcm(a, c)$, i.e. it must divide 
+$ab/\gcd(a, b)$ and $ac/\gcd(a, c)$. Thus it must divide $a\gcd(b/\gcd(a, b), c/\gcd(a, c))$. It then certainly 
+divides $a\gcd(b/\gcd(a, b, c), c/\gcd(a, b, c)) = a\gcd(b, c)/\gcd(a, b, c)$. However, this is precisely the left hand 
 side of the identity. Thus the right side of the identity divides the left. </br></br>
 
 As the left side divides the right and conversely, the two sides are equal.
 </proof>
 
-<theorem> (Distributive law) Let \(a, b, c \in \mathbb{N}\), then
-\[\gcd(a, \lcm(b, c)) = \lcm(gcd(a, b), \gcd(a, c)).\]
+<theorem> (Distributive law) Let $a, b, c \in \mathbb{N}$, then
+$$\gcd(a, \lcm(b, c)) = \lcm(gcd(a, b), \gcd(a, c)).$$
 </theorem>
 
 <proof> The proof is exactly dual to that of the previous distributive law.
 </proof>
 
-<theorem> Let \(a, b, c \in \mathbb{N}\), then
-\[\gcd(\lcm(a,b), \lcm(b,c), \lcm(a,c)) = \lcm(\gcd(a,b), \gcd(b,c), \gcd(a,c)).\]
+<theorem> Let $a, b, c \in \mathbb{N}$, then
+$$\gcd(\lcm(a,b), \lcm(b,c), \lcm(a,c)) = \lcm(\gcd(a,b), \gcd(b,c), \gcd(a,c)).$$
 </theorem>
 
 <proof> Let us rewrite the right side of the identity. It is in turn 
-\[\lcm(\gcd(a,b), \lcm(\gcd(b,c), \gcd(a,c))) 
-= \frac{\gcd(a,b)\lcm(\gcd(b,c), \gcd(a,c))}{\gcd(\gcd(a,b), \lcm(\gcd(b,c), \gcd(a,c)))}\]
+$$\lcm(\gcd(a,b), \lcm(\gcd(b,c), \gcd(a,c))) 
+= \frac{\gcd(a,b)\lcm(\gcd(b,c), \gcd(a,c))}{\gcd(\gcd(a,b), \lcm(\gcd(b,c), \gcd(a,c)))}$$
 
-\[= \frac{\gcd(a,b)\lcm(\gcd(b,c), \gcd(a,c))}{\gcd(a,b,c, \lcm(a,b))} 
-= \frac{\gcd(a,b)\lcm(\gcd(b,c), \gcd(a,c))}{\gcd(a,b,c)}\]
+$$= \frac{\gcd(a,b)\lcm(\gcd(b,c), \gcd(a,c))}{\gcd(a,b,c, \lcm(a,b))} 
+= \frac{\gcd(a,b)\lcm(\gcd(b,c), \gcd(a,c))}{\gcd(a,b,c)}$$
 
-\[= \frac{\gcd(a,b)\gcd(c,\lcm(a,b))}{\gcd(a,b,c)} = \frac{\gcd(c \gcd(a,b), ab)}{\gcd(a,b,c)} 
-= \frac{\gcd(ac, bc, ac)}{\gcd(a,b,c)}.\]
+$$= \frac{\gcd(a,b)\gcd(c,\lcm(a,b))}{\gcd(a,b,c)} = \frac{\gcd(c \gcd(a,b), ab)}{\gcd(a,b,c)} 
+= \frac{\gcd(ac, bc, ac)}{\gcd(a,b,c)}.$$
 
 By a dual argument the left side of the identity is 
-\[\frac{\lcm(ac, bc, ac)}{\lcm(a,b,c)}.\] 
+$$\frac{\lcm(ac, bc, ac)}{\lcm(a,b,c)}.$$ 
 
-The result now follows since \(\lcm(ac, bc, ac)\gcd(a, b, c) = abc\) and its dual hold by a previous theorem.
+The result now follows since $\lcm(ac, bc, ac)\gcd(a, b, c) = abc$ and its dual hold by a previous theorem.
 </proof>
 
-<theorem> Let \(a, b, c \in \mathbb{N}\), then
-\[\frac{\lcm(a,b)\lcm(b,c)\lcm(c,a)}{\gcd(a,b)\gcd(b,c)\gcd(c,a)} 
-= \frac{\lcm(a,b,c)^2}{\gcd(a,b,c)^2}.\]
+<theorem> Let $a, b, c \in \mathbb{N}$, then
+$$\frac{\lcm(a,b)\lcm(b,c)\lcm(c,a)}{\gcd(a,b)\gcd(b,c)\gcd(c,a)} 
+= \frac{\lcm(a,b,c)^2}{\gcd(a,b,c)^2}.$$
 </theorem>
 
 <proof> By the previous theorem, this is equivalent to showing that the left side is equal to
-\[\frac{\lcm(a,b,c)^2\gcd(\lcm(a,b), \lcm(c,a), \lcm(b,c))}{\gcd(a,b,c)^2\lcm(\gcd(a,b), \gcd(b,c), \gcd(a,c))}.\]
+$$\frac{\lcm(a,b,c)^2\gcd(\lcm(a,b), \lcm(c,a), \lcm(b,c))}{\gcd(a,b,c)^2\lcm(\gcd(a,b), \gcd(b,c), \gcd(a,c))}.$$
 
 The result follows from the following argument and its dual
-\[\frac{\lcm(a,b)\lcm(b,c)\lcm(c,a)}{\gcd(\lcm(a,b), \lcm(c,a), \lcm(b,c))}
-= \lcm(\lcm(a,b)\lcm(c,a), \lcm(c,a)\lcm(b,c), \lcm(a,b)\lcm(b,c))\]
-\[= \lcm(\lcm(c,a)\lcm(\lcm(a,b), \lcm(b,c)), \lcm(a,b)\lcm(b,c))\] \[= \lcm(\lcm(c,a)\lcm(a,b,c), \lcm(a,b)\lcm(b,c))\]
-\[= \lcm(\lcm(c,a)\lcm(a,b,c), \lcm(\lcm(a,b), \lcm(b,c))\gcd(\lcm(a,b),\lcm(b,c)))\]
-\[= \lcm(\lcm(c,a)\lcm(a,b,c), \lcm(a,b,c)\gcd(\lcm(a,b),\lcm(b,c)))\]
-\[= \lcm(a,b,c)\lcm(\lcm(c,a), \gcd(\lcm(a,b),\lcm(b,c)))\] \[= \lcm(a,b,c)\lcm(\lcm(c,a), \lcm(b,\gcd(a,c)))\]
-\[= \lcm(a,b,c)\lcm(a,b,c,\gcd(a,c)) = \lcm(a,b,c)^2.\]
+$$\frac{\lcm(a,b)\lcm(b,c)\lcm(c,a)}{\gcd(\lcm(a,b), \lcm(c,a), \lcm(b,c))}
+= \lcm(\lcm(a,b)\lcm(c,a), \lcm(c,a)\lcm(b,c), \lcm(a,b)\lcm(b,c))$$
+$$= \lcm(\lcm(c,a)\lcm(\lcm(a,b), \lcm(b,c)), \lcm(a,b)\lcm(b,c))$$ $$= \lcm(\lcm(c,a)\lcm(a,b,c), \lcm(a,b)\lcm(b,c))$$
+$$= \lcm(\lcm(c,a)\lcm(a,b,c), \lcm(\lcm(a,b), \lcm(b,c))\gcd(\lcm(a,b),\lcm(b,c)))$$
+$$= \lcm(\lcm(c,a)\lcm(a,b,c), \lcm(a,b,c)\gcd(\lcm(a,b),\lcm(b,c)))$$
+$$= \lcm(a,b,c)\lcm(\lcm(c,a), \gcd(\lcm(a,b),\lcm(b,c)))$$ $$= \lcm(a,b,c)\lcm(\lcm(c,a), \lcm(b,\gcd(a,c)))$$
+$$= \lcm(a,b,c)\lcm(a,b,c,\gcd(a,c)) = \lcm(a,b,c)^2.$$
 </proof>
