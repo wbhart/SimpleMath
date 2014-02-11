@@ -5,13 +5,16 @@ title: Simplemath
 
 <h2>Divisibility</h2>
 
+$x^2 = 2$
+
 <definition>The <u>integers</u> are the counting numbers,  positive, negative and zero, i.e. 
 \(\ldots, -2, -1, 0, 1, 2, \ldots\). We denote the set of integers by \(\mathbb{Z}\). We sometimes write 
 \(\mathbb{Z}_{\geq 0}\) for the set of integers greater than or equal to zero, etc.
 </definition>
 
 <definition> For integers \(a\) and \(b \neq 0\) we say that \(a\) is <u>divisible</u> by \(b\) (or that 
-\(b\) <u>divides</u> \(a\)) if there is an integer \(c\) such that \(a = bc\). We write \(b \;|\; a\).
+\(b\) <u>divides</u> \(a\) or \(a\) is a <u>multiple</u> of \(b\)) if there is an integer \(c\) such that \(a = bc\).
+We write \(b \;|\; a\).
 </definition>
 
 <definition> For \(a \in \mathbb{Z}\) we define \(|a|\) to be \(-a\) if \(a < 0\) and \(a\) if \(a \geq 0\). 
@@ -41,6 +44,17 @@ and \(a = b + (c-1)b > b\), as \(c-1) \geq 0\).
 <proof> We can write \(b = ua\) and \(c = vb\) for some integers \(u, v\). But then \(c = vb = vua\), i.e. \(c\) 
 is a multiple of \(a\). 
 </proof> 
+
+<theorem> If \(a, b, n \in \mathbb{Z}\) and \(n\) divides \(a\) and \(b\) then \(n\) divides \(as + bt\) for all integers
+\(s\) and \(t\).
+</theorem>
+
+<proof> By assumption there exist \(c, d \in \mathbb{Z}\) such that \(a = cn\) and \(b = dn\). Thus 
+\(as + bt = cns + dnt = n(cs + dt).\) In other words \(as + bt\) is divisible by \(n\).
+</proof>
+
+<corollary> If \(a, b, n \in \mathbb{Z}\) and \(n\) divides \(a\) and \(b\) then \(n\) divides \(a + b\) and \(a - b\).
+</corollary>
 
 <theorem> (Division algorithm) If \(a, b \in \mathbb{Z}_{\geq 0}\) with \(b \neq 0\) then there exist 
 \(q, r \in \mathbb{Z}_{\geq 0}\) such that \(a = bq + r\), and \(0 \leq r < b\).
