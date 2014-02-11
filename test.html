@@ -375,3 +375,26 @@ By a dual argument the left side of the identity is
 The result now follows since \(\mbox{lcm}(ac, bc, ac)\gcd(a, b, c) = abc\) and its dual hold by a previous theorem.
 </proof>
 
+<theorem> Let \(a, b, c \in \mathbb{N}\), then
+\[\frac{\gcd(a,b)\gcd(b,c)\gcd(c,a)}{\mbox{lcm}(a,b)\mbox{lcm}(b,c)\mbox{lcm}(c,a)} 
+= \frac{\gcd(a,b,c)^2}{\mbox{lcm}(a,b,c)^2}.\]
+</theorem>
+
+<proof> By the previous theorem, this is equivalent to showing that the left side is equal to
+\[\frac{\gcd(a,b,c)^2\mbox{lcm}(\gcd(a,b), \gcd(b,c), \gcd(a,c))}
+{\mbox{lcm}(a,b,c)^2\gcd(\mbox{lcm}(a,b), \mbox{lcm}(c,a), \mbox{lcm}(b,c))}.\]
+
+We have that
+\[\frac{\mbox{lcm}(a,b)\mbox{lcm}(b,c)\mbox{lcm}(c,a)}{\gcd(\mbox{lcm}(a,b), \mbox{lcm}(c,a), \mbox{lcm}(b,c))}
+= \mbox{lcm}(\mbox{lcm}(a,b)\mbox{lcm}(c,a), \mbox{lcm}(c,a)\mbox{lcm}(b,c), \mbox{lcm}(a,b)\mbox{lcm}(b,c))\]
+\[= \mbox{lcm}(\mbox{lcm}(c,a) \mbox{lcm}(\mbox{lcm}(a,b), \mbox{lcm}(b,c)), \mbox{lcm}(a,b)\mbox{lcm}(b,c))\]
+\[= \mbox{lcm}(\mbox{lcm}(c,a) \mbox{lcm}(a,b,c), \mbox{lcm}(a,b)\mbox{lcm}(b,c))\]
+\[= \mbox{lcm}(\mbox{lcm}(c,a) \mbox{lcm}(a,b,c), \mbox{lcm}(\mbox{lcm}(a,b),\mbox{lcm}(b,c))
+gcd(\mbox{lcm}(a,b),\mbox{lcm}(b,c)))\]
+\[= \mbox{lcm}(\mbox{lcm}(c,a) \mbox{lcm}(a,b,c), \mbox{lcm}(a,b,c)gcd(\mbox{lcm}(a,b),\mbox{lcm}(b,c)))\]
+\[= \mbox{lcm}(a,b,c)\mbox{lcm}(\mbox{lcm}(c,a), gcd(\mbox{lcm}(a,b),\mbox{lcm}(b,c)))\]
+\[= \mbox{lcm}(a,b,c)\mbox{lcm}(\mbox{lcm}(c,a), \mbox{lcm}(b,gcd(a,c))) = \mbox{lcm}(a,b,c)\mbox{lcm}(a,b,c,gcd(a,c))\]
+\[= \mbox{lcm}(a,b,c)^2.\]
+
+From this and its dual, the result follows.
+</proof>
