@@ -83,6 +83,25 @@ $r' \geq 0$. Then $b + r' = a - bq$, i.e. $r' = a - b(q + 1)$. But as $r' \geq 0
 is a larger multiple of $b$ not exceeding $a$ than $bq$, which is a contradiction. Thus $r < b$ after all.
 </proof> 
 
+<definition> Given $a, b \in \Z_{\geq 0}$ with $b \neq 0$ and $q, r$ as given by the division algorithm, we call $q$ the
+<u>quotient</u> of $a$ by $b$ and $r$ the (least non-negative) <u>remainder</u>.
+</definition>
+
+<theorem> If $a, b \in \Z_{\geq 0}$ with $b \neq 0$ then there exist 
+$q \in \Z_{\geq 0}$ and $r \in \Z$ such that $a = bq + r$, and $-b/2 < r \leq b/2$.
+</theorem>
+
+<proof> We take $r'$ to be the least non-negative remainder, and $q'$ the associated quotient. If $r' > b/2$ we set
+$r = r' - b$ and $q = q' + 1$, otherwise we take $r = r'$ and $q = q'$.
+
+In the first case $0 = b - b > r = r' - b > b/2 - b = -b/2$ and $bq + r = b(q' + 1) + r' - b = bq' + r' = a$. 
+
+In the second case $0 \leq r = r' \leq b/2$ and $bq + r = bq' + r' = a$.
+</proof>
+
+<definitio> We call $r'$ in the previous theorem the <u>least absolute remainder</u>.
+</definitio>
+
 <h2>GCD and LCM</h2>
 
 <definition> The <u>greatest common divisor</u> of two natural numbers $b$ and $c$, denoted $\gcd(b, c)$ is the 
