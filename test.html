@@ -267,6 +267,26 @@ are nonzero we define their least common multiple to be the smallest natural num
 $a_i$. We write $\lcm(a_1, a_2, \ldots, a_n)$.
 </definition>
 
+<theorem> (Absorption law) If $a_1, a_2 \in \Z_{\geq 0}$ then
+$$\gcd(a, \lcm(a, b)) = a.$$
+</theorem>
+
+<proof> As $a$ divides $\lcm(a, b)$ we have that $a$ is a common divisor of $a$ and $\lcm(a, b)$. It is therefore less
+than or equal to their greatest common divisor. </br></br>
+
+However their gcd must divide $a$ and so $\gcd(a, \lcm(a, b))$ is less than or equal to $a$. </br></br>
+
+We have shown the left side of the identity divides the right and conversely, thus the two sides are equal.
+</proof>
+
+<theorem> (Absorption law) If $a_1, a_2 \in \Z_{\geq 0}$ then
+$$\lcm(a, \gcd(a, b)) = a.$$
+</theorem>
+
+<proof> $\gcd(a, b)$ divides $a$ and thus $a$ is a common multiple of them both. However any such common multiple much be
+divisible by $a$ and hence greater than or equal to $a$. Thus $a$ is the least common multiple.
+</proof>
+
 <theorem>If $a_1, a_2, \ldots a_n \in \Z_{\geq 0}$ then
 $$\gcd(a_1, a_2, \ldots, a_n) = \gcd(\ldots \gcd(\gcd(a_1, a_2), a_3), \ldots a_n).$$
 </theorem>
