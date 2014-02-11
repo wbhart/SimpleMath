@@ -336,13 +336,14 @@ Multiplying these we obtain \(LG\) times the left side of the theorem for \(n = 
 </theorem>
 
 <proof> Note \(a\) divides both \(\mbox{lcm}(a, b)\) and \(\mbox{lcm}(a, c)\). Thus it divides their gcd, which is the 
-right side of the theorem. Similarly \(\gcd(b, c)\) divides \(b\) and hence \(\mbox{lcm}(a, b)\), and \(c\) and hence
-\(\mbox{lcm}(a, c)\). Thus \(\gcd(b, c)\) divides the right side of the theorem. But as \(a\) and \(\gcd(b, c)\) both
-divide the right side, then so must their lcm. Thus the left side of the theorem divides the right. The left side is
-therefore less than or equal to the right side.
+right side of the identity. Similarly \(\gcd(b, c)\) divides \(b\) and hence \(\mbox{lcm}(a, b)\), and \(c\) and hence
+\(\mbox{lcm}(a, c)\). Thus \(\gcd(b, c)\) divides the right side of the identity. But as \(a\) and \(\gcd(b, c)\) both
+divide the right side, then so must their lcm. Thus the left side of the identity divides the right. </br></br>
 
-...
-</br></br>
+Any divisor \(n\) of the right side must divide both \(\mbox{lcm}(a, b)\) and \(\mbox{lcm}(a, c)\), i.e. it must 
+divide \(ab/\gcd(a, b)\) and \(ac/\gcd(a, c)\). Thus it must divide \(a\gcd(b/\gcd(a, b), c/\gcd(a, c)\). It then 
+certainly divides \(a\gcd(b/\gcd(a, b, c), c/\gcd(a, b, c) = a\gcd(b, c)/\gcd(a, b, c)\). However, this is precisely the 
+left hand side of the identity. 
 
 As the left side divides the right and conversely, the two sides are equal.
 </proof>
