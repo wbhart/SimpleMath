@@ -54,6 +54,14 @@ $as + bt = cns + dnt = n(cs + dt).$ In other words $as + bt$ is divisible by $n$
 <corollary> If $a, b, n \in \mathbb{Z}$ and $n$ divides $a$ and $b$ then $n$ divides $a + b$ and $a - b$.
 </corollary>
 
+<theorem> If $a, b, c \in \mathbb{Z}$ with $c \neq 0$ then $ac \;|\; bc$ iff $a \;|\; b$.
+</theorem>
+
+<proof> If $ac \;|\; bc$ then there exists $d \in \mathbb{Z}$ such that $acd = bc$. As $c \neq 0$ we can divide through
+by $c$, which gives $ad = b$, i.e. $a \;|\; b$. Conversely, if $a \;|\; b$ then there exists $d \in \mathbb{Z}$ such that
+$ad = b$. Multiplying through by $c$ we get $acd = bc$ which implies $ac \;|\; bc$.
+</proof>
+
 <theorem> (Division algorithm) If $a, b \in \mathbb{Z}_{\geq 0}$ with $b \neq 0$ then there exist 
 $q, r \in \mathbb{Z}_{\geq 0}$ such that $a = bq + r$, and $0 \leq r < b$.
 </theorem> 
