@@ -376,13 +376,13 @@ The result now follows since \(\mbox{lcm}(ac, bc, ac)\gcd(a, b, c) = abc\) and i
 </proof>
 
 <theorem> Let \(a, b, c \in \mathbb{N}\), then
-\[\frac{\gcd(a,b)\gcd(b,c)\gcd(c,a)}{\mbox{lcm}(a,b)\mbox{lcm}(b,c)\mbox{lcm}(c,a)} 
-= \frac{\gcd(a,b,c)^2}{\mbox{lcm}(a,b,c)^2}.\]
+\[\frac{\mbox{lcm}(a,b)\mbox{lcm}(b,c)\mbox{lcm}(c,a)}{\gcd(a,b)\gcd(b,c)\gcd(c,a)} 
+= \frac{\mbox{lcm}(a,b,c)^2}{\gcd(a,b,c)^2}.\]
 </theorem>
 
 <proof> By the previous theorem, this is equivalent to showing that the left side is equal to
-\[\frac{\gcd(a,b,c)^2\mbox{lcm}(\gcd(a,b), \gcd(b,c), \gcd(a,c))}
-{\mbox{lcm}(a,b,c)^2\gcd(\mbox{lcm}(a,b), \mbox{lcm}(c,a), \mbox{lcm}(b,c))}.\]
+\[\frac{\mbox{lcm}(a,b,c)^2\gcd(\mbox{lcm}(a,b), \mbox{lcm}(c,a), \mbox{lcm}(b,c))}
+{\gcd(a,b,c)^2\mbox{lcm}(\gcd(a,b), \gcd(b,c), \gcd(a,c))}.\]
 
 We have that
 \[\frac{\mbox{lcm}(a,b)\mbox{lcm}(b,c)\mbox{lcm}(c,a)}{\gcd(\mbox{lcm}(a,b), \mbox{lcm}(c,a), \mbox{lcm}(b,c))}
