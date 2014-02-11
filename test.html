@@ -354,3 +354,22 @@ As the left side divides the right and conversely, the two sides are equal.
 
 <proof> The proof is exactly dual to that of the previous distributive law.
 </proof>
+
+<theorem> Let \(a, b, c \in \mathbb{N}\), then
+\(\gcd(\mbox{lcm}(a,b), \mbox{lcm}(b,c), \mbox{lcm}(a,c)) = \mbox{lcm}(\gcd(a,b), \gcd(b,c), \gcd(a,c)).\]
+</theorem>
+
+<proof> Let us rewrite the right side of the identity. It is in turn 
+\[\mbox{lcm}(\gcd(a,b), \mbox{lcm}(\gcd(b,c), \gcd(a,c))) 
+= \frac{\gcd(a,b)\mbox{lcm}(\gcd(b,c), \gcd(a,c))}{\gcd(\gcd(a,b), \mbox{lcm}(\gcd(b,c), \gcd(a,c)))}\]
+
+\[= \frac{\gcd(a,b)\mbox{lcm}(\gcd(b,c), \gcd(a,c))}{\gcd(a,b,c, \mbox{lcm}(a,b))} 
+= \frac{\gcd(a,b)\mbox{lcm}(\gcd(b,c), \gcd(a,c))}{\gcd(a,b,c)}\]
+
+\[= \frac{\gcd(a,b)\gcd(c,\mbox{lcm}(a,b))}{\gcd(a,b,c)} = \frac{\gcd(c \gcd(a,b), ab)}{\gcd(a,b,c)} 
+= \frac{\gcd(ac, bc, ac)}{\gcd(a,b,c)}.\]
+
+By a dual argument the left side of the identity is \(\frac{\mbox{lcm}(ac, bc, ac)}{\mbox{lcm}(a,b,c)}\). The result now
+follows since \(\mbox{lcm}(ac, bc, ac)\gcd(a, b, c) = abc\) and its dual hold by a previous theorem.
+</proof>
+
