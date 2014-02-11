@@ -383,20 +383,14 @@ The result now follows since \(\mbox{lcm}(ac, bc, ac)\gcd(a, b, c) = abc\) and i
 </theorem>
 
 <proof> By the previous theorem, this is equivalent to showing that the left side is equal to
-\[\frac{\mbox{lcm}(a,b,c)^2\gcd(\mbox{lcm}(a,b), \mbox{lcm}(c,a), \mbox{lcm}(b,c))}
-{\gcd(a,b,c)^2\mbox{lcm}(\gcd(a,b), \gcd(b,c), \gcd(a,c))}.\]
+\[\frac{\lcm(a,b,c)^2\gcd(\lcm(a,b), \lcm(c,a), \lcm(b,c))}{\gcd(a,b,c)^2\lcm(\gcd(a,b), \gcd(b,c), \gcd(a,c))}.\]
 
-We have that
-\[\frac{\lcm(a,b)\mbox{lcm}(b,c)\mbox{lcm}(c,a)}{\gcd(\mbox{lcm}(a,b), \mbox{lcm}(c,a), \mbox{lcm}(b,c))}
-= \mbox{lcm}(\mbox{lcm}(a,b)\mbox{lcm}(c,a), \mbox{lcm}(c,a)\mbox{lcm}(b,c), \mbox{lcm}(a,b)\mbox{lcm}(b,c))\]
-\[= \mbox{lcm}(\mbox{lcm}(c,a) \mbox{lcm}(\mbox{lcm}(a,b), \mbox{lcm}(b,c)), \mbox{lcm}(a,b)\mbox{lcm}(b,c))\]
-\[= \mbox{lcm}(\mbox{lcm}(c,a) \mbox{lcm}(a,b,c), \mbox{lcm}(a,b)\mbox{lcm}(b,c))\]
-\[= \mbox{lcm}(\mbox{lcm}(c,a) \mbox{lcm}(a,b,c), \mbox{lcm}(\mbox{lcm}(a,b),\mbox{lcm}(b,c))
-gcd(\mbox{lcm}(a,b),\mbox{lcm}(b,c)))\]
-\[= \mbox{lcm}(\mbox{lcm}(c,a) \mbox{lcm}(a,b,c), \mbox{lcm}(a,b,c)\gcd(\mbox{lcm}(a,b),\mbox{lcm}(b,c)))\]
-\[= \mbox{lcm}(a,b,c)\mbox{lcm}(\mbox{lcm}(c,a), \gcd(\mbox{lcm}(a,b),\mbox{lcm}(b,c)))\]
-\[= \mbox{lcm}(a,b,c)\mbox{lcm}(\mbox{lcm}(c,a), \mbox{lcm}(b,\gcd(a,c)))\]
-\[= \mbox{lcm}(a,b,c)\mbox{lcm}(a,b,c,\gcd(a,c)) = \mbox{lcm}(a,b,c)^2.\]
-
-From this and its dual, the result follows.
+The result follows from the following argument and its dual
+\[\frac{\lcm(a,b)\lcm(b,c)\lcm(c,a)}{\gcd(\lcm(a,b), \lcm(c,a), \lcm(b,c))}
+= \lcm(\lcm(a,b)\lcm(c,a), \lcm(c,a)\lcm(b,c), \lcm(a,b)\lcm(b,c))\]
+\[= \lcm(\lcm(c,a)\lcm(\lcm(a,b), \lcm(b,c)), \lcm(a,b)\lcm(b,c))\] \[= \lcm(\lcm(c,a)\lcm(a,b,c), \lcm(a,b)\lcm(b,c))\]
+\[= \lcm(\lcm(c,a)\lcm(a,b,c), \lcm(\lcm(a,b), \lcm(b,c))\gcd(\lcm(a,b),\lcm(b,c)))\]
+\[= \lcm(\lcm(c,a)\lcm(a,b,c), \lcm(a,b,c)\gcd(\lcm(a,b),\lcm(b,c)))\]
+\[= \lcm(a,b,c)\lcm(\lcm(c,a), \gcd(\lcm(a,b),\lcm(b,c)))\] \[= \lcm(a,b,c)\lcm(\lcm(c,a), \lcm(b,\gcd(a,c)))\]
+\[= \lcm(a,b,c)\lcm(a,b,c,\gcd(a,c)) = \lcm(a,b,c)^2.\]
 </proof>
