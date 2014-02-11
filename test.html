@@ -62,56 +62,56 @@ By convention we also define \(\gcd(b, 0) = b\), \(\gcd(0, c) = c\) and \(\gcd(0
 \(b, c \in \mathbb{N}\).  
 </definition> 
 
-<definition> The <u>least common multiple</u> of two natural numbers \(b\) and \(c\), denoted \(\mbox{lcm}(b, c)\) is 
+<definition> The <u>least common multiple</u> of two natural numbers \(b\) and \(c\), denoted \(\lcm(b, c)\) is 
 the smallest natural number which is divisible by both \(b\) and \(c\).
 </definition> 
 
-<theorem> If \(c = \mbox{lcm}(a, b)\) then \(c\) divides any common multiple of \(a\) and \(b\).
+<theorem> If \(c = \lcm(a, b)\) then \(c\) divides any common multiple of \(a\) and \(b\).
 </theorem> 
 
 <proof> Assume \(d\) is a common multiple of \(a\) and \(b\) such that \(c\) does not divide \(d\). Then by the 
 division algorithm, \(d = qc + r\) with \(0 \leq r < c\). As \(a\) and \(b\) both divide \(c\) and \(d\) we see that 
-\(r\) is also a common multiple of \(a\) and \(b\). But as \(r < c = \mbox{lcm}(a, b)\) we have a contradiction. Thus \(c\) 
+\(r\) is also a common multiple of \(a\) and \(b\). But as \(r < c = \lcm(a, b)\) we have a contradiction. Thus \(c\) 
 must divide \(d\) after all.
 </proof> 
 
 <theorem> If \(a, b \in \mathbb{N}\) then 
-\[c \;|\; a, b \;\;\mbox{iff}\;\; a, b \;|\; ab/c \;\;\mbox{iff}\;\; \mbox{lcm}(a, b) \;|\; ab/c 
-\;\;\mbox{iff}\;\; c \;|\; ab/\mbox{lcm}(a, b).\]
+\[c \;|\; a, b \;\;\mbox{iff}\;\; a, b \;|\; ab/c \;\;\mbox{iff}\;\; \lcm(a, b) \;|\; ab/c 
+\;\;\mbox{iff}\;\; c \;|\; ab/\lcm(a, b).\]
 </theorem> 
 
 <proof> For the first implication, if \(c \;|\; a\) then \(a/c\) is a natural number, thus \(ab/c\) is a multiple of 
 \(b\). Similarly if \(c \;|\; b\) then \(ab/c\) is a multiple of \(a\). Conversely, if \(a \;|\; ab/c\) then \(b/c\) 
 is an integer. Similarly if \(b \;|\; ab/c\) then \(a/c\) is an integer. Thus \(c \;|\; a, b\). </br></br>
 
-The second implication is given by the previous theorem. For the converse, as \(a, b \;|\; \mbox{lcm}(a, b)\) by definition 
+The second implication is given by the previous theorem. For the converse, as \(a, b \;|\; \lcm(a, b)\) by definition 
 then \(a, b \;|\; ab/c\). </br></br>
 
-For the third implication, we can write \(ab/c = \mbox{lcm}(a, b)u\) for some natural number \(u\), i.e. 
-\(ab/\mbox{lcm}(a, b) = cu\) which implies \(c\) divides \(ab/\mbox{lcm}(a, b)\). The converse follows by reversing 
+For the third implication, we can write \(ab/c = \lcm(a, b)u\) for some natural number \(u\), i.e. 
+\(ab/\lcm(a, b) = cu\) which implies \(c\) divides \(ab/\lcm(a, b)\). The converse follows by reversing 
 the argument. </br></br>
 </proof>
 
 <theorem> If \(a, b \in \mathbb{N}\) then 
-\[ab = \gcd(a, b)\mbox{lcm}(a, b).\]
+\[ab = \gcd(a, b)\lcm(a, b).\]
 </theorem> 
 
-<proof> By the previous theorem \(c \;|\; a, b \;\;\mbox{iff}\;\; c \;|\; ab/\mbox{lcm}(a, b)\). 
+<proof> By the previous theorem \(c \;|\; a, b \;\;\mbox{iff}\;\; c \;|\; ab/\lcm(a, b)\). 
 
-If we set \(c = \gcd(a, b)\) then we have \(\gcd(a, b) \;|\; ab/\mbox{lcm}(a, b)\) which implies
-\(ab/\mbox{lcm}(a, b) \geq \gcd(a, b)\). 
+If we set \(c = \gcd(a, b)\) then we have \(\gcd(a, b) \;|\; ab/\lcm(a, b)\) which implies
+\(ab/\lcm(a, b) \geq \gcd(a, b)\). 
 
-On the othe hand, setting \(c = ab/\mbox{lcm}(a, b)\) we see that \(ab/\mbox{lcm}(a, b)\) is a common divisor of 
-\(a\) and \(b\), which implies \(ab/\mbox{lcm}(a, b) \leq \gcd(a, b)\) by definition of the greatest common divisor.
+On the othe hand, setting \(c = ab/\lcm(a, b)\) we see that \(ab/\lcm(a, b)\) is a common divisor of 
+\(a\) and \(b\), which implies \(ab/\lcm(a, b) \leq \gcd(a, b)\) by definition of the greatest common divisor.
 
-Combining the two inequalities we see that \(ab/\mbox{lcm}(a, b) = \gcd(a, b)\).
+Combining the two inequalities we see that \(ab/\lcm(a, b) = \gcd(a, b)\).
 </proof> 
 
 <theorem> Any common divisor of \(a\) and \(b\) is a divisor of \(\gcd(a, b)\).
 </theorem> 
 
 <proof> From the previous two theorems we have respectively that 
-\(c \;|\; a, b \;\;\mbox{iff}\;\; c \;|\; ab/\mbox{lcm}(a, b)\) and \(\gcd(a, b) = ab/\mbox{lcm}(a, b)\). Combining 
+\(c \;|\; a, b \;\;\mbox{iff}\;\; c \;|\; ab/\lcm(a, b)\) and \(\gcd(a, b) = ab/\lcm(a, b)\). Combining 
 these facts the result follows immediately.
 </proof> 
 
@@ -214,7 +214,7 @@ If \(-t = a\) then \(a \;|\; d\) and \(a = d\). But then we take \(s = 1\), \(t 
 <definition> Given \(n\) values \(a_1, a_2, \ldots a_n \in \mathbb{Z}_{\geq 0}\) we define their greatest common divisor
 to be the largest integer dividing all of them. We write \(\gcd(a_1, a_2, \ldots, a_n)\). Similarly if all the \(a_i\) 
 are nonzero we define their least common multiple to be the smallest natural number which is divisible by all of the 
-\(a_i\). We write \(\mbox{lcm}(a_1, a_2, \ldots, a_n)\).
+\(a_i\). We write \(\lcm(a_1, a_2, \ldots, a_n)\).
 </definition>
 
 <theorem>If \(a_1, a_2, \ldots a_n \in \mathbb{Z}_{\geq 0}\) then
@@ -240,7 +240,7 @@ inequalities we see that both sides are equal.
 </corollary>
 
 <theorem>If \(a_1, a_2, \ldots a_n \in \mathbb{N}\) then
-\[\mbox{lcm}(a_1, a_2, \ldots, a_n) = \mbox{lcm}(\ldots \mbox{lcm}(\mbox{lcm}(a_1, a_2), a_3), \ldots a_n).\]
+\[\lcm(a_1, a_2, \ldots, a_n) = \lcm(\ldots \lcm(\lcm(a_1, a_2), a_3), \ldots a_n).\]
 </theorem>
 
 <proof> The theorem is dual to the previous one and follows by replacing "gcd" with "lcm", "divisor of" with 
@@ -249,7 +249,7 @@ inequalities we see that both sides are equal.
 </proof>
 
 <corollary> If \(a_1, a_2, \ldots a_n \in \mathbb{N}\) then
-\[\mbox{lcm}(a_1, a_2, \ldots, a_n) = \mbox{lcm}(\mbox{lcm}(a_1, a_2, \ldots, a_{n-1}), a_n).\]
+\[\lcm(a_1, a_2, \ldots, a_n) = \lcm(\lcm(a_1, a_2, \ldots, a_{n-1}), a_n).\]
 </corollary>
 
 <theorem> If \(a_1, a_2, \ldots a_n \in \mathbb{Z}_{\geq 0}\) then for any \(0 < r \leq n\)
@@ -271,8 +271,8 @@ observing that, by the definition of the gcd, reordering the terms does not chan
 </proof>
 
 <theorem> If \(a_1, a_2, \ldots a_n \in \mathbb{N}\) then for any \(0 < r \leq n\)
-\[\mbox{lcm}(\mbox{lcm}(a_1, a_2, \ldots, a_r), \mbox{lcm}(a_{r+1}, a_{r+2}, \ldots a_n)) = 
-\mbox{lcm}(\mbox{lcm}(a_1, a_2, \ldots, a_{r-1}), \mbox{lcm}(a_r, a_{r+1}, \ldots a_n)).\]
+\[\lcm(\lcm(a_1, a_2, \ldots, a_r), \lcm(a_{r+1}, a_{r+2}, \ldots a_n)) = 
+\lcm(\lcm(a_1, a_2, \ldots, a_{r-1}), \lcm(a_r, a_{r+1}, \ldots a_n)).\]
 </theorem>
 
 <proof> The proof is the same as that of the previous theorem with gcd replaced by lcm.
@@ -296,21 +296,21 @@ the statement of the theorem.
 </corollary>
 
 <theorem> If \(a, b, c \in \mathbb{N}\) then
-\[\mbox{lcm}(ac, bc) = c\;\mbox{lcm}(a, b).\]
+\[\lcm(ac, bc) = c\;\lcm(a, b).\]
 </theorem>
 
-<proof> We recall that \(ab = \gcd(a, b)\mbox{lcm}(a, b)\). Thus the previous theorem is equivalent to
-\[(ac)(bc)/\mbox{lcm}(ac, bc) = abc/\mbox{lcm}(a, b).\]
+<proof> We recall that \(ab = \gcd(a, b)\lcm(a, b)\). Thus the previous theorem is equivalent to
+\[(ac)(bc)/\lcm(ac, bc) = abc/\lcm(a, b).\]
 Rearranging and cancelling \(abc\) from both sides gives us the result.
 </proof>
 
 <corollary> If \(a_1, a_2, \ldots a_n, c \in \mathbb{N}\) then
-\[\mbox{lcm}(a_1c, a_2c, \ldots, a_nc) = c\;\mbox{lcm}(a_1, a_2, \ldots, a_n).\]
+\[\lcm(a_1c, a_2c, \ldots, a_nc) = c\;\lcm(a_1, a_2, \ldots, a_n).\]
 </corollary>
 
 <theorem> If \(a_1, a_2, \ldots a_n \in \mathbb{N}\) then for any fixed \(0 < r < n\)
 \[a_1a_2\ldots a_n = \gcd(a_1a_2\cdots a_r, a_1a_2\cdots a_{r-1}a_{r+1}, \ldots)
-\mbox{lcm}(a_1a_2\cdots a_{n-r}, a_1a_2\cdots a_{n-r-1}a_{n-r+1}, \ldots),\]
+\lcm(a_1a_2\cdots a_{n-r}, a_1a_2\cdots a_{n-r-1}a_{n-r+1}, \ldots),\]
 where the gcd is of all products of the \(a_i\) taken \(r\) at a time and the lcm is of all products of the \(a_i\) taken
 \(n-r\) at a time.
 </theorem>
@@ -318,29 +318,29 @@ where the gcd is of all products of the \(a_i\) taken \(r\) at a time and the lc
 <proof> By a previous theorem the result is true for \(n = 2\). Let us assume it is proved for \(n = k-1\). </br></br>
 
 Let us denote the gcd on the right side of the theorem with \(n = k\) by \(\gcd_r(a_1, \ldots, a_k)\) and the lcm by 
-\(\mbox{lcm}_{n-r}(a_1, \ldots, a_k)\). With this notation, note that
+\(\lcm_{n-r}(a_1, \ldots, a_k)\). With this notation, note that
 \[\mbox{gcd}_r(a_1, \ldots, a_k) = 
 \mbox{gcd}(\mbox{gcd}_r(a_1, \ldots, a_{k-1}), a_n\;\mbox{gcd}_{r-1}(a_1, \ldots, a_{k-1})).\]
 
-If we multiply this by \(L = \mbox{lcm}_{k-r-1}(a_1, \ldots, a_{k-1})\) then by the assumption we obtain the value
-\[\mbox{gcd}(a_1a_2\ldots a_{k-1}, a_k\;\mbox{gcd}_{r-1}(a_1, \ldots a_{k-1})\mbox{lcm}_{k-r-1}(a_1, \ldots, a_{k-1})).\] 
+If we multiply this by \(L = \lcm_{k-r-1}(a_1, \ldots, a_{k-1})\) then by the assumption we obtain the value
+\[\mbox{gcd}(a_1a_2\ldots a_{k-1}, a_k\;\mbox{gcd}_{r-1}(a_1, \ldots a_{k-1})\lcm_{k-r-1}(a_1, \ldots, a_{k-1})).\] 
 
 Similarly, if we multiply the lcm on the right side of the theorem by \(G = \gcd_{r-1}(a_1, ..., a_{k-1})\), we obtain
-\[\mbox{lcm}(a_1a_2\ldots a_{k-1}, a_k\;\mbox{gcd}_{r-1}(a_1, \ldots a_{k-1})\mbox{lcm}_{k-r-1}(a_1, \ldots, a_{k-1})).\] 
+\[\lcm(a_1a_2\ldots a_{k-1}, a_k\;\mbox{gcd}_{r-1}(a_1, \ldots a_{k-1})\lcm_{k-r-1}(a_1, \ldots, a_{k-1})).\] 
 
 Multiplying these we obtain \(LG\) times the left side of the theorem for \(n = k\), from which the result follows.
 </proof>
 
 <theorem> (Distributive law) Let \(a, b, c \in \mathbb{N}\), then
-\[\mbox{lcm}(a, \gcd(b, c)) = \gcd(\mbox{lcm}(a, b), \mbox{lcm}(a, c)).\]
+\[\lcm(a, \gcd(b, c)) = \gcd(\lcm(a, b), \lcm(a, c)).\]
 </theorem>
 
-<proof> Note \(a\) divides both \(\mbox{lcm}(a, b)\) and \(\mbox{lcm}(a, c)\). Thus it divides their gcd, which is the 
-right side of the identity. Similarly \(\gcd(b, c)\) divides \(b\) and hence \(\mbox{lcm}(a, b)\), and \(c\) and hence
-\(\mbox{lcm}(a, c)\). Thus \(\gcd(b, c)\) divides the right side of the identity. But as \(a\) and \(\gcd(b, c)\) both
+<proof> Note \(a\) divides both \(\lcm(a, b)\) and \(\lcm(a, c)\). Thus it divides their gcd, which is the 
+right side of the identity. Similarly \(\gcd(b, c)\) divides \(b\) and hence \(\lcm(a, b)\), and \(c\) and hence
+\(\lcm(a, c)\). Thus \(\gcd(b, c)\) divides the right side of the identity. But as \(a\) and \(\gcd(b, c)\) both
 divide the right side, then so must their lcm. Thus the left side of the identity divides the right. </br></br>
 
-Any divisor of the right side must divide both \(\mbox{lcm}(a, b)\) and \(\mbox{lcm}(a, c)\), i.e. it must divide 
+Any divisor of the right side must divide both \(\lcm(a, b)\) and \(\lcm(a, c)\), i.e. it must divide 
 \(ab/\gcd(a, b)\) and \(ac/\gcd(a, c)\). Thus it must divide \(a\gcd(b/\gcd(a, b), c/\gcd(a, c))\). It then certainly 
 divides \(a\gcd(b/\gcd(a, b, c), c/\gcd(a, b, c)) = a\gcd(b, c)/\gcd(a, b, c)\). However, this is precisely the left hand 
 side of the identity. Thus the right side of the identity divides the left. </br></br>
@@ -349,35 +349,35 @@ As the left side divides the right and conversely, the two sides are equal.
 </proof>
 
 <theorem> (Distributive law) Let \(a, b, c \in \mathbb{N}\), then
-\[\gcd(a, \mbox{lcm}(b, c)) = \mbox{lcm}(gcd(a, b), \gcd(a, c)).\]
+\[\gcd(a, \lcm(b, c)) = \lcm(gcd(a, b), \gcd(a, c)).\]
 </theorem>
 
 <proof> The proof is exactly dual to that of the previous distributive law.
 </proof>
 
 <theorem> Let \(a, b, c \in \mathbb{N}\), then
-\[\gcd(\mbox{lcm}(a,b), \mbox{lcm}(b,c), \mbox{lcm}(a,c)) = \mbox{lcm}(\gcd(a,b), \gcd(b,c), \gcd(a,c)).\]
+\[\gcd(\lcm(a,b), \lcm(b,c), \lcm(a,c)) = \lcm(\gcd(a,b), \gcd(b,c), \gcd(a,c)).\]
 </theorem>
 
 <proof> Let us rewrite the right side of the identity. It is in turn 
-\[\mbox{lcm}(\gcd(a,b), \mbox{lcm}(\gcd(b,c), \gcd(a,c))) 
-= \frac{\gcd(a,b)\mbox{lcm}(\gcd(b,c), \gcd(a,c))}{\gcd(\gcd(a,b), \mbox{lcm}(\gcd(b,c), \gcd(a,c)))}\]
+\[\lcm(\gcd(a,b), \lcm(\gcd(b,c), \gcd(a,c))) 
+= \frac{\gcd(a,b)\lcm(\gcd(b,c), \gcd(a,c))}{\gcd(\gcd(a,b), \lcm(\gcd(b,c), \gcd(a,c)))}\]
 
-\[= \frac{\gcd(a,b)\mbox{lcm}(\gcd(b,c), \gcd(a,c))}{\gcd(a,b,c, \mbox{lcm}(a,b))} 
-= \frac{\gcd(a,b)\mbox{lcm}(\gcd(b,c), \gcd(a,c))}{\gcd(a,b,c)}\]
+\[= \frac{\gcd(a,b)\lcm(\gcd(b,c), \gcd(a,c))}{\gcd(a,b,c, \lcm(a,b))} 
+= \frac{\gcd(a,b)\lcm(\gcd(b,c), \gcd(a,c))}{\gcd(a,b,c)}\]
 
-\[= \frac{\gcd(a,b)\gcd(c,\mbox{lcm}(a,b))}{\gcd(a,b,c)} = \frac{\gcd(c \gcd(a,b), ab)}{\gcd(a,b,c)} 
+\[= \frac{\gcd(a,b)\gcd(c,\lcm(a,b))}{\gcd(a,b,c)} = \frac{\gcd(c \gcd(a,b), ab)}{\gcd(a,b,c)} 
 = \frac{\gcd(ac, bc, ac)}{\gcd(a,b,c)}.\]
 
 By a dual argument the left side of the identity is 
-\[\frac{\mbox{lcm}(ac, bc, ac)}{\mbox{lcm}(a,b,c)}.\] 
+\[\frac{\lcm(ac, bc, ac)}{\lcm(a,b,c)}.\] 
 
-The result now follows since \(\mbox{lcm}(ac, bc, ac)\gcd(a, b, c) = abc\) and its dual hold by a previous theorem.
+The result now follows since \(\lcm(ac, bc, ac)\gcd(a, b, c) = abc\) and its dual hold by a previous theorem.
 </proof>
 
 <theorem> Let \(a, b, c \in \mathbb{N}\), then
-\[\frac{\mbox{lcm}(a,b)\mbox{lcm}(b,c)\mbox{lcm}(c,a)}{\gcd(a,b)\gcd(b,c)\gcd(c,a)} 
-= \frac{\mbox{lcm}(a,b,c)^2}{\gcd(a,b,c)^2}.\]
+\[\frac{\lcm(a,b)\lcm(b,c)\lcm(c,a)}{\gcd(a,b)\gcd(b,c)\gcd(c,a)} 
+= \frac{\lcm(a,b,c)^2}{\gcd(a,b,c)^2}.\]
 </theorem>
 
 <proof> By the previous theorem, this is equivalent to showing that the left side is equal to
