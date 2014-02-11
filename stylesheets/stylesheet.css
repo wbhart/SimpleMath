@@ -309,6 +309,10 @@ corollary:before {
   font-style: normal;
 }
 
+proof:after {
+  content: "</br>";
+}
+
 exercise {
   font-style: italic;
 }
