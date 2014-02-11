@@ -6,8 +6,8 @@ title: Simplemath
 <h2>Divisibility</h2>
 
 <definition>The <u>integers</u> are the counting numbers,  positive, negative and zero, i.e. 
-$\ldots, -2, -1, 0, 1, 2, \ldots$. We denote the set of integers by $\mathbb{Z}$. We sometimes write 
-$\mathbb{Z}_{\geq 0}$ for the set of integers greater than or equal to zero, etc.
+$\ldots, -2, -1, 0, 1, 2, \ldots$. We denote the set of integers by $\Z$. We sometimes write 
+$\Z_{\geq 0}$ for the set of integers greater than or equal to zero, etc.
 </definition>
 
 <definition> For integers $a$ and $b \neq 0$ we say that $a$ is <u>divisible</u> by $b$ (or that 
@@ -15,22 +15,22 @@ $b$ <u>divides</u> $a$ or $a$ is a <u>multiple</u> of $b$) if there is an intege
 We write $b \;|\; a$.
 </definition>
 
-<definition> For $a \in \mathbb{Z}$ we define $|a|$ to be $-a$ if $a < 0$ and $a$ if $a \geq 0$. 
-We call $|a|$ the <u>absolute value</u> of $a$. Note that for all $a \in \mathbb{Z}$ we have $|a| \geq 0$.
+<definition> For $a \in \Z$ we define $|a|$ to be $-a$ if $a < 0$ and $a$ if $a \geq 0$. 
+We call $|a|$ the <u>absolute value</u> of $a$. Note that for all $a \in \Z$ we have $|a| \geq 0$.
 </definition> 
 
 <definition> The <u>natural numbers</u> are the positive integers $1, 2, 3, \ldots$. We denote the set of natural
-numbers by $\mathbb{N}$.
+numbers by $\N$.
 </definition> 
 
-<theorem> If $a, b \in \mathbb{N}$ and $b \;|\; a$ then $a \geq b$.
+<theorem> If $a, b \in \N$ and $b \;|\; a$ then $a \geq b$.
 </theorem>
 
 <proof> We have that $a = bc$ for some natural number $c$. If $c = 1$ then $a = b$. Otherwise $c > 1$ 
 and $a = b + (c-1)b > b$, as $c-1) \geq 0$. 
 </proof> 
 
-<theorem> If $a, b \in \mathbb{N}$ and $b \;|\; a$ and $a \;|\; b$ then $a = b$.
+<theorem> If $a, b \in \N$ and $b \;|\; a$ and $a \;|\; b$ then $a = b$.
 </theorem> 
 
 <proof> We see from the previous theorem that $a \geq b$ and $b \geq a$. Thus $a = b$.
@@ -43,27 +43,27 @@ and $a = b + (c-1)b > b$, as $c-1) \geq 0$.
 is a multiple of $a$. 
 </proof> 
 
-<theorem> If $a, b, n \in \mathbb{Z}$ and $n$ divides $a$ and $b$ then $n$ divides $as + bt$ for all integers
+<theorem> If $a, b, n \in \Z$ and $n$ divides $a$ and $b$ then $n$ divides $as + bt$ for all integers
 $s$ and $t$.
 </theorem>
 
-<proof> By assumption there exist $c, d \in \mathbb{Z}$ such that $a = cn$ and $b = dn$. Thus 
+<proof> By assumption there exist $c, d \in \Z$ such that $a = cn$ and $b = dn$. Thus 
 $as + bt = cns + dnt = n(cs + dt).$ In other words $as + bt$ is divisible by $n$.
 </proof>
 
-<corollary> If $a, b, n \in \mathbb{Z}$ and $n$ divides $a$ and $b$ then $n$ divides $a + b$ and $a - b$.
+<corollary> If $a, b, n \in \Z$ and $n$ divides $a$ and $b$ then $n$ divides $a + b$ and $a - b$.
 </corollary>
 
-<theorem> If $a, b, c \in \mathbb{Z}$ with $c \neq 0$ then $ac \;|\; bc$ iff $a \;|\; b$.
+<theorem> If $a, b, c \in \Z$ with $c \neq 0$ then $ac \;|\; bc$ iff $a \;|\; b$.
 </theorem>
 
-<proof> If $ac \;|\; bc$ then there exists $d \in \mathbb{Z}$ such that $acd = bc$. As $c \neq 0$ we can divide through
-by $c$, which gives $ad = b$, i.e. $a \;|\; b$. Conversely, if $a \;|\; b$ then there exists $d \in \mathbb{Z}$ such that
+<proof> If $ac \;|\; bc$ then there exists $d \in \Z$ such that $acd = bc$. As $c \neq 0$ we can divide through
+by $c$, which gives $ad = b$, i.e. $a \;|\; b$. Conversely, if $a \;|\; b$ then there exists $d \in \Z$ such that
 $ad = b$. Multiplying through by $c$ we get $acd = bc$ which implies $ac \;|\; bc$.
 </proof>
 
-<theorem> (Division algorithm) If $a, b \in \mathbb{Z}_{\geq 0}$ with $b \neq 0$ then there exist 
-$q, r \in \mathbb{Z}_{\geq 0}$ such that $a = bq + r$, and $0 \leq r < b$.
+<theorem> (Division algorithm) If $a, b \in \Z_{\geq 0}$ with $b \neq 0$ then there exist 
+$q, r \in \Z_{\geq 0}$ such that $a = bq + r$, and $0 \leq r < b$.
 </theorem> 
 
 <proof> We let $qb$ be the largest non-negative multiple of $b$ which does not exceed $a$. We then set 
@@ -79,7 +79,7 @@ largest natural number which divides both $b$ and $c$. If $\gcd(b, c) = 1$ we sa
 <u>coprime</u>. 
 
 By convention we also define $\gcd(b, 0) = b$, $\gcd(0, c) = c$ and $\gcd(0, 0) = 0$ for all 
-$b, c \in \mathbb{N}$.  
+$b, c \in \N$.  
 </definition> 
 
 <definition> The <u>least common multiple</u> of two natural numbers $b$ and $c$, denoted $\lcm(b, c)$ is 
@@ -95,7 +95,7 @@ $r$ is also a common multiple of $a$ and $b$. But as $r < c = \lcm(a, b)$ we hav
 must divide $d$ after all.
 </proof> 
 
-<theorem> If $a, b \in \mathbb{N}$ then 
+<theorem> If $a, b \in \N$ then 
 $$c \;|\; a, b \;\;\mbox{iff}\;\; a, b \;|\; ab/c \;\;\mbox{iff}\;\; \lcm(a, b) \;|\; ab/c 
 \;\;\mbox{iff}\;\; c \;|\; ab/\lcm(a, b).$$
 </theorem> 
@@ -112,7 +112,7 @@ $ab/\lcm(a, b) = cu$ which implies $c$ divides $ab/\lcm(a, b)$. The converse fol
 the argument. </br></br>
 </proof>
 
-<theorem> If $a, b \in \mathbb{N}$ then 
+<theorem> If $a, b \in \N$ then 
 $$ab = \gcd(a, b)\lcm(a, b).$$
 </theorem> 
 
@@ -135,7 +135,7 @@ $c \;|\; a, b \;\;\mbox{iff}\;\; c \;|\; ab/\lcm(a, b)$ and $\gcd(a, b) = ab/\lc
 these facts the result follows immediately.
 </proof> 
 
-<theorem> For $b, c \in \mathbb{N}$ we have that 
+<theorem> For $b, c \in \N$ we have that 
 $$\gcd(b, c) = \gcd(b, |b - c|).$$
 </theorem> 
 
@@ -153,9 +153,9 @@ But now $d = \gcd(b, c)$ divides $g = \gcd(b, |b - c|)$ and conversely, thus by 
 $\gcd(b, c) = \gcd(b, |b - c|)$.
 </proof> 
 
-<theorem> For $a, b \in \mathbb{Z}_{\geq 0}$ with $b \neq 0$, if 
+<theorem> For $a, b \in \Z_{\geq 0}$ with $b \neq 0$, if 
 $$a = bq + r$$ 
-for $q, r \in \mathbb{Z}_{\geq 0}$ with $r < b$ then we have 
+for $q, r \in \Z_{\geq 0}$ with $r < b$ then we have 
 $$\gcd(a, b) = \gcd(b, r).$$
 </theorem>
 
@@ -168,12 +168,12 @@ both $a$ and $b$ and thus divides their gcd, $g$. </br></br>
 By a previous result, as $d$ divides $g$ and conversely, $d = g$, which is what we wanted to show.
 </proof>
 
-<theorem> (Euclid's algorithm) Given $a, b \in \mathbb{Z}_{\geq 0}$ with $b \neq 0$, we can compute $\gcd(a, b)$
+<theorem> (Euclid's algorithm) Given $a, b \in \Z_{\geq 0}$ with $b \neq 0$, we can compute $\gcd(a, b)$
 in finitely many steps.
 </theorem>
 
-<proof> Write $r_{-1} = a, r_0 = b$. Given $r_{i-1}, r_i \in \mathbb{Z}_{\geq 0}$ with $r_i \neq 0$ we can use
-the division algorithm to find $q_{i+1}, r_{i+1} \in \mathbb{Z}_{\geq 0}$ such that
+<proof> Write $r_{-1} = a, r_0 = b$. Given $r_{i-1}, r_i \in \Z_{\geq 0}$ with $r_i \neq 0$ we can use
+the division algorithm to find $q_{i+1}, r_{i+1} \in \Z_{\geq 0}$ such that
 $$r_{i-1} = q_{i+1}r_i + r_{i+1},$$
 with $r_{i+1} < r_i$. </br></br>
 
@@ -185,8 +185,8 @@ remainders in turn, we see that $\gcd(a, b) = \gcd(r_k, 0) = r_k$. In other word
 sequence is the gcd of $a$ and $b$. Thus we can compute $\gcd(a, b)$ in finitely many steps. </br></br>
 </proof>
 
-<theorem> (Extended euclidean algorithm) Given $a, b \in \mathbb{Z}_{\geq 0}$ with $b \neq 0$, if $d = \gcd(a, b)$
-then we can find $s, t \in \mathbb{Z}$ such that
+<theorem> (Extended euclidean algorithm) Given $a, b \in \Z_{\geq 0}$ with $b \neq 0$, if $d = \gcd(a, b)$
+then we can find $s, t \in \Z$ such that
 $$d = as + bt.$$
 </theorem>
 
@@ -202,14 +202,14 @@ Rewriting each of the equations from previous applications of the division algor
 eventually obtain an expression for $r_k$ in terms of $r_{-1}$ and $r_0$ only, i.e. in terms of $a$ and $b$.
 </br></br>
 
-As $r_k = \gcd(a, b)$ we have an expression of the form $\gcd(a, b) = as + bt$ for some $s, t \in \mathbb{Z}$.
+As $r_k = \gcd(a, b)$ we have an expression of the form $\gcd(a, b) = as + bt$ for some $s, t \in \Z$.
 </proof>
 
-<corollary> Given $a, b \in \mathbb{N}$ that are coprime, there exist $s, t \in \mathbb{Z}$ such that
+<corollary> Given $a, b \in \N$ that are coprime, there exist $s, t \in \Z$ such that
 $$as + bt = 1.$$
 </corollary>
 
-<theorem> Given $a, b$ as in the previous theorem with $d = \gcd(a, b)$ we can find $s, t \in \mathbb{Z}$ such that
+<theorem> Given $a, b$ as in the previous theorem with $d = \gcd(a, b)$ we can find $s, t \in \Z$ such that
 $$d = as + bt$$
 with either $s = 0$, $t = 1$ or $s = 1$, $t = 0$ or $s$ and $t$ have opposite signs and $|s| < b$ and
 $|t| < a$.
@@ -231,13 +231,13 @@ and $-bt$ differ by more than $d$, which is a contradiction. Thus $-t \leq a$. <
 If $-t = a$ then $a \;|\; d$ and $a = d$. But then we take $s = 1$, $t = 0$. In the remaining case $-t < a$.
 </proof>
 
-<definition> Given $n$ values $a_1, a_2, \ldots a_n \in \mathbb{Z}_{\geq 0}$ we define their greatest common divisor
+<definition> Given $n$ values $a_1, a_2, \ldots a_n \in \Z_{\geq 0}$ we define their greatest common divisor
 to be the largest integer dividing all of them. We write $\gcd(a_1, a_2, \ldots, a_n)$. Similarly if all the $a_i$ 
 are nonzero we define their least common multiple to be the smallest natural number which is divisible by all of the 
 $a_i$. We write $\lcm(a_1, a_2, \ldots, a_n)$.
 </definition>
 
-<theorem>If $a_1, a_2, \ldots a_n \in \mathbb{Z}_{\geq 0}$ then
+<theorem>If $a_1, a_2, \ldots a_n \in \Z_{\geq 0}$ then
 $$\gcd(a_1, a_2, \ldots, a_n) = \gcd(\ldots \gcd(\gcd(a_1, a_2), a_3), \ldots a_n).$$
 </theorem>
 
@@ -255,11 +255,11 @@ Thus the left hand side itself divides the right hand side and is thus less than
 inequalities we see that both sides are equal.
 </proof>
 
-<corollary> If $a_1, a_2, \ldots a_n \in \mathbb{Z}_{\geq 0}$ then
+<corollary> If $a_1, a_2, \ldots a_n \in \Z_{\geq 0}$ then
 $$\gcd(a_1, a_2, \ldots, a_n) = \gcd(\gcd(a_1, a_2, \ldots, a_{n-1}), a_n).$$
 </corollary>
 
-<theorem>If $a_1, a_2, \ldots a_n \in \mathbb{N}$ then
+<theorem>If $a_1, a_2, \ldots a_n \in \N$ then
 $$\lcm(a_1, a_2, \ldots, a_n) = \lcm(\ldots \lcm(\lcm(a_1, a_2), a_3), \ldots a_n).$$
 </theorem>
 
@@ -268,11 +268,11 @@ $$\lcm(a_1, a_2, \ldots, a_n) = \lcm(\ldots \lcm(\lcm(a_1, a_2), a_3), \ldots a_
 "largest such" with "smallest such".
 </proof>
 
-<corollary> If $a_1, a_2, \ldots a_n \in \mathbb{N}$ then
+<corollary> If $a_1, a_2, \ldots a_n \in \N$ then
 $$\lcm(a_1, a_2, \ldots, a_n) = \lcm(\lcm(a_1, a_2, \ldots, a_{n-1}), a_n).$$
 </corollary>
 
-<theorem> If $a_1, a_2, \ldots a_n \in \mathbb{Z}_{\geq 0}$ then for any $0 < r \leq n$
+<theorem> If $a_1, a_2, \ldots a_n \in \Z_{\geq 0}$ then for any $0 < r \leq n$
 $$\gcd(\gcd(a_1, a_2, \ldots, a_r), \gcd(a_{r+1}, a_{r+2}, \ldots a_n)) = 
 \gcd(\gcd(a_1, a_2, \ldots, a_{r-1}), \gcd(a_r, a_{r+1}, \ldots a_n)).$$
 </theorem>
@@ -290,7 +290,7 @@ observing that, by the definition of the gcd, reordering the terms does not chan
 $$d = \gcd(\gcd(a_1, a_2, \ldots, a_{k-1}), \gcd(a_k, a_{k+1}, \ldots a_n)).$$
 </proof>
 
-<theorem> If $a_1, a_2, \ldots a_n \in \mathbb{N}$ then for any $0 < r \leq n$
+<theorem> If $a_1, a_2, \ldots a_n \in \N$ then for any $0 < r \leq n$
 $$\lcm(\lcm(a_1, a_2, \ldots, a_r), \lcm(a_{r+1}, a_{r+2}, \ldots a_n)) = 
 \lcm(\lcm(a_1, a_2, \ldots, a_{r-1}), \lcm(a_r, a_{r+1}, \ldots a_n)).$$
 </theorem>
@@ -298,7 +298,7 @@ $$\lcm(\lcm(a_1, a_2, \ldots, a_r), \lcm(a_{r+1}, a_{r+2}, \ldots a_n)) =
 <proof> The proof is the same as that of the previous theorem with gcd replaced by lcm.
 </proof>
 
-<theorem> If $a, b, c \in \mathbb{Z}_{\geq 0}$ then
+<theorem> If $a, b, c \in \Z_{\geq 0}$ then
 $$\gcd(ac, bc) = c\gcd(a, b).$$
 </theorem>
 
@@ -311,11 +311,11 @@ will be multiplied by $c$. In particular, the final nonzero remainder will be mu
 the statement of the theorem.
 </proof>
 
-<corollary> If $a_1, a_2, \ldots a_n, c \in \mathbb{Z}_{\geq 0}$ then
+<corollary> If $a_1, a_2, \ldots a_n, c \in \Z_{\geq 0}$ then
 $$\gcd(a_1c, a_2c, \ldots, a_nc) = c\gcd(a_1, a_2, \ldots, a_n).$$
 </corollary>
 
-<theorem> If $a, b, c \in \mathbb{N}$ then
+<theorem> If $a, b, c \in \N$ then
 $$\lcm(ac, bc) = c\;\lcm(a, b).$$
 </theorem>
 
@@ -324,11 +324,11 @@ $$(ac)(bc)/\lcm(ac, bc) = abc/\lcm(a, b).$$
 Rearranging and cancelling $abc$ from both sides gives us the result.
 </proof>
 
-<corollary> If $a_1, a_2, \ldots a_n, c \in \mathbb{N}$ then
+<corollary> If $a_1, a_2, \ldots a_n, c \in \N$ then
 $$\lcm(a_1c, a_2c, \ldots, a_nc) = c\;\lcm(a_1, a_2, \ldots, a_n).$$
 </corollary>
 
-<theorem> If $a_1, a_2, \ldots a_n \in \mathbb{N}$ then for any fixed $0 < r < n$
+<theorem> If $a_1, a_2, \ldots a_n \in \N$ then for any fixed $0 < r < n$
 $$a_1a_2\ldots a_n = \gcd(a_1a_2\cdots a_r, a_1a_2\cdots a_{r-1}a_{r+1}, \ldots)
 \lcm(a_1a_2\cdots a_{n-r}, a_1a_2\cdots a_{n-r-1}a_{n-r+1}, \ldots),$$
 where the gcd is of all products of the $a_i$ taken $r$ at a time and the lcm is of all products of the $a_i$ taken
@@ -351,7 +351,7 @@ $$\lcm(a_1a_2\ldots a_{k-1}, a_k\;\mbox{gcd}_{r-1}(a_1, \ldots a_{k-1})\lcm_{k-r
 Multiplying these we obtain $LG$ times the left side of the theorem for $n = k$, from which the result follows.
 </proof>
 
-<theorem> (Distributive law) Let $a, b, c \in \mathbb{N}$, then
+<theorem> (Distributive law) Let $a, b, c \in \N$, then
 $$\lcm(a, \gcd(b, c)) = \gcd(\lcm(a, b), \lcm(a, c)).$$
 </theorem>
 
@@ -368,14 +368,14 @@ side of the identity. Thus the right side of the identity divides the left. </br
 As the left side divides the right and conversely, the two sides are equal.
 </proof>
 
-<theorem> (Distributive law) Let $a, b, c \in \mathbb{N}$, then
+<theorem> (Distributive law) Let $a, b, c \in \N$, then
 $$\gcd(a, \lcm(b, c)) = \lcm(gcd(a, b), \gcd(a, c)).$$
 </theorem>
 
 <proof> The proof is exactly dual to that of the previous distributive law.
 </proof>
 
-<theorem> Let $a, b, c \in \mathbb{N}$, then
+<theorem> Let $a, b, c \in \N$, then
 $$\gcd(\lcm(a,b), \lcm(b,c), \lcm(a,c)) = \lcm(\gcd(a,b), \gcd(b,c), \gcd(a,c)).$$
 </theorem>
 
@@ -395,7 +395,7 @@ $$\frac{\lcm(ac, bc, ac)}{\lcm(a,b,c)}.$$
 The result now follows since $\lcm(ac, bc, ac)\gcd(a, b, c) = abc$ and its dual hold by a previous theorem.
 </proof>
 
-<theorem> Let $a, b, c \in \mathbb{N}$, then
+<theorem> Let $a, b, c \in \N$, then
 $$\frac{\lcm(a,b)\lcm(b,c)\lcm(c,a)}{\gcd(a,b)\gcd(b,c)\gcd(c,a)} 
 = \frac{\lcm(a,b,c)^2}{\gcd(a,b,c)^2}.$$
 </theorem>
