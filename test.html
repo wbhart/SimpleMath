@@ -10,7 +10,7 @@ $\ldots, -2, -1, 0, 1, 2, \ldots$. We denote the set of integers by $\Z$. We som
 $\Z_{\geq 0}$ for the set of integers greater than or equal to zero, etc.
 </definition>
 
-<definition> For integers $a$ and $b \neq 0$ we say that $a$ is <u>divisible</u> by $b$ (or that 
+<definition> For integers $a$ and $b$ we say that $a$ is <u>divisible</u> by $b$ (or that 
 $b$ <u>divides</u> $a$ or $a$ is a <u>multiple</u> of $b$) if there is an integer $c$ 
 such that $a = bc$. We write $b \;|\; a$.
 </definition>
@@ -73,22 +73,28 @@ by $c$, which gives $ad = b$, i.e. $a \;|\; b$. Conversely, if $a \;|\; b$ then 
 $ad = b$. Multiplying through by $c$ we get $acd = bc$ which implies $ac \;|\; bc$.
 </proof>
 
-<theorem> (Division algorithm) If $a, b \in \Z_{\geq 0}$ with $b \neq 0$ then there exist 
-$q, r \in \Z_{\geq 0}$ such that $a = bq + r$, and $0 \leq r < b$.
+<theorem> (Division algorithm) If $a \in \Z$ and $b \in \N$ then there exist 
+$q, r \in \Z$ such that $a = bq + r$, and $0 \leq r < b$.
 </theorem> 
 
-<proof> We let $qb$ be the largest non-negative multiple of $b$ which does not exceed $a$. We then set 
-$r = a - bq$. Clearly $r \geq 0$. But we also have $r < b$. Otherwise, let $r = b + r'$ for some 
-$r' \geq 0$. Then $b + r' = a - bq$, i.e. $r' = a - b(q + 1)$. But as $r' \geq 0$ we have that $b(q + 1)$ 
-is a larger multiple of $b$ not exceeding $a$ than $bq$, which is a contradiction. Thus $r < b$ after all.
+<proof> Consider the set of all integers of the form $a - bq$ for $q \in \Z$. We see that it is always possible to find
+values of $q$ such that $a - bq \geq 0$ (if $a \geq 0$ just pick $q = 0$. If $a < 0$ pick $q < 0$ sufficiently small).
+Thus the set of integers $a - bq > 0$ is non-empty. 
+</br></br>
+
+This set of integers must have a least value for some $q$. For this $q$ we claim $0 \leq a - bq < b$. We have 
+$0 \leq a - bq$ by definition. Also, $a - bq < b$, otherwise $0 \leq a - b(q + 1)$ which is a lesser number of the
+required form. </br></br>
+
+We set $r = a - bq$ to be this least nonnegative value. Thus $0 \leq r < b$.
 </proof> 
 
-<definition> Given $a, b \in \Z_{\geq 0}$ with $b \neq 0$ and $q, r$ as given by the division algorithm, we call $q$ the
+<definition> Given $a \in \Z}$ and $b \in \N$ and $q, r$ as given by the division algorithm, we call $q$ the
 <u>quotient</u> of $a$ by $b$ and $r$ the (least non-negative) <u>remainder</u>.
 </definition>
 
-<theorem> If $a, b \in \Z_{\geq 0}$ with $b \neq 0$ then there exist 
-$q \in \Z_{\geq 0}$ and $r \in \Z$ such that $a = bq + r$, and $-b/2 < r \leq b/2$.
+<theorem> If $a \in \Z$ and $b \in \N$ then there exist 
+$q, r \in \Z$ such that $a = bq + r$, and $-b/2 < r \leq b/2$.
 </theorem>
 
 <proof> We take $r'$ to be the least non-negative remainder, and $q'$ the associated quotient. If $r' > b/2$ we set
@@ -106,7 +112,7 @@ In the second case $0 \leq r = r' \leq b/2$ and $bq + r = bq' + r' = a$.
 
 <definition> The <u>greatest common divisor</u> of two natural numbers $b$ and $c$, denoted $\gcd(b, c)$ is the 
 largest natural number which divides both $b$ and $c$. If $\gcd(b, c) = 1$ we say that $b$ and $c$ are 
-<u>coprime</u>. 
+<u>coprime</u>. </br></br>
 
 By convention we also define $\gcd(b, 0) = b$, $\gcd(0, c) = c$ and $\gcd(0, 0) = 0$ for all 
 $b, c \in \N$.  
@@ -114,6 +120,8 @@ $b, c \in \N$.
 
 <definition> The <u>least common multiple</u> of two natural numbers $b$ and $c$, denoted $\lcm(b, c)$ is 
 the smallest natural number which is divisible by both $b$ and $c$.
+
+By convention we also define $\lcm(b, 0) = \lcm(0, c) = \lcm(0, 0) = 0$ for all $b, c \in \N$.
 </definition> 
 
 <theorem> If $c = \lcm(a, b)$ then $c$ divides any common multiple of $a$ and $b$.
@@ -142,17 +150,20 @@ $ab/\lcm(a, b) = cu$ which implies $c$ divides $ab/\lcm(a, b)$. The converse fol
 the argument. </br></br>
 </proof>
 
-<theorem> If $a, b \in \N$ then 
+<theorem> If $a, b \in \Z_{\geq 0}$ then 
 $$ab = \gcd(a, b)\lcm(a, b).$$
 </theorem> 
 
-<proof> By the previous theorem $c \;|\; a, b \;\;\mbox{iff}\;\; c \;|\; ab/\lcm(a, b)$. 
+<proof> The theorem is true if either $a = 0$ or $b = 0$. Therefore restrict to the case where $a \neq 0$ and $b \neq 0$.
+</br></br>
+
+By the previous theorem $c \;|\; a, b \;\;\mbox{iff}\;\; c \;|\; ab/\lcm(a, b)$. </br></br>
 
 If we set $c = \gcd(a, b)$ then we have $\gcd(a, b) \;|\; ab/\lcm(a, b)$ which implies
-$ab/\lcm(a, b) \geq \gcd(a, b)$. 
+$ab/\lcm(a, b) \geq \gcd(a, b)$. </br></br>
 
 On the othe hand, setting $c = ab/\lcm(a, b)$ we see that $ab/\lcm(a, b)$ is a common divisor of 
-$a$ and $b$, which implies $ab/\lcm(a, b) \leq \gcd(a, b)$ by definition of the greatest common divisor.
+$a$ and $b$, which implies $ab/\lcm(a, b) \leq \gcd(a, b)$ by definition of the greatest common divisor. </br></br>
 
 Combining the two inequalities we see that $ab/\lcm(a, b) = \gcd(a, b)$.
 </proof> 
@@ -267,7 +278,7 @@ are nonzero we define their least common multiple to be the smallest natural num
 $a_i$. We write $\lcm(a_1, a_2, \ldots, a_n)$.
 </definition>
 
-<theorem> (Absorption law) If $a_1, a_2 \in \Z_{\geq 0}$ then
+<theorem> (Absorption law) If $a, b \in \Z_{\geq 0}$ then
 $$\gcd(a, \lcm(a, b)) = a.$$
 </theorem>
 
@@ -279,7 +290,7 @@ However their gcd must divide $a$ and so $\gcd(a, \lcm(a, b))$ is less than or e
 We have shown the left side of the identity divides the right and conversely, thus the two sides are equal.
 </proof>
 
-<theorem> (Absorption law) If $a_1, a_2 \in \Z_{\geq 0}$ then
+<theorem> (Absorption law) If $a, b \in \Z_{\geq 0}$ then
 $$\lcm(a, \gcd(a, b)) = a.$$
 </theorem>
 
@@ -309,7 +320,7 @@ inequalities we see that both sides are equal.
 $$\gcd(a_1, a_2, \ldots, a_n) = \gcd(\gcd(a_1, a_2, \ldots, a_{n-1}), a_n).$$
 </corollary>
 
-<theorem>If $a_1, a_2, \ldots a_n \in \N$ then
+<theorem>If $a_1, a_2, \ldots a_n \in \Z_{\geq 0}$ then
 $$\lcm(a_1, a_2, \ldots, a_n) = \lcm(\ldots \lcm(\lcm(a_1, a_2), a_3), \ldots a_n).$$
 </theorem>
 
@@ -318,7 +329,7 @@ $$\lcm(a_1, a_2, \ldots, a_n) = \lcm(\ldots \lcm(\lcm(a_1, a_2), a_3), \ldots a_
 "largest such" with "smallest such".
 </proof>
 
-<corollary> If $a_1, a_2, \ldots a_n \in \N$ then
+<corollary> If $a_1, a_2, \ldots a_n \in \Z_{\geq 0}$ then
 $$\lcm(a_1, a_2, \ldots, a_n) = \lcm(\lcm(a_1, a_2, \ldots, a_{n-1}), a_n).$$
 </corollary>
 
@@ -340,7 +351,7 @@ observing that, by the definition of the gcd, reordering the terms does not chan
 $$d = \gcd(\gcd(a_1, a_2, \ldots, a_{k-1}), \gcd(a_k, a_{k+1}, \ldots a_n)).$$
 </proof>
 
-<theorem> If $a_1, a_2, \ldots a_n \in \N$ then for any $0 < r \leq n$
+<theorem> If $a_1, a_2, \ldots a_n \in \Z_{\geq 0}$ then for any $0 < r \leq n$
 $$\lcm(\lcm(a_1, a_2, \ldots, a_r), \lcm(a_{r+1}, a_{r+2}, \ldots a_n)) = 
 \lcm(\lcm(a_1, a_2, \ldots, a_{r-1}), \lcm(a_r, a_{r+1}, \ldots a_n)).$$
 </theorem>
@@ -365,7 +376,7 @@ the statement of the theorem.
 $$\gcd(a_1c, a_2c, \ldots, a_nc) = c\gcd(a_1, a_2, \ldots, a_n).$$
 </corollary>
 
-<theorem> If $a, b, c \in \N$ then
+<theorem> If $a, b, c \in \Z_{\geq 0}$ then
 $$\lcm(ac, bc) = c\;\lcm(a, b).$$
 </theorem>
 
@@ -374,11 +385,11 @@ $$(ac)(bc)/\lcm(ac, bc) = abc/\lcm(a, b).$$
 Rearranging and cancelling $abc$ from both sides gives us the result.
 </proof>
 
-<corollary> If $a_1, a_2, \ldots a_n, c \in \N$ then
+<corollary> If $a_1, a_2, \ldots a_n, c \in \Z_{\geq 0}$ then
 $$\lcm(a_1c, a_2c, \ldots, a_nc) = c\;\lcm(a_1, a_2, \ldots, a_n).$$
 </corollary>
 
-<theorem> If $a_1, a_2, \ldots a_n \in \N$ then for any fixed $0 < r < n$
+<theorem> If $a_1, a_2, \ldots a_n \in \Z_{\geq 0}$ then for any fixed $0 < r < n$
 $$a_1a_2\ldots a_n = \gcd(a_1a_2\cdots a_r, a_1a_2\cdots a_{r-1}a_{r+1}, \ldots)
 \lcm(a_1a_2\cdots a_{n-r}, a_1a_2\cdots a_{n-r-1}a_{n-r+1}, \ldots),$$
 where the gcd is of all products of the $a_i$ taken $r$ at a time and the lcm is of all products of the $a_i$ taken
@@ -401,7 +412,7 @@ $$\lcm(a_1a_2\ldots a_{k-1}, a_k\;\mbox{gcd}_{r-1}(a_1, \ldots a_{k-1})\lcm_{k-r
 Multiplying these we obtain $LG$ times the left side of the theorem for $n = k$, from which the result follows.
 </proof>
 
-<theorem> (Distributive law) Let $a, b, c \in \N$, then
+<theorem> (Distributive law) Let $a, b, c \in \Z_{\geq 0}$, then
 $$\lcm(a, \gcd(b, c)) = \gcd(\lcm(a, b), \lcm(a, c)).$$
 </theorem>
 
@@ -418,14 +429,14 @@ side of the identity. Thus the right side of the identity divides the left. </br
 As the left side divides the right and conversely, the two sides are equal.
 </proof>
 
-<theorem> (Distributive law) Let $a, b, c \in \N$, then
+<theorem> (Distributive law) Let $a, b, c \in \Z_{\geq 0}$, then
 $$\gcd(a, \lcm(b, c)) = \lcm(gcd(a, b), \gcd(a, c)).$$
 </theorem>
 
 <proof> The proof is exactly dual to that of the previous distributive law.
 </proof>
 
-<theorem> Let $a, b, c \in \N$, then
+<theorem> Let $a, b, c \in \Z_{\geq 0}$, then
 $$\gcd(\lcm(a,b), \lcm(b,c), \lcm(a,c)) = \lcm(\gcd(a,b), \gcd(b,c), \gcd(a,c)).$$
 </theorem>
 
@@ -445,7 +456,7 @@ $$\frac{\lcm(ac, bc, ac)}{\lcm(a,b,c)}.$$
 The result now follows since $\lcm(ac, bc, ac)\gcd(a, b, c) = abc$ and its dual hold by a previous theorem.
 </proof>
 
-<theorem> Let $a, b, c \in \N$, then
+<theorem> Let $a, b, c \in \Z_{\geq 0}$, then
 $$\frac{\lcm(a,b)\lcm(b,c)\lcm(c,a)}{\gcd(a,b)\gcd(b,c)\gcd(c,a)} 
 = \frac{\lcm(a,b,c)^2}{\gcd(a,b,c)^2}.$$
 </theorem>
