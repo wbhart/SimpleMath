@@ -531,6 +531,38 @@ Every even number is of the form $n = 2m$ for some natural number $m$ by definit
 In every other case $n$ is composite since $2 \;|\; n$ and $2 \neq n$ and $2 \neq 1$.
 </proof>
 
+<theorem> If $n = ab \in \N$ for $a, b \neq 1$ then either $a \leq \sqrt{n}$ or $b \leq \sqrt{n}$.
+</theorem>
+
+<proof> If $a, b \neq 1$ then $1 < a, b < n$. If both are greater than $\sqrt{n}$ their product is greater than $n$. 
+Thus one of them must be at most $\sqrt{n}$.
+</proof>
+
+<theorem> If $n > 1$ is a natural number which is not divisible by any prime $p \leq \sqrt{n}$, then $n$ is prime.
+</theorem>
+
+<proof> Let $p$ be the smallest prime dividing $n$. Write $n = pm$. If $m = 1$ then then $n$ is prime and the only prime
+dividing $n$ is $n$ itself, which is greater than $\sqrt{n}$. </br></br>
+
+On the other hand if $m > 1$ it can be written as a product of primes, all of which are at least $p$ by definition.
+Thus $m \geq p$. Thus $n \geq p^2$, i.e. $p \leq \sqrt{n}$. In other words, if $n$ is composite, the smallest prime
+dividing $n$ is at most $\sqrt{n}$. </br></br>
+
+Therefore, if $n$ is not divisible by any primes $p \leq \sqrt{n}$ it is itself prime.
+</proof>
+
+<theorem> The first few prime numbers are $2, 3, 5, 7, 11, 13, 17, 19, 23$.
+</theorem>
+
+<proof> The numbers $4, 6, 8, 10, 12, 14, 16, 18, 20, 22$ are all divisible by $2$. As the only even composite is $2$
+then they are all composite. The numbers $9, 15, 21$ are all of the form $3m$ for $m > 1$, so they are all composite.
+The numbers up to $23$ which remain are those of the theorem. </br></br>
+
+We know $2$ is prime. For each of the other numbers $n$ in the list we must show that they are not divisible by any
+primes up to $\sqrt{n}$. For each of $3, 5, 7$ it is sufficient that they are not divisible by $2$. For the remaining
+numbers it is sufficient that they are not divisible by $2$ or $3$. 
+</proof>
+
 <theorem> There are infinitely many primes of the form $4k + 3$.
 </theorem>
 
