@@ -531,3 +531,20 @@ Every even number is of the form $n = 2m$ for some natural number $m$ by definit
 In every other case $n$ is composite since $2 \;|\; n$ and $2 \neq n$ and $2 \neq 1$.
 </proof>
 
+<theorem> There are infinitely many primes of the form $4k + 3$.
+</theorem>
+
+<proof> Note that $3$ is a prime of this form. Now suppose that there are only finitely many primes of this form, 
+$p_1, p_2, \ldots, p_n$. Consider the number $N = 4p_1p_2\cdots p_n - 1$. As $N$ is larger than each of the $p_i$ it
+cannot be prime. </br></br>
+
+Write $N$ as a product of primes $N = q_1q_2\cdots q_m$. As $N$ is odd, it is not divisible by $2$. Thus each of the 
+$q_i$ are odd, i.e. of the form $2s + 1$ for some $s$. If $q_i = 2s + 1$ and $s$ is even, i.e. $s = 2k$ for some $k$ then 
+$q_i = 4k + 1$. When $s$ is odd, i.e. $s = 2k + 1$ for some $k$ then $q_i = 4k + 3$. </br></br>
+
+But not all of the $q_i$ can be of the form $4k + 1$, since a product of numbers of this form is also of this form. For
+$(4k_1 + 1)(4k_2 + 1) = 4(4k_1k_2 + k_1 + k_2) + 1$. But $N$ is not of this form. Therefore at least one of the prime
+factors $q_i$ of $N$ is of the form $4k + 3$. But $q_i$ cannot be equal to any of the $p_i$, otherwise $q_i$ divides
+$1 = 4p_1p_2\cdots p_n - N$. This is a contradiction and therefore there are infinitely many primes of the form $4k + 3$.
+</proof>
+
