@@ -580,3 +580,22 @@ factors $q_i$ of $N$ is of the form $4k + 3$. But $q_i$ cannot be equal to any o
 $1 = 4p_1p_2\cdots p_n - N$. This is a contradiction and therefore there are infinitely many primes of the form $4k + 3$.
 </proof>
 
+<theorem> There are infinitely many primes of the form $6k + 5$.
+</theorem>
+
+<proof> The prime $5$ is of this form. Suppose there are finitely many primes $p_1, p_2, \ldots, p_n$ of this form.
+Consider the number $N = 6p_1p_2\cdots p_n - 1$. As $N > p_i$ for each $i$ it is not prime. </br></br>
+
+Write $N = q_1q_2\ldots q_m$ with $q_i$ prime for all $i$. Each $q_i$ must be of the form $6k$, $6k + 1$, $6k + 2$, 
+$6k + 3$, $6k + 4$ or $6k + 5$ by the division algorithm. But no $q_i$ can be of the form $6k$, $6k + 2$ or $6k + 4$ as
+all of these are divisible by $2$ and $N$ is odd. Similarly no $q_i$ can be of the form $6k + 3$ since this is divisible
+by $3$ and $N$ is not. Thus each of the $q_i$ must be of the form $6k + 1$ or $6k + 5$. </br></br>
+
+But not all of the $q_i$ can be of the form $6k + 1$ since any product of numbers of this form is also of this form 
+($6k_1 + 1)(6k_2 + 1) = 6(6k_1k_2 + k_1 + k_2) + 1$), but $N$ is not of this form. Thus at least one of the $q_i$ is of 
+the form $6k + 5$. However, $q_i$ cannot be any of the $p_i$ since otherwise $q_i$ divides $1 = 6p_1p_2\cdots p_n - N$,
+which is impossible. Thus we have a contradiction and there are infinitely many primes of the form $6k + 5$.
+</proof>
+
+<corollary> There are infinitely many primes of the form $3k + 2$.
+</corollary>
