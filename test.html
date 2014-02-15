@@ -473,3 +473,39 @@ $$= \lcm(\lcm(c,a)\lcm(a,b,c), \lcm(a,b,c)\gcd(\lcm(a,b),\lcm(b,c)))$$
 $$= \lcm(a,b,c)\lcm(\lcm(c,a), \gcd(\lcm(a,b),\lcm(b,c)))$$ $$= \lcm(a,b,c)\lcm(\lcm(c,a), \lcm(b,\gcd(a,c)))$$
 $$= \lcm(a,b,c)\lcm(a,b,c,\gcd(a,c)) = \lcm(a,b,c)^2.$$
 </proof>
+
+<h2>Primes</h2>
+
+<definition> A natural number $n > 1$ is said to be <u>prime</u> if it is divisible only by $1$ and $n$. A natural number
+which is divisible by a number other than $1$ and itself is said to be <u>composite</u>.
+</definition>
+
+<theorem> Every natural number $n$ greater than $1$ is divisible by a prime number.
+</theorem>
+
+<proof> If $n$ is a prime then we are done. Otherwise $n$ is composite and has at least one factor $a_1$ other than $1$ 
+or $n$. Note that $a_1 < n$. </br></br>
+
+Again if $a_1$ is prime then we are done. Otherwise $a_1$ is composite and has a factor $a_2$ other than $1$ or $a_1$ 
+with $a_2 < a_1$. We keep applying the same argument and construct a sequence of natural numbers 
+$n > a_1 > a_2 > a_3 > \cdots$ with $a_{i+1} \;|\; a_i$ for each $i$ and $a_1 \;|\; n$. But this sequence cannot go on
+forever as it is strictly decreasing. Eventually it must stop at a number which has no factors other that $1$ and
+itself, i.e. at a prime $a_m$. </br></br>
+
+But $a_m$ divides $a_{m-1}$ and $a_{m-1}$ divides $a_{m-2}$, thus $a_m$ divides $a_{m-2}$. Repeating this argument we see
+that $a_m$ divides each of $a_{m-1}, a_{m-2}, \ldots, a_1, n$. Thus $n$ is divisible by the prime number $a_m$.
+</proof>
+
+<theorem> Every natural number $n > 1$ can be written as the product of prime numbers.
+</theorem>
+
+<proof> If $n$ is prime we are done. Otherwise by the previous theorem we can write $n = p_1n_1$ for some prime number 
+$p_1$. Note that $n_1 < n$. Now we apply the same argument to $n_1$ and so on. We construct a sequence of prime numbers
+$p_1, p_2, \ldots$ and numbers $n > n_1 > n_2 > \cdots$. </br></br>
+
+Eventually this process must terminate as the sequence of natural numbers $n_i$ is strictly decreasing. We must reach
+some $n_m$ which is itself a prime $q$. In so doing we will have written $n = p_1p_2\cdots p_mq$ where each of the $p_i$
+and $q$ are prime.
+</proof>
+
+<definition></definition>
