@@ -26,6 +26,9 @@ numbers by $\N$.
 <definition> If $a, b \in \N$ we say $b$ is a <u>factor</u> of $a$ if $b$ divides $a$.
 </definition>
 
+<definition> We say that a divisor of a natural number $n$ is <u>proper</u> if it is not equal to $n$.
+</definition>
+
 <theorem> For $a, b \in \Z$ with $b \neq 0$, $a/b = c$ for some $c \in \Z$ iff $b \;|\; a$.
 </theorem>
 
@@ -629,3 +632,29 @@ We repeat the argument in turn with $p_2$, $p_3$ up to $p_r$. Eventually we divi
 $1$. Each of the $p_i$ will have been equal to one of the $q_j$ in some order. Thus the primes were the same after all.
 </proof>
 
+<definition> We say that a proper divisor $a$ of a natural number $n$ is <u>maximal</u> if no other proper divisor of 
+$n$ contains $a$ as a factor. The quotient $n/a$ of a maximal divisor $a$ of $n$ is called the <u>index</u> of $a$ in 
+$n$.
+</definition>
+
+<definition> Let $n$ be a natural number. If $a_1$ is a maximal divisor of $n$ and $a_2$ a maximal divisor of $a_1$, and
+$a_3$ a maximal divisor or $a_2$, etc., we call the sequence $a_0 = n, a_1, a_2, \ldots$ a <u>composition series</u>.
+</definition>
+
+<theorem> (Jordan) Let $a_0 = n, a_1, a_2, \ldots$ be a composition series of a natural number $n$. The set of indices
+$a_0/a_1, a_1/a_2, \ldots$ is unique up to order.
+</theorem>
+
+<proof> Note that as $n$ is finite and we keep taking proper divisors, the composition series must be finite, i.e. 
+$a_m = 1$ for some $m$. </br></br>
+
+Given a natural number $k$, the index of a maximal divisor $d$ of $k$ in $k$ must be a prime divisor of $k$. For, suppose
+that $k/d = ab$ for $a, b \neq 1$. Then $k = abd$ and $bd$ is a proper divisor of $k$ containing $d$ as a proper factor. 
+Furthemore, if $p$ is the index $k/d$ then $k = dp$, i.e. $d$ is one of the prime divisors of $k$. </br></br>
+
+Let $p_1$ be the index of a maximal divisor $a_1$ of $a_0$. Then $a_0 = p_1a_1$. Similarly, if $p_2$ is the index of a
+maximal divisor $a_2$ of $a_1$ then $a_1 = p_2a_2$. Then $a_0 = p_1p_2a_2$, etc. Eventually the composition series
+terminates and we will have expressed $n = a_0$ as a product of primes $p_1p_2\cdots p_m$. As the prime factorisation
+of $n$ is unique up to order, and the $p_i$ are prime factors of $n$ and indices of the composition series, this set of
+indices is also unique up to order.
+</proof>
