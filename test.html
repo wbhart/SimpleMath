@@ -818,3 +818,21 @@ contained in $(p)$. Then $B$ contains every element of the form $px + by$ for in
 $(p)$, it is not a multiple of $p$. Thus $\gcd(p, b) = 1$. But as $\gcd(p, b)$ is of the form $px + by$ by the extended
 euclidean algorithm, we have that $1 \in B$. Thus $B = \Z$ which is a contradiction. Thus $(p)$ must in fact be maximal.
 </proof>
+
+<definition> We say that a proper ideal $P$ is <u>prime</u> if $P \;|\; AB$ implies that either 
+$P \;|\; A$ or $P \;|\; B$ (or both).
+</definition>
+
+<theorem> A prime ideal is of the form $(p)$ for $p$ a prime or $p = 0$. The converse also holds.
+</theorem>
+
+<proof> Suppose $P \;|\; AB$ for $P = (p)$, $A = (a)$ and $B = (b)$. If $P$ is prime have that $p \;|\; ab$ implies 
+$p \;|\; a$ or $p \;|\; b$ for all $a, b \in \Z$. If $p = cd$ were composite then setting $a = c$ and $b = d$ would give
+a contradiction. Thus $p$ must be prime, $0$ or $1$. We cannot have $p = 1$ since $P$ must be proper. </br></br>
+
+Conversely, if $P = (p)$ for a prime $p$ then if $P \;|\; AB$ either $P \;|\; A$ or $P \;|\; B$. Similarly if $P = (0)$
+then $P \;|\; AB$ for $A = (m)$ and $B = (n)$ implies that $(0)(k) = (m)(n)$ for some $k$. Thus $(mn) = 0$, i.e. 
+$mn = 0$. Thus either $m = 0$ or $n = 0$, which implies that $(0)$ divides either $(m)$ of $(n)$ as required.
+</proof>
+
+<corollary> The nonzero prime ideals are precisely the maximal ideals.</corollary>
