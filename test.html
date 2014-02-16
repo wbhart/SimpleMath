@@ -599,3 +599,33 @@ which is impossible. Thus we have a contradiction and there are infinitely many 
 
 <corollary> There are infinitely many primes of the form $3k + 2$.
 </corollary>
+
+<theorem> If a prime $p$ divides a product $ab$ of natural numbers then either it divides $a$ or it divides $b$ (or 
+both).
+</theorem>
+
+<proof> We show that if $p$ divides $ab$ but does not divide $a$ then it divides $b$. </br></br>
+
+As $p$ does not divide $a$ then $p$ and $a$ are coprime, as the only divisors of $p$ are $1$ and $p$. Therefore, by the
+extended euclidean algorithm we can find $s, t \in \Z$ such that $ps + at = 1$. Multiplying through by $b$ we have
+$pbs + abt = b$. But now $p$ divides $b = pbs + abt$.
+</proof>
+
+<theorem> (Fundamental theorem of arithmetic) Every natural number $n > 1$ can be written as a product of primes in only
+one way, up to the order of the factors.
+</theorem>
+
+<proof> Suppose to the contrary that $n \in \N$ is written as a product of primes in two essentially different ways, 
+$n = p_1p_2\cdots p_r = q_1q_2\cdots q_s$, for $p_i$ and $q_j$ prime. </br></br>
+
+We see that $p_1 \;|\; n$. Therefore by the previous theorem it divides either $q_1$ or $q_2q_3\cdots q_s$. If the latter
+then it either divides $q_2$ or $q_3q_4\cdots q_s$, etc. Thus we see that $p_1$ divides one of the $q_j$. </br></br>
+
+But if one prime divides another, they are the same prime since the only factor of a prime other than $1$ is the prime
+itself. Therefore $p_1$ is equal to one of the $q_j$. By renumbering we can assume that it is equal to $q_1$. We can
+therefore divide $p_1 = q_1$ from both sides. </br></br>
+
+We repeat the argument in turn with $p_2$, $p_3$ up to $p_r$. Eventually we divide by all the primes $p_i$, which leaves
+$1$. Each of the $p_i$ will have been equal to one of the $q_j$ in some order. Thus the primes were the same after all.
+</proof>
+
