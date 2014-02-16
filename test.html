@@ -721,6 +721,19 @@ is a subset of the left. Similarly, any multiple of $m$ times a multiple of $n$ 
 multiples of $mn$ is a multiple of $mn$. Thus the left side is a subset of the right.
 </proof>
 
+<theorem> For integers $a_1, a_2, \ldots, a_m$ and $b_1, b_2, \ldots, b_n$ we have 
+$$(a_1, a_2, \ldots, a_m)(b_1, b_2, \ldots b_n) = (a_1b_1, a_1b_2, \ldots, a_mb_n).$$
+</theorem>
+
+<proof> By a previous result we can take all the $a_i$ and $b_j$ to be non-negative. </br></br>
+  
+By a previous theorem, the left hand side is equal to
+$$(\gcd(a_1, a_2, \ldots, a_m))(\gcd(b_1, b_2, \ldots, b_n)) = (\gcd(a_1, a_2, \ldots, a_m)\gcd(b_1, b_2, \ldots, b_n))$$
+$$= (\gcd(a_1\gcd(b_1, b_2, \ldots, b_n), a_2\gcd(b_1, b_2, \ldots, b_n), \ldots, a_m\gcd(b_1, b_2, \ldots, b_n)))$$
+$$= (\gcd(\gcd(a_1b_1, a_1b_2, \ldots a_1b_n), \gcd(a_2b_1, a_2b_2, \ldots, a_2b_n), \ldots, \gcd(a_mb_1, a_mb_2, \ldots
+a_mb_n)))$$ $$= (\gcd(a_1b_1, a_1b_2, \ldots, a_mb_n)) = (a_1b_1, a_1b_2, \ldots, a_mb_n).$$
+</proof>
+
 <definition> We define the sum of two ideals $A$ and $B$ of $\Z$ to be the set
 $$A + B = \{a + b \;|\; a \in A, \;\; b \in B\}.$$
 </definition>
