@@ -790,9 +790,12 @@ $d$ is an element of $B$.
 $A = BC$. We also say the ideal $B$ <u>divides</u> the ideal $A$.
 </definition>
 
-<theorem> If the ideal $B$ divides the ideal $A$ then $B \supseteq A$.
+<theorem> If the ideal $B$ divides the ideal $A$ then $B \supseteq A$. The converse also holds.
 </theorem>
 
 <proof> If $B$ divides $A$ then there exists an ideal $C$ such that $A = BC$. From a previous theorem 
-$B \bigcap C \supseteq BC$. Thus $A = BC$ is contained in $B$.
+$B \bigcap C \supseteq BC$. Thus $A = BC$ is contained in $B$. </br></br>
+
+Conversely suppose that $B \supseteq A$. If $A = (m)$ and $B = (n)$ for integers $m$ and $n$, then $m \in A \subseteq B$.
+Thus $m = kn$ for some integer $k$. Thus $A = (kn) = (k)(n) = (k)B$. In other words, $B$ divides $A$.
 </proof>
