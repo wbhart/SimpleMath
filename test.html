@@ -799,3 +799,22 @@ $B \bigcap C \supseteq BC$. Thus $A = BC$ is contained in $B$. </br></br>
 Conversely suppose that $B \supseteq A$. If $A = (m)$ and $B = (n)$ for integers $m$ and $n$, then $m \in A \subseteq B$.
 Thus $m = kn$ for some integer $k$. Thus $A = (kn) = (k)(n) = (k)B$. In other words, $B$ divides $A$.
 </proof>
+
+<definition> A proper ideal $A$ of $\Z$ is said to be <u>maximal</u> if there is no ideal $B$ of $\Z$ such that 
+$A \subset B \subset \Z$.
+</definition>
+
+<theorem> A maximal ideal of $\Z$ is of the form $(p)$ for a prime $p$.
+</theorem>
+
+<proof> Suppose $A = (ab)$ is maximal for $a, b \neq \pm 1$. Then $A = (ab) = (a)(b)$. Thus $(a)$ divides $A$ and 
+therefore $(a) \supseteq A$. We do not have $(a) = A$ because $(a) \neq (ab)$ (e.g. $a$ is not in $(ab)$ since 
+$b \neq 1$). Also $(a) \neq \Z$ since for example $1$ is not in $(a)$. Thus we have $A \subset (a) \subset \Z$ and $A$ is
+not maximal. </br></br>
+
+The ideal $(1) = \Z$ is not maximal. This only leaves ideals of the form $(p)$ for $p$ a prime. Suppose such an ideal is
+not maximal. Then there must be another ideal $B$ such that $(p) \subset B \subset \Z$. Let $b \in B$ be any element not
+contained in $(p)$. Then $B$ contains every element of the form $px + by$ for integers $x$ and $y$. But as $b$ is not in
+$(p)$, it is not a multiple of $p$. Thus $\gcd(p, b) = 1$. But as $\gcd(p, b)$ is of the form $px + by$ by the extended
+euclidean algorithm, we have that $1 \in B$. Thus $B = \Z$ which is a contradiction. Thus $(p)$ must in fact be maximal.
+</proof>
