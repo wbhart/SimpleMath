@@ -641,6 +641,15 @@ $n$.
 $a_3$ a maximal divisor or $a_2$, etc., we call the sequence $a_0 = n, a_1, a_2, \ldots$ a <u>composition series</u>.
 </definition>
 
+<theorem> Given a natural number $n$, the index of a maximal divisor $d$ of $n$ in $n$ must be a prime divisor of $n$. 
+</theorem>
+
+<proof> Suppose to the contrary that $n/d = ab$ for $a, b \neq 1$. Then $n = abd$ and $bd$ is a proper divisor of $n$ 
+containing $d$ as a proper factor. This contradicts the maximality of $d$. Thus $n/d$ must be prime. </br></br>
+
+Furthemore, if $p$ is the index $n/d$ then $n = pd$, i.e. $p$ is one of the prime divisors of $n$. 
+</proof>
+
 <theorem> (Jordan) Let $a_0 = n, a_1, a_2, \ldots$ be a composition series of a natural number $n$. The set of indices
 $a_0/a_1, a_1/a_2, \ldots$ is unique up to order.
 </theorem>
@@ -648,13 +657,9 @@ $a_0/a_1, a_1/a_2, \ldots$ is unique up to order.
 <proof> Note that as $n$ is finite and we keep taking proper divisors, the composition series must be finite, i.e. 
 $a_m = 1$ for some $m$. </br></br>
 
-Given a natural number $k$, the index of a maximal divisor $d$ of $k$ in $k$ must be a prime divisor of $k$. For, suppose
-that $k/d = ab$ for $a, b \neq 1$. Then $k = abd$ and $bd$ is a proper divisor of $k$ containing $d$ as a proper factor. 
-Furthemore, if $p$ is the index $k/d$ then $k = pd$, i.e. $p$ is one of the prime divisors of $k$. </br></br>
-
 Let $p_1$ be the index of a maximal divisor $a_1$ of $a_0$. Then $a_0 = p_1a_1$. Similarly, if $p_2$ is the index of a
 maximal divisor $a_2$ of $a_1$ then $a_1 = p_2a_2$. Then $a_0 = p_1p_2a_2$, etc. Eventually the composition series
-terminates and we will have expressed $n = a_0$ as a product of primes $p_1p_2\cdots p_m$. As the prime factorisation
-of $n$ is unique up to order, and the $p_i$ are prime factors of $n$ and indices of the composition series, this set of
+terminates and by the previous theorem we will have expressed $n = a_0$ as a product of primes $p_1p_2\cdots p_m$. As the
+prime factorisation of $n$ is unique up to order, and the $p_i$ are indices of the composition series, this set of 
 indices is also unique up to order.
 </proof>
