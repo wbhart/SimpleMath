@@ -702,3 +702,32 @@ $$\{a_{n-2}x_{n-2} + c \;|\; x_{n-2} \in \Z \;\;\mbox{and}\;\; c \in (d_n)\} = (
 
 Repeating this argument eventually yields the result of the theorem.
 </proof>
+
+<theorem> The ideals $(-1)$ and $(1)$ are both equal to the whole of $\Z$. The ideal $(0)$ contains only the element $0$.
+</theorem>
+
+<proof> From the definition $(-1)$ and $(1)$ and $(0)$ contain all integer multiples of $-1$, $1$ and $0$ respectively.
+</proof>
+
+<definition> We define the product of two ideals $I$ and $J$ of $\Z$ to be the set
+$$IJ = \{ij \;|\; i \in I, \;\; j \in J\}.$$
+</definition>
+
+<theorem> For integers $m, n$ we have $(m)(n) = (mn)$.
+</theorem>
+
+<proof> Any multiple of $mn$ can be written as a product of a multiple of $m$ and a multiple of $n$, and vice versa.
+</proof>
+
+<theorem> For integer $a_i, b_j$ have 
+$$(a_1, a_2, \ldots, a_m)(b_1, b_2, \ldots b_n) = (a_1b_1, a_1b_2, \ldots, a_mb_n).$$
+</theorem>
+
+<proof> By a previous result we can take all the $a_i$ and $b_j$ to be non-negative. </br></br>
+  
+By a previous theorem, the left hand side is equal to
+$$(\gcd(a_1, a_2, \ldots, a_m))(\gcd(b_1, b_2, \ldots, b_n)) = (\gcd(a_1, a_2, \ldots, a_m)\gcd(b_1, b_2, \ldots, b_n))$$
+$$= (\gcd(a_1\gcd(b_1, b_2, \ldots, b_n), a_2\gcd(b_1, b_2, \ldots, b_n), \ldots, a_m\gcd(b_1, b_2, \ldots, b_n)))$$
+$$= (\gcd(\gcd(a_1b_1, a_1b_2, \ldots a_1b_n), \gcd(a_2b_1, a_2b_2, \ldots, a_2b_n), \ldots, \gcd(a_mb_1, a_mb_2, \ldots
+a_mb_n)))$$ $$= (\gcd(a_1b_1, a_1b_2, \ldots, a_mb_n)) = (a_1b_1, a_1b_2, \ldots, a_mb_n).$$
+</proof>
