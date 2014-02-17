@@ -392,6 +392,16 @@ Rearranging and cancelling $abc$ from both sides gives us the result.
 $$\lcm(a_1c, a_2c, \ldots, a_nc) = c\;\lcm(a_1, a_2, \ldots, a_n).$$
 </corollary>
 
+<therorem> If $a_1, a_2, \ldots, a_m, b_1, b_2, \ldots, b_n \in \Z_{\geq 0}$ then
+$$\gcd(a_1, a_2, \ldots, a_m)\gcd(b_1, b_2, \ldots, b_n) = \gcd(a_1b_1, a_1b_2, \ldots, a_mb_n).$$
+</therorem>
+
+<proof> We have, by a previous theorem
+$$\gcd(a_1, a_2, \ldots, a_m)\gcd(b_1, b_2, \ldots, b_n)$$
+$$= \gcd(a_1\gcd(b_1, b_2, \ldots, b_n), a_2\gcd(b_1, b_2, \ldots, b_n), \ldots, a_m\gcd(b_1, b_2, \ldots, b_n))$$
+$$= \gcd(\gcd(a_1b_1, a_1b_2, \ldots a_1b_n), \gcd(a_2b_1, a_2b_2, \ldots, a_2b_n), \ldots, \gcd(a_mb_1, a_mb_2, \ldots
+a_mb_n))$$ $$= \gcd(a_1b_1, a_1b_2, \ldots, a_mb_n).$$
+</proof>
 <theorem> If $a_1, a_2, \ldots a_n \in \Z_{\geq 0}$ then for any fixed $0 < r < n$
 $$a_1a_2\ldots a_n = \gcd(a_1a_2\cdots a_r, a_1a_2\cdots a_{r-1}a_{r+1}, \ldots)
 \lcm(a_1a_2\cdots a_{n-r}, a_1a_2\cdots a_{n-r-1}a_{n-r+1}, \ldots),$$
