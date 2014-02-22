@@ -670,3 +670,57 @@ prime factorisation of $n$ is unique up to order, and the $p_i$ are indices of t
 indices is also unique up to order.
 </proof>
 
+<h2>Modular arithmetic</h2>
+
+<definition> Let $m$ be a natural number. We say that integers $a$ and $b$ are <u>congruent</u> modulo $m$, and write
+$a \equiv b \pmod{m}$ if there exists an integer $k$ such that $a = km + b$.
+</definition>
+
+<theorem> If $a$ and $b$ have the same least nonnegative remainder upon division by $m$ then $a \equiv b \pmod{m}.
+</theorem>
+
+<proof> We have that $a = k_1m + r$ and $b = k_2m + r$ for some $0 \leq r < m$. Thus $a - b = (k_1 - k_2)m$, i.e.
+$a = (k_1 - k_2)m + b$, which means that $a \equiv b \pmod{m}$.
+</proof>
+
+<theorem> If $a \equiv b \pmod{m}$ then $a + c \equiv b + c \pmod{m}$ for all integers $c$.
+</theorem>
+
+<proof> We have that $a = km + b$ for some integer $k$. Thus $a + c = km + b + c$ which implies 
+$a + c \equiv b + c \pmod{m}$.
+</proof>
+
+<corollary> If $a \equiv b \pmod{m}$ then $a - c \equiv b - c \pmod{m}$ for all integers $c$.
+</corollary>
+
+<theorem> If $a \equiv b \pmod{m}$ then $ac \equiv bc \pmod{m}$ for all integers $c$.
+</theorem>
+
+<proof> We have that $a = km + b$ for some integer $k$. Multiplying through by $c$ we have $ac = kcm + bc$. Thus we have
+that $ac \equiv bc \pmod{m}$.
+</proof>
+
+<theorem> If $a$ and $m$ are coprime there exists an $a'$ such that $aa' \equiv 1 \pmod{m]$. The converse holds.
+</theorem>
+
+<proof> Suppose that $\gcd(a, m) = 1$. Then by the extended euclidean algorithm there exist integers $s$ and $t$ such
+that $as + mt = 1$. Thus $as \equiv 1 \pmod{m}$. </br></br>
+  
+Conversely, suppose that $aa' \equiv 1 \pmod{m}$. Then $aa' = km + 1$ for some integer $k$. Now suppose that $d$ is a
+common divisor of $a$ and $m$. Then $1 = aa' - km$ must also be divisible by $d$. As the only natural number dividing $1$
+is $1$ itself, the greatest common divisor of $a$ and $m$ must also be $1$.
+</proof>
+
+<definition> If $aa' \equiv 1 \pmod{m}$ we say that $a'$ is a <u>modular inverse</u> of $a$.
+</definition>
+
+<theorem> If a modular inverse of $a$ modulo $m$ exists, it is unique modulo $m$. 
+</theorem>
+
+<proof> If $aa' \equiv 1 \pmod{m}$, then $aa' = km + 1$ for some $k$. But then $a(a' + sm) = (as + k)m + 1$, i.e. we have
+$a(a' + sm) \equiv 1 \pmod{m}$. But $a' \equiv a' + sm \pmod{m}$. </br></br>
+
+To show uniqueness modulo $m$, suppose that $aa' \equiv aa'' \pmod{m}$. Thus $a(a' - a'') = km$ for some $k$. So $m$ 
+divides $a(a' - a'')$. However, as $\gcd(a, m) = 1$ we must have $m \;|\; (a' - a'')$. Thus $a' \equiv a'' \pmod{m}$.
+</proof>
+
