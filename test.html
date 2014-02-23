@@ -724,3 +724,15 @@ To show uniqueness modulo $m$, suppose that $aa' \equiv aa'' \pmod{m}$. Thus $a(
 divides $a(a' - a'')$. However, as $\gcd(a, m) = 1$ we must have $m \;|\; (a' - a'')$. Thus $a' \equiv a'' \pmod{m}$.
 </proof>
 
+<definition> We call an integer $a'$ such that $aa' \equiv 1 \pmod{m}$ a <u>modular inverse</u> of $a$ modulo $m$. We 
+sometimes write $aa^{-1} \equiv 1 \pmod{m}$. 
+</definition>
+
+<theorem> If $ac \equiv bc \pmod{m}$ and $\gcd(c, m) = 1$ then $a \equiv b \pmod{m}$.
+</theorem>
+
+<proof> By the previous theorem, as $\gcd(c, m) = 1$, there exists a modular inverse of $c$, i.e. a $c^{-1}$ such that
+$cc^{-1} \equiv 1 \pmod{m}$. Multiplying $ac \equiv bc \pmod{m}$ through by $c^{-1}$ we get 
+$a \equiv acc^{-1} \equiv bcc^{-1} \equiv b \pmod{m}$.
+</proof>
+
