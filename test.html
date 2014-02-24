@@ -755,6 +755,17 @@ $a \equiv acc^{-1} \equiv bcc^{-1} \equiv b \pmod{m}$.
 $a \equiv b \pmod{m}$.
 </proof>
 
+<theorem> If $ac \equiv bc \pmod{m}$ then $a \equiv b \pmod{m/d}$ where $d = \gcd(m, c)$. The converse also holds.
+</theorem>
+
+<proof> We have $ac = mk + bc$ for some integer $k$. Thus $(a - b)c = mk$. Now if $d = \gcd(m, c)$ we can divide through
+by $d$, i.e. $(a - b)(c/d) = (m/d)k$. As $\gcd(m/d, c/d) = 1$ we must have that $c/d$ divides $k$. Dividing through by
+$c/d$ we have $a - b = (m/d)k_1$ with $k_1 = k/(c/d)$. In other words, $a \equiv b \pmod{m/d}$. </br></br>
+
+Conversely, if $a \equiv b \pmod{m/d}$ then $a = (m/d)k + b$. Multiplying through by $c$ we have $ac = m(c/d)k + bc$, 
+i.e. $ac \equiv bc \pmod{m}$ as $c/d$ is an integer.
+</proof>
+
 <theorem> The relation $\equiv \pmod{m}$ is an equivalence relation and therefore the integers are partitioned into 
 equivalence classes of integers modulo $m$.
 </theorem>
