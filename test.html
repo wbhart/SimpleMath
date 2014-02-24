@@ -770,10 +770,10 @@ i.e. $ac \equiv bc \pmod{m}$ as $c/d$ is an integer.
 equivalence classes of integers modulo $m$.
 </theorem>
 
-<proof> We have from the definition that $a \equiv a \pmod{m}$. Also if $a \equiv b \pmod{m}$ we also have 
-$b \equiv a \pmod{m}$. Finally if $a \equiv b \pmod{m}$ and $b \equiv c \pmod{m}$ then $a = mk_1 + b$ and $b = mk_2 + c$
-for some integers $k_1$ and $k_2$. Thus $a = m(k_1 + k_2) + c$, i.e. $a \equiv c \pmod{m}$. Thus $\equiv \pmod{m}$ is
-an equivalence relation.
+<proof> We have from the definition that $a \equiv a \pmod{m}$. Also if $a \equiv b \pmod{m}$ then $a = mk + b$ for some
+integer $k$. Thus $b = a - mk = a + m(-k)$. Thus we also have $b \equiv a \pmod{m}$. Finally if $a \equiv b \pmod{m}$ and
+$b \equiv c \pmod{m}$ then $a = mk_1 + b$ and $b = mk_2 + c$ for some integers $k_1$ and $k_2$. Thus 
+$a = m(k_1 + k_2) + c$, i.e. $a \equiv c \pmod{m}$. Thus $\equiv \pmod{m}$ is an equivalence relation.
 </proof>
 
 <definition> A set of representatives for the equivalence classes modulo $m$ is called a <u>complete set of residues</u>
