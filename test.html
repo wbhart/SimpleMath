@@ -807,3 +807,16 @@ suppose that $a_i \equiv k$ and $a_j \equiv 0 \pmod{m}$. Such always exist as $S
 $m$. Now $a_ic \equiv kc \equiv 0 \pmod{m}$ as $kd = m$ divides $kc$. Also $a_jc \equiv 0 \pmod{m}$. Thus $S_c$ is not a
 complete set of residues modulo $m$ as $a_jc \equiv a_ic \pmod{m}$.
 </proof>
+
+<theorem> If $S = \{a_0, a_1, \ldots, a_{m - 1}\}$ is a complete set of residues modulo $m$ then  
+$T_c = \{a_0 + c, a_1 + c, \ldots, a_{m - 1} + c\}$ is also.
+</theorem>
+
+<proof> If $a_i + c \equiv a_j + c \pmod{m}$ then $a_i \equiv a_j \pmod{m}$. Thus the residues in $T_c$ are distinct
+modulo $m$. As there are $m$ of them, $T_c$ is a complete set of residues.
+</proof>
+
+<corollary> If $S = \{a_0, a_1, \ldots, a_{m - 1}\}$ is a complete set of residues modulo $m$ then  
+$\{a_0c + d, a_1c + d, \ldots, a_{m - 1}c + d\}$ is also if $\gcd(c, m) = 1$.
+</corollary>
+
