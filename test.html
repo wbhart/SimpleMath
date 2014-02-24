@@ -790,3 +790,17 @@ must have $k = 0$, i.e. $a = b$. </br></br>
 Also, if $r$ is an arbitrary integer, then by the division algorithm we can write $r = km + s$ for $0 \leq s < m$. Thus
 $r \equiv s \pmod{m}$ and $s \in S$. So every integer $r$ is congruent to a member of $S$. 
 </proof>
+
+<theorem> If $S = \{a_0, a_1, \ldots, a_{m - 1}\}$ is a complete set of residues modulo $m$ then  
+$S_c = \{a_0c, a_1c, \ldots, a_{m - 1}c\}$ is iff $\gcd(m, c) = 1$.
+</theorem>
+
+<proof> Suppose $\gcd(m, c) = 1$. Then no two values in $S_c$ are congruent modulo $m$, for if 
+$a_ic \equiv a_jc \pmod{m}$ then by a previous theorem $a_i \equiv a_j \pmod{c}$. As there are precisely $m$ elements in
+$S_c$ it must be a complete set of residues modulo $m$. </br></br>
+
+Conversely, suppose $\gcd(m, c) = d \neq 1$. Let's suppose that $kd = m$. As $d > 1$ we must have $k < m$. Now 
+suppose that $a_i \equiv k$ and $a_j \equiv 0 \pmod{m}$. Such always exist as $S$ is a complete set of residues modulo
+$m$. Now $a_ic \equiv kc \equiv 0 \pmod{m}$ as $kd = m$ divides $kc$. Also $a_jd \equiv 0 \pmod{m}$. Thus $S_c$ is not a
+complete set of residues modulo $m$.
+</proof>
