@@ -755,3 +755,27 @@ $a \equiv acc^{-1} \equiv bcc^{-1} \equiv b \pmod{m}$.
 $a \equiv b \pmod{m}$.
 </proof>
 
+<theorem> The relation $\equiv \pmod{m}$ is an equivalence relation and therefore the integers are partitioned into 
+equivalence classes of integers modulo $m$.
+</theorem>
+
+<proof> We have from the definition that $a \equiv a \pmod{m}$. Also if $a \equiv b \pmod{m}$ we also have 
+$b \equiv a \pmod{m}$. Finally if $a \equiv b \pmod{m}$ and $b \equiv c \pmod{m}$ then $a = mk_1 + b$ and $b = mk_2 + c$
+for some integers $k_1$ and $k_2$. Thus $a = m(k_1 + k_2) + c$, i.e. $a \equiv c \pmod{m}$. Thus $\equiv \pmod{m}$ is
+an equivalence relation.
+</proof>
+
+<definition> A set of representatives for the equivalence classes modulo $m$ is called a <u>complete set of residues</u>
+modulo $m$.
+</definition>
+
+<theorem> The set $S = \{0, 1, \ldots, m - 1\}$ is a complete set of residues modulo $m$.
+</theorem>
+
+<proof> No two elements of $S$ are congruent modulo $m$. For if $a, b \in S$ and $a \equiv b \pmod{m}$ then $a = mk + b$
+for some integer $k$, i.e. $a - b = mk$, a multiple of $m$. But as all the elements of $S$ differ by less than $m$, we
+must have $k = 0$, i.e. $a = b$. </br></br>
+
+Also, if $r$ is an arbitrary integer, then by the division algorithm we can write $r = km + s$ for $0 \leq s < m$. Thus
+$r \equiv s \pmod{m}$ and $s \in S$. So every integer $r$ is congruent to a member of $S$. 
+</proof>
