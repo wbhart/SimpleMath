@@ -693,12 +693,24 @@ $a + c \equiv b + c \pmod{m}$.
 <corollary> If $a \equiv b \pmod{m}$ then $a - c \equiv b - c \pmod{m}$ for all integers $c$.
 </corollary>
 
+<theorem> If $a \equiv b \pmod{m}$ and $c \equiv d \pmod{m}$ then $a + c \equiv b + d \pmod{m}$.
+</theorem>
+
+<proof> By the previous theorem $a + c \equiv b + c \equiv b + d \pmod{m}$. 
+</proof>
+
+<corollary> If $a \equiv b \pmod{m}$ and $c \equiv d \pmod{m}$ then $a - c \equiv b - d \pmod{m}$.
+</corollary>
+
 <theorem> If $a \equiv b \pmod{m}$ then $ac \equiv bc \pmod{m}$ for all integers $c$.
 </theorem>
 
 <proof> We have that $a = km + b$ for some integer $k$. Multiplying through by $c$ we have $ac = kcm + bc$. Thus we have
 that $ac \equiv bc \pmod{m}$.
 </proof>
+
+<corollary> If $a \equiv b \pmod{m}$ and $c \equiv d \pmod{m}$ then $ac \equiv bd \pmod{m}$.
+</corollary>
 
 <theorem> If $a$ and $m$ are coprime there exists an $a'$ such that $aa' \equiv 1 \pmod{m}$. The converse holds.
 </theorem>
@@ -734,5 +746,12 @@ sometimes write $aa^{-1} \equiv 1 \pmod{m}$.
 <proof> By the previous theorem, as $\gcd(c, m) = 1$, there exists a modular inverse of $c$, i.e. a $c^{-1}$ such that
 $cc^{-1} \equiv 1 \pmod{m}$. Multiplying $ac \equiv bc \pmod{m}$ through by $c^{-1}$ we get 
 $a \equiv acc^{-1} \equiv bcc^{-1} \equiv b \pmod{m}$.
+</proof>
+
+<theorem> If $ac \equiv bc \pmod{mc}$ then if $c \neq 0$ we have $a \equiv b \pmod{m}$.
+</theorem>
+
+<proof> We have $ac = kmc + bc$. Thus, if $c \neq 0$ we can divide through by $c$ which gives $a = km + b$, i.e.
+$a \equiv b \pmod{m}$.
 </proof>
 
