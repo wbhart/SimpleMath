@@ -712,6 +712,12 @@ that $ac \equiv bc \pmod{m}$.
 <corollary> If $a \equiv b \pmod{m}$ and $c \equiv d \pmod{m}$ then $ac \equiv bd \pmod{m}$.
 </corollary>
 
+<theorem> If $a \equiv b \pmod{mn}$ then $a \equiv b \pmod{m}$.
+</theorem>
+
+<proof> We have $a = mnk + b$ for some integer $k$. From this we have that $a \equiv b \pmod{m}$.
+</proof>
+
 <theorem> If $a$ and $m$ are coprime there exists an $a'$ such that $aa' \equiv 1 \pmod{m}$. The converse holds.
 </theorem>
 
@@ -723,7 +729,8 @@ common divisor of $a$ and $m$. Then $1 = aa' - km$ must also be divisible by $d$
 is $1$ itself, the greatest common divisor of $a$ and $m$ must also be $1$.
 </proof>
 
-<definition> If $aa' \equiv 1 \pmod{m}$ we say that $a'$ is a <u>modular inverse</u> of $a$.
+<definition> If $aa' \equiv 1 \pmod{m}$ we say that $a'$ is a <u>modular inverse</u> of $a$. We sometimes write 
+$aa^{-1} \equiv 1 \pmod{m}$.
 </definition>
 
 <theorem> If a modular inverse of $a$ modulo $m$ exists, it is unique modulo $m$. 
@@ -735,10 +742,6 @@ $a(a' + sm) \equiv 1 \pmod{m}$. But $a' \equiv a' + sm \pmod{m}$. </br></br>
 To show uniqueness modulo $m$, suppose that $aa' \equiv aa'' \pmod{m}$. Thus $a(a' - a'') = km$ for some $k$. So $m$ 
 divides $a(a' - a'')$. However, as $\gcd(a, m) = 1$ we must have $m \;|\; (a' - a'')$. Thus $a' \equiv a'' \pmod{m}$.
 </proof>
-
-<definition> We call an integer $a'$ such that $aa' \equiv 1 \pmod{m}$ a <u>modular inverse</u> of $a$ modulo $m$. We 
-sometimes write $aa^{-1} \equiv 1 \pmod{m}$. 
-</definition>
 
 <theorem> If $ac \equiv bc \pmod{m}$ and $\gcd(c, m) = 1$ then $a \equiv b \pmod{m}$.
 </theorem>
