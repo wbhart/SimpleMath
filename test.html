@@ -724,6 +724,17 @@ that $ac \equiv bc \pmod{m}$.
 <proof> We have $a = mnk + b$ for some integer $k$. From this we have that $a \equiv b \pmod{m}$.
 </proof>
 
+<theorem> If $a \equiv b \pmod{m}$ and $a \equiv b \pmod{n}$ then $a \equiv b \pmod{\lcm(m, n)}$.
+</theorem>
+
+<proof> We have $a = k_1m + b$ and $a = k_2n + b$ for integers $k_1$ and $k_2$. Thus $a - b = k_1m = k_2n$. Thus $a - b$
+is divisible by $m$ and by $n$. Therefore it is divisible by $\lcm(m, n)$, i.e. $a - b = \lcm(m, n)k$ for some integer 
+$k$. Thus $a = \lcm(m, n)k + b$ and $a \equiv b \pmod{\lcm(m, n)}$.
+</proof>
+
+<corollary> If $a \equiv b \pmod{m}$ and $a \equiv b \pmod{n}$ for $m$ and $n$ coprime, then $a \equiv b \pmod{mn}$.
+</corollary>
+
 <theorem> If $a$ and $m$ are coprime there exists an $a'$ such that $aa' \equiv 1 \pmod{m}$. The converse holds.
 </theorem>
 
