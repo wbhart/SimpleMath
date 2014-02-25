@@ -870,3 +870,15 @@ If $a_ic \equiv a_jc \pmod{m}$ then since $\gcd(c, m) = 1$ we have $a_i \equiv a
 are mutually inequivalent. Since there are $\phi(m)$ of them $S_c$ must be a reduced residue system modulo $m$.
 </proof>
 
+<theorem> If $S = \{a_0, a_1, \ldots, a_{\phi(m)}\}$ is a reduced residue system modulo $m$ then  
+$$\sum_{i=1}^{\phi(m)} a_i = 0 \pmod{m}.$$
+</theorem>
+
+<proof> Each of the $a_i$ is congruent to a unique residue in the range $1\ldots (m-1)$. Replacing $a_i$ with such will
+alter its value by a multiple of $m$ and thus not alter the sum. So without loss of generality, we assume $0 < a_i < m$
+for all $i$. </br></br>
+
+If $\gcd(a_i, m) = 1$ then $\gcd(m - a_i, m) = 1$. We cannot have $a_i = m - a_i$ otherwise $\gcd(a_i, m) \neq 1$. Thus
+the residues occur in pairs that sum to $m$. The sum in the theorem must therefore be a multiple of $m$, which gives us
+the required result.
+</proof>
