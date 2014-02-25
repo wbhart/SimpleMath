@@ -882,3 +882,17 @@ If $\gcd(a_i, m) = 1$ then $\gcd(m - a_i, m) = 1$. We cannot have $a_i = m - a_i
 the residues occur in pairs that sum to $m$. The sum in the theorem must therefore be a multiple of $m$, which gives us
 the required result.
 </proof>
+
+<theorem> If $S = \{a_0, a_1, \ldots, a_{\phi(m)}\}$ is a reduced residue system modulo $m$ then so is
+$S^{-1} = \{a_0^{-1}, a_1^{-1}, \ldots, a_{\phi(m)}^{-1}\}$ where $a_i^{-1}$ is a modular inverse of $a_i$ modulo $m$.
+</theorem>
+
+<proof> Since $a_ia_i^{-1} \equiv 1 \pmod{m}$ i.e. $a_ia_i^{-1} = km + 1$ for some $k$, we have that 
+$\gcd(a_i^{-1}, m) = 1$. </br></br>
+
+If $a_i^{-1} \equiv a_j^{-1} \pmod{m}$ then $1 \equiv a_ia_i^{-1} \equiv a_ia_j^{-1} \pmod{m}$. Thus $a_i$ is a modular
+inverse of $a_j^{-1}$. As such an inverse is unique modulo $m$ an $a_j$ is also such an inverse, we must have
+$a_i \equiv a_j \pmod{m}$. Thus all the residues in $S^{-1}$ are distinct modulo $m$. As there are $\phi(m)$ of them
+$S^{-1}$ must be a reduced system of residues modulo $m$.
+</proof>
+
