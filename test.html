@@ -820,3 +820,53 @@ modulo $m$. As there are $m$ of them, $T_c$ is a complete set of residues.
 $\{a_0c + d, a_1c + d, \ldots, a_{m - 1}c + d\}$ is also if $\gcd(c, m) = 1$.
 </corollary>
 
+<theorem> A residue $a \pmod{m}$ is coprime with $m$ iff every element of the equivalence class of $a$ is comprime with
+$m$.
+</theorem>
+
+<proof> If $\gcd(a, m) = 1$ and $b = km + a$ is an element of the same class, then $\gcd(b, m) = \gcd(a, m) = 1$. 
+</br></br>
+
+On the other hand, if $\gcd(a, m) = d > 1$ then $\gcd(b, m) = \gcd(a, m) = d$.
+</proof>
+
+<definition> A maximal set of mutually inequivalent residues coprime to $m$ is called a <u>reduced residue system</u>
+modulo $m$.
+</definition>
+
+<theorem> If $p$ is prime, $S = \{1, 2, \ldots, p - 1\}$ is a reduced residue system modulo $p$.
+</theorem>
+
+<proof> The residues are mutually inequivalent modulo $p$. They are all coprime with $p$ as the only factors of $p$ are
+$1$ and $p$. The only remaining residue class is that of $0$, but we cannot include it since no element of that class is 
+coprime with $p$. Thus the set $S$ is maximal with respect to the other conditions and is therefore a reduced residue 
+system.
+</proof>
+
+<theorem> The number of elements of a reduce residue system modulo $m$ only depends on $m$.
+</theorem>
+
+<proof> Since each equivalence class of residues either consists entirely of residues coprime with $m$ or not coprime 
+with $m$ and since a reduced residue system has a representative from each of the former classes and none of the latter,
+the number of elements in the reduced residue system modulo $m$ must be the number of equivalence classes of residues
+coprime with $m$. This number depends only on $m$, not the representatives chosen.
+</proof>
+
+<definition> The number of residues in a reduced residue system modulo $m$ is a function of $m$ called the <u>Euler phi
+function</u> and is denoted $\phi(m)$.
+</definition>
+
+<theorem> If $S = \{a_0, a_1, \ldots, a_{\phi(m)}\}$ is a reduced residue system modulo $m$ then  
+$S_c = \{a_0c, a_1c, \ldots, a_{\phi(m)}c\}$ is iff $\gcd(m, c) = 1$.
+</theorem>
+
+<proof> If $\gcd(m, c) = d > 1$ then $a_ic$ is divisible by $d$ for all $i$. Thus $\gcd(a_ic, m) \neq 1$. </br></br>
+
+Conversely, if $\gcd(m, c) = 1$ then $\gcd(a_ic, m) = 1$ for all $i$. For if $d$ divides $m$ and $a_ic$ then any prime
+$p$ dividing $d$ must divide $m$ and $a_ic$. But then $p$ divides either $a_i$ or $c$, which is impossible as 
+$\gcd(m, c) = 1$ and $\gcd(m, a_i) = 1$. </br></br>
+
+If $a_ic \equiv a_jc \pmod{m}$ then since $\gcd(c, m) = 1$ we have $a_i \equiv a_j \pmod{m}$. Thus the residues in $S_c$
+are mutually inequivalent. Since there are $\phi(m)$ of them $S_c$ must be a reduced residue system modulo $m$.
+</proof>
+
