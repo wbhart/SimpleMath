@@ -271,7 +271,7 @@ form {
 Math Styles
 *******************************************************************************/
 
-theorem, proof, definition {
+theorem, proof, definition, exercise, corollary {
   display: block;
   margin: 12px 0;
 }
