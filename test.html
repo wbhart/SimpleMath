@@ -1031,3 +1031,12 @@ positive. On the first occasion that that the number becomes nonpositive, as $k$
 Thus the final value must lie between $-18$ and $0$ inclusive. The only values in this range that are divisible by $7$
 are those given.
 </proof>
+
+<theorem> To test whether a number is divisible by $8$, if the hundreds digit is even examine the number formed by the 
+final two digits for divisibility by $8$. Otherwise, add $4$ to the number formed by the last two digits and examine for
+divisibility by $8$.
+</theorem>
+
+<proof> As $1000$ is divisible by $8$, only the final three digits count. As $200$ is divisible by $8$ an even hundreds 
+digit does not contribute. Otherwise, an odd hundreds digit contributes $100 \equiv 4 \pmod{8}$.
+</proof>
