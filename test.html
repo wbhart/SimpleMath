@@ -1019,8 +1019,15 @@ digits modulo $3$.
 
 <theorem> A natural number $m = 10n + k$ is divisible by $7$ iff $n - 2k$ is divisible by $7$. To test division of a 
 number by $7$, let $k$ be the final digit and $n$ the number formed by the remaining digits. Repeatedly apply the rule 
-until a value less than $100$ is obtained. Check the two digit number for divisibility by $7$. 
+until a value between $-18$ and $0$ (inclusive) is obtained. If the remaining number is $-14$, $-7$ or $0$, the original
+number was divisible by $7$. 
 </theorem>
 
 <proof> If $10n + k$ is divisible by $7$ then so is $-2(10n + k) = -20n - 2k$. But $-20n - 2k \equiv n - 2k \pmod{7}$.
+</br></br>
+  
+If $m$ is positive, $n - 2k < 10n + k$. Thus, repeated application of the rule reduces the number whilst it remains
+positive. On the first occasion that that the number becomes nonpositive, as $k$ can be at most $9$, $n - 2k \geq -18$.
+Thus the final value must lie between $-18$ and $0$ inclusive. The only values in this range that are divisible by $7$
+are those given.
 </proof>
