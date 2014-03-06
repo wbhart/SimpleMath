@@ -1040,3 +1040,12 @@ divisibility by $8$.
 <proof> As $1000$ is divisible by $8$, only the final three digits count. As $200$ is divisible by $8$ an even hundreds 
 digit does not contribute. Otherwise, an odd hundreds digit contributes $100 \equiv 4 \pmod{8}$.
 </proof>
+
+<theorem> A number of the form $m = 100n + 10k_1 + k_2$ is divisible by $11$ iff $n - k_1 + k_2$ is. To test whether a
+number is divisible by $11$ test the alternating sum of its digits by divisibility by $11$.
+</theorem>
+
+<proof> We have that $100n + 10k_1 + k_2 \equiv n - k_1 + k_2 \pmod{11}$. If $k_1, k_2$ are the final two digits of a
+number, repeated application of the rule computes the alternating sum of the digits of a number (the leading digit may be
+zero).
+</proof>
