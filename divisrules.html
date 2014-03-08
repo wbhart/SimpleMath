@@ -115,3 +115,19 @@ the previous theorem we have that $A - B$ is divisible by $10 - (-b) = 10 + b$. 
 is $B$.
 </proof>
 
+<theorem> (Gergonne) Let $A = a_0 + a_110^m + \cdots + a_n10^{mn}$ with $0 \leq a_i < 10^m$. If $d$ is any divisor of 
+$10^m - 1$ then $A \equiv a_0 + a_1 + \cdots a_n \pmod{d}$.
+</theorem>
+
+<proof> We have that $10^m \equiv 1 \pmod{d}$. Thus $a_i10^{mi} \equiv a_i \pmod{d}$. Thus 
+$A \equiv a_0 + a_1 + \cdots + a_n \pmod{d}$.
+</proof>
+
+<theorem> (Gergonne) Let $A = a_0 + a_110^m + \cdots + a_n10^{mn}$ with $0 \leq a_i < 10^m$. If $d$ is any divisor of 
+$10^m + 1$ then $A \equiv a_0 - a_1 + \cdots (-1)^na_n \pmod{d}$.
+</theorem>
+
+<proof> We have that $10^m \equiv -1 \pmod{d}$. Thus $a_i10^{mi} \equiv (-1)^ma_i \pmod{d}$. Thus 
+$A \equiv a_0 - a_1 + \cdots + (-1)^na_n \pmod{d}$.
+</proof>
+
