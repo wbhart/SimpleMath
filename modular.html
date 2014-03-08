@@ -1,0 +1,250 @@
+---
+layout: default
+title: Simplemath
+---
+
+<h2>Modular arithmetic</h2>
+
+<definition> Let $m$ be a natural number. We say that integers $a$ and $b$ are <u>congruent</u> modulo $m$, and write
+$a \equiv b \pmod{m}$ if there exists an integer $k$ such that $a = km + b$.
+</definition>
+
+<theorem> If $a$ and $b$ have the same least nonnegative remainder upon division by $m$ then $a \equiv b \pmod{m}$.
+</theorem>
+
+<proof> We have that $a = k_1m + r$ and $b = k_2m + r$ for some $0 \leq r < m$. Thus $a - b = (k_1 - k_2)m$, i.e.
+$a = (k_1 - k_2)m + b$, which means that $a \equiv b \pmod{m}$.
+</proof>
+
+<theorem> If $a \equiv b \pmod{m}$ then $a + c \equiv b + c \pmod{m}$ for all integers $c$.
+</theorem>
+
+<proof> We have that $a = km + b$ for some integer $k$. Thus $a + c = km + b + c$ which implies 
+$a + c \equiv b + c \pmod{m}$.
+</proof>
+
+<corollary> If $a \equiv b \pmod{m}$ then $a - c \equiv b - c \pmod{m}$ for all integers $c$.
+</corollary>
+
+<theorem> If $a \equiv b \pmod{m}$ and $c \equiv d \pmod{m}$ then $a + c \equiv b + d \pmod{m}$.
+</theorem>
+
+<proof> By the previous theorem $a + c \equiv b + c \equiv b + d \pmod{m}$. 
+</proof>
+
+<corollary> If $a \equiv b \pmod{m}$ and $c \equiv d \pmod{m}$ then $a - c \equiv b - d \pmod{m}$.
+</corollary>
+
+<theorem> If $a \equiv b \pmod{m}$ then $ac \equiv bc \pmod{m}$ for all integers $c$.
+</theorem>
+
+<proof> We have that $a = km + b$ for some integer $k$. Multiplying through by $c$ we have $ac = kcm + bc$. Thus we have
+that $ac \equiv bc \pmod{m}$.
+</proof>
+
+<corollary> If $a \equiv b \pmod{m}$ and $c \equiv d \pmod{m}$ then $ac \equiv bd \pmod{m}$.
+</corollary>
+
+<corollary> If $a \equiv b \pmod{m}$ then $a^n \equiv b^n \pmod{m}$ for all $n \in \N$.
+</corollary>
+
+<corollary> If $a \equiv b \pmod{m}$ then $f(a) \equiv f(b)$ for any polynomial $f$ with integer coefficients.
+</corollary>
+
+<theorem> If $a \equiv b \pmod{mn}$ then $a \equiv b \pmod{m}$.
+</theorem>
+
+<proof> We have $a = mnk + b$ for some integer $k$. From this we have that $a \equiv b \pmod{m}$.
+</proof>
+
+<theorem> If $a \equiv b \pmod{m}$ and $a \equiv b \pmod{n}$ then $a \equiv b \pmod{\lcm(m, n)}$.
+</theorem>
+
+<proof> We have $a = k_1m + b$ and $a = k_2n + b$ for integers $k_1$ and $k_2$. Thus $a - b = k_1m = k_2n$. Thus $a - b$
+is divisible by $m$ and by $n$. Therefore it is divisible by $\lcm(m, n)$, i.e. $a - b = \lcm(m, n)k$ for some integer 
+$k$. Thus $a = \lcm(m, n)k + b$ and $a \equiv b \pmod{\lcm(m, n)}$.
+</proof>
+
+<corollary> If $a \equiv b \pmod{m}$ and $a \equiv b \pmod{n}$ for $m$ and $n$ coprime, then $a \equiv b \pmod{mn}$.
+</corollary>
+
+<theorem> If $a$ and $m$ are coprime there exists an $a'$ such that $aa' \equiv 1 \pmod{m}$. The converse holds.
+</theorem>
+
+<proof> Suppose that $\gcd(a, m) = 1$. Then by the extended euclidean algorithm there exist integers $s$ and $t$ such
+that $as + mt = 1$. Thus $as \equiv 1 \pmod{m}$. </br></br>
+  
+Conversely, suppose that $aa' \equiv 1 \pmod{m}$. Then $aa' = km + 1$ for some integer $k$. Now suppose that $d$ is a
+common divisor of $a$ and $m$. Then $1 = aa' - km$ must also be divisible by $d$. As the only natural number dividing $1$
+is $1$ itself, the greatest common divisor of $a$ and $m$ must also be $1$.
+</proof>
+
+<definition> If $aa' \equiv 1 \pmod{m}$ we say that $a'$ is a <u>modular inverse</u> of $a$. We sometimes write 
+$aa^{-1} \equiv 1 \pmod{m}$.
+</definition>
+
+<theorem> If a modular inverse of $a$ modulo $m$ exists, it is unique modulo $m$. 
+</theorem>
+
+<proof> If $aa' \equiv 1 \pmod{m}$, then $aa' = km + 1$ for some $k$. But then $a(a' + sm) = (as + k)m + 1$, i.e. we have
+$a(a' + sm) \equiv 1 \pmod{m}$. But $a' \equiv a' + sm \pmod{m}$. </br></br>
+
+To show uniqueness modulo $m$, suppose that $aa' \equiv aa'' \pmod{m}$. Thus $a(a' - a'') = km$ for some $k$. So $m$ 
+divides $a(a' - a'')$. However, as $\gcd(a, m) = 1$ we must have $m \;|\; (a' - a'')$. Thus $a' \equiv a'' \pmod{m}$.
+</proof>
+
+<theorem> If $ac \equiv bc \pmod{m}$ and $\gcd(c, m) = 1$ then $a \equiv b \pmod{m}$.
+</theorem>
+
+<proof> By the previous theorem, as $\gcd(c, m) = 1$, there exists a modular inverse of $c$, i.e. a $c^{-1}$ such that
+$cc^{-1} \equiv 1 \pmod{m}$. Multiplying $ac \equiv bc \pmod{m}$ through by $c^{-1}$ we get 
+$a \equiv acc^{-1} \equiv bcc^{-1} \equiv b \pmod{m}$.
+</proof>
+
+<theorem> If $ac \equiv bc \pmod{mc}$ then if $c \neq 0$ we have $a \equiv b \pmod{m}$.
+</theorem>
+
+<proof> We have $ac = kmc + bc$. Thus, if $c \neq 0$ we can divide through by $c$ which gives $a = km + b$, i.e.
+$a \equiv b \pmod{m}$.
+</proof>
+
+<theorem> If $ac \equiv bc \pmod{m}$ then $a \equiv b \pmod{m/d}$ where $d = \gcd(m, c)$. The converse also holds.
+</theorem>
+
+<proof> We have $ac = mk + bc$ for some integer $k$. Thus $(a - b)c = mk$. Now if $d = \gcd(m, c)$ we can divide through
+by $d$, i.e. $(a - b)(c/d) = (m/d)k$. As $\gcd(m/d, c/d) = 1$ we must have that $c/d$ divides $k$. Dividing through by
+$c/d$ we have $a - b = (m/d)k_1$ with $k_1 = k/(c/d)$. In other words, $a \equiv b \pmod{m/d}$. </br></br>
+
+Conversely, if $a \equiv b \pmod{m/d}$ then $a = (m/d)k + b$. Multiplying through by $c$ we have $ac = m(c/d)k + bc$, 
+i.e. $ac \equiv bc \pmod{m}$ as $c/d$ is an integer.
+</proof>
+
+<theorem> The relation $\equiv \pmod{m}$ is an equivalence relation and therefore the integers are partitioned into 
+equivalence classes of integers modulo $m$.
+</theorem>
+
+<proof> We have from the definition that $a \equiv a \pmod{m}$. Also if $a \equiv b \pmod{m}$ then $a = mk + b$ for some
+integer $k$. Thus $b = a - mk = a + m(-k)$. Thus we also have $b \equiv a \pmod{m}$. Finally if $a \equiv b \pmod{m}$ and
+$b \equiv c \pmod{m}$ then $a = mk_1 + b$ and $b = mk_2 + c$ for some integers $k_1$ and $k_2$. Thus 
+$a = m(k_1 + k_2) + c$, i.e. $a \equiv c \pmod{m}$. Thus $\equiv \pmod{m}$ is an equivalence relation.
+</proof>
+
+<definition> A set of representatives for the equivalence classes modulo $m$ is called a <u>complete set of residues</u>
+modulo $m$.
+</definition>
+
+<theorem> The set $S = \{0, 1, \ldots, m - 1\}$ is a complete set of residues modulo $m$.
+</theorem>
+
+<proof> No two elements of $S$ are congruent modulo $m$. For if $a, b \in S$ and $a \equiv b \pmod{m}$ then $a = mk + b$
+for some integer $k$, i.e. $a - b = mk$, a multiple of $m$. But as all the elements of $S$ differ by less than $m$, we
+must have $k = 0$, i.e. $a = b$. </br></br>
+
+Also, if $r$ is an arbitrary integer, then by the division algorithm we can write $r = km + s$ for $0 \leq s < m$. Thus
+$r \equiv s \pmod{m}$ and $s \in S$. So every integer $r$ is congruent to a member of $S$. 
+</proof>
+
+<theorem> If $S = \{a_0, a_1, \ldots, a_{m - 1}\}$ is a complete set of residues modulo $m$ then  
+$S_c = \{a_0c, a_1c, \ldots, a_{m - 1}c\}$ is iff $\gcd(m, c) = 1$.
+</theorem>
+
+<proof> Suppose $\gcd(m, c) = 1$. Then no two values in $S_c$ are congruent modulo $m$, for if 
+$a_ic \equiv a_jc \pmod{m}$ then by a previous theorem $a_i \equiv a_j \pmod{c}$. As there are precisely $m$ elements in
+$S_c$ it must be a complete set of residues modulo $m$. </br></br>
+
+Conversely, suppose $\gcd(m, c) = d \neq 1$. Let's suppose that $kd = m$. As $d > 1$ we must have $k < m$. Now 
+suppose that $a_i \equiv k$ and $a_j \equiv 0 \pmod{m}$. Such always exist as $S$ is a complete set of residues modulo
+$m$. Now $a_ic \equiv kc \equiv 0 \pmod{m}$ as $kd = m$ divides $kc$. Also $a_jc \equiv 0 \pmod{m}$. Thus $S_c$ is not a
+complete set of residues modulo $m$ as $a_jc \equiv a_ic \pmod{m}$.
+</proof>
+
+<theorem> If $S = \{a_0, a_1, \ldots, a_{m - 1}\}$ is a complete set of residues modulo $m$ then  
+$T_c = \{a_0 + c, a_1 + c, \ldots, a_{m - 1} + c\}$ is also.
+</theorem>
+
+<proof> If $a_i + c \equiv a_j + c \pmod{m}$ then $a_i \equiv a_j \pmod{m}$. Thus the residues in $T_c$ are distinct
+modulo $m$. As there are $m$ of them, $T_c$ is a complete set of residues.
+</proof>
+
+<corollary> If $S = \{a_0, a_1, \ldots, a_{m - 1}\}$ is a complete set of residues modulo $m$ then  
+$\{a_0c + d, a_1c + d, \ldots, a_{m - 1}c + d\}$ is also if $\gcd(c, m) = 1$.
+</corollary>
+
+<theorem> A residue $a \pmod{m}$ is coprime with $m$ iff every element of the equivalence class of $a$ is comprime with
+$m$.
+</theorem>
+
+<proof> If $\gcd(a, m) = 1$ and $b = km + a$ is an element of the same class, then $\gcd(b, m) = \gcd(a, m) = 1$. 
+</br></br>
+
+On the other hand, if $\gcd(a, m) = d > 1$ then $\gcd(b, m) = \gcd(a, m) = d$.
+</proof>
+
+<definition> A maximal set of mutually inequivalent residues coprime to $m$ is called a <u>reduced residue system</u>
+modulo $m$.
+</definition>
+
+<theorem> If $p$ is prime, $S = \{1, 2, \ldots, p - 1\}$ is a reduced residue system modulo $p$.
+</theorem>
+
+<proof> The residues are mutually inequivalent modulo $p$. They are all coprime with $p$ as the only factors of $p$ are
+$1$ and $p$. The only remaining residue class is that of $0$, but we cannot include it since no element of that class is 
+coprime with $p$. Thus the set $S$ is maximal with respect to the other conditions and is therefore a reduced residue 
+system.
+</proof>
+
+<theorem> The number of elements of a reduce residue system modulo $m$ only depends on $m$.
+</theorem>
+
+<proof> Since each equivalence class of residues either consists entirely of residues coprime with $m$ or not coprime 
+with $m$ and since a reduced residue system has a representative from each of the former classes and none of the latter,
+the number of elements in the reduced residue system modulo $m$ must be the number of equivalence classes of residues
+coprime with $m$. This number depends only on $m$, not the representatives chosen.
+</proof>
+
+<definition> The number of residues in a reduced residue system modulo $m$ is a function of $m$ called the <u>Euler phi
+function</u> and is denoted $\phi(m)$.
+</definition>
+
+<theorem> If $S = \{a_0, a_1, \ldots, a_{\phi(m)}\}$ is a reduced residue system modulo $m$ then  
+$S_c = \{a_0c, a_1c, \ldots, a_{\phi(m)}c\}$ is iff $\gcd(m, c) = 1$.
+</theorem>
+
+<proof> If $\gcd(m, c) = d > 1$ then $a_ic$ is divisible by $d$ for all $i$. Thus $\gcd(a_ic, m) \neq 1$. </br></br>
+
+Conversely, if $\gcd(m, c) = 1$ then $\gcd(a_ic, m) = 1$ for all $i$. For if $d$ divides $m$ and $a_ic$ then any prime
+$p$ dividing $d$ must divide $m$ and $a_ic$. But then $p$ divides either $a_i$ or $c$, which is impossible as 
+$\gcd(m, c) = 1$ and $\gcd(m, a_i) = 1$. </br></br>
+
+If $a_ic \equiv a_jc \pmod{m}$ then since $\gcd(c, m) = 1$ we have $a_i \equiv a_j \pmod{m}$. Thus the residues in $S_c$
+are mutually inequivalent. Since there are $\phi(m)$ of them $S_c$ must be a reduced residue system modulo $m$.
+</proof>
+
+<corollary> A reduced residue system modulo $m$ is closed under multiplication modulo $m$.
+</corollary>
+
+<theorem> If $S = \{a_0, a_1, \ldots, a_{\phi(m)}\}$ is a reduced residue system modulo $m$ then  
+$$\sum_{i=1}^{\phi(m)} a_i = 0 \pmod{m}.$$
+</theorem>
+
+<proof> Each of the $a_i$ is congruent to a unique residue in the range $1\ldots (m-1)$. Replacing $a_i$ with such will
+alter its value by a multiple of $m$ and thus not alter the sum. So without loss of generality, we assume $0 < a_i < m$
+for all $i$. </br></br>
+
+If $\gcd(a_i, m) = 1$ then $\gcd(m - a_i, m) = 1$. We cannot have $a_i = m - a_i$ otherwise $\gcd(a_i, m) \neq 1$. Thus
+the residues occur in pairs that sum to $m$. The sum in the theorem must therefore be a multiple of $m$, which gives us
+the required result.
+</proof>
+
+<theorem> If $S = \{a_0, a_1, \ldots, a_{\phi(m)}\}$ is a reduced residue system modulo $m$ then so is
+$S^{-1} = \{a_0^{-1}, a_1^{-1}, \ldots, a_{\phi(m)}^{-1}\}$ where $a_i^{-1}$ is a modular inverse of $a_i$ modulo $m$.
+</theorem>
+
+<proof> Since $a_ia_i^{-1} \equiv 1 \pmod{m}$ i.e. $a_ia_i^{-1} = km + 1$ for some $k$, we have that 
+$\gcd(a_i^{-1}, m) = 1$. </br></br>
+
+If $a_i^{-1} \equiv a_j^{-1} \pmod{m}$ then $1 \equiv a_ia_i^{-1} \equiv a_ia_j^{-1} \pmod{m}$. Thus $a_i$ is a modular
+inverse of $a_j^{-1}$. As such an inverse is unique modulo $m$ an $a_j$ is also such an inverse, we must have
+$a_i \equiv a_j \pmod{m}$. Thus all the residues in $S^{-1}$ are distinct modulo $m$. As there are $\phi(m)$ of them,
+$S^{-1}$ must be a reduced system of residues modulo $m$.
+</proof>
