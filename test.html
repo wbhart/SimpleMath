@@ -723,6 +723,27 @@ Also by a previous result, the first five integers are divisible by $120$. There
 divisible by $\lcm(48, 36, 120) = 720$.
 </proof>
 
+<definition> The product of the first $n$ natural numbers is call $n$ <u>factorial</u>. It is denoted $n!$.
+</definition>
+
+<theorem> The product of any $n$ consecutive integers is divisible by $n!$.
+</theorem>
+
+<proof> If one of the integers is $0$, the product is $0$ and therefore divisible by $n!$. </br></br>
+
+Otherwise, the integers are all positive or all negative. In the latter case we have $\pm 1$ times the product of $n$ 
+consecutive natural numbers. So it suffices to prove the result when the integers are all positive. </br></br>
+
+Let $P_n(k) = (k + 1)(k + 2)\ldots (k + n)$. We have that $P_n(0) = n!$ and thus $P_n(0)$ is divisible by $n!$. We prove
+the result we are after by induction on $n$ and $k$. We assume that it has been shown that $P_m(k)$ is divisible for all
+$1 \leq m < n$ and all $k \geq 0$. </br></br>
+
+If $P_n(r)$ is divisible by $n!$ for $0 \leq r \leq k$ then 
+$$P_n(k + 1) = (k + 2)(k + 3) \ldots (k + n + 1) = (k + 2)(k + 3) \ldots ((k + 1) + n) = P_n(k) + P_{n-1}(k + 1)n.$$
+By the induction hypothesis, the first term on the right is divisible by $n!$ and $P_{n-1}(k + 1)$ is divisible by 
+$(n - 1)!$. Thus the second term on the right is divisible by $(n - 1)!n = n!$. Thus $P_n(k + 1)$ is divisible by $n!$.
+</proof>
+
 <h2>Modular arithmetic</h2>
 
 <definition> Let $m$ be a natural number. We say that integers $a$ and $b$ are <u>congruent</u> modulo $m$, and write
