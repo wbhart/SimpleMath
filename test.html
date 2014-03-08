@@ -735,8 +735,8 @@ Otherwise, the integers are all positive or all negative. In the latter case we 
 consecutive natural numbers. So it suffices to prove the result when the integers are all positive. </br></br>
 
 Let $P_n(k) = (k + 1)(k + 2)\ldots (k + n)$. We have that $P_n(0) = n!$ and thus $P_n(0)$ is divisible by $n!$. We prove
-the result we are after by induction on $n$ and $k$. We assume that it has been shown that $P_m(k)$ is divisible for all
-$1 \leq m < n$ and all $k \geq 0$. </br></br>
+the result we are after by induction on $n$ and $k$. We assume that it has been shown that $P_m(k)$ is divisible by $n!$
+for all $1 \leq m < n$ and all $k \geq 0$. </br></br>
 
 If $P_n(r)$ is divisible by $n!$ for $0 \leq r \leq k$ then 
 $$P_n(k + 1) = (k + 2)(k + 3) \ldots (k + n + 1)$$ $$= (k + 2)(k + 3) \ldots ((k + 1) + n) = P_n(k) + nP_{n-1}(k + 1).$$
