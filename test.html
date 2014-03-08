@@ -739,7 +739,7 @@ the result we are after by induction on $n$ and $k$. We assume that it has been 
 $1 \leq m < n$ and all $k \geq 0$. </br></br>
 
 If $P_n(r)$ is divisible by $n!$ for $0 \leq r \leq k$ then 
-$$P_n(k + 1) = (k + 2)(k + 3) \ldots (k + n + 1) = (k + 2)(k + 3) \ldots ((k + 1) + n) = P_n(k) + P_{n-1}(k + 1)n.$$
+$$P_n(k + 1) = (k + 2)(k + 3) \ldots (k + n + 1)$$ $$= (k + 2)(k + 3) \ldots ((k + 1) + n) = P_n(k) + nP_{n-1}(k + 1).$$
 By the induction hypothesis, the first term on the right is divisible by $n!$ and $P_{n-1}(k + 1)$ is divisible by 
 $(n - 1)!$. Thus the second term on the right is divisible by $(n - 1)!n = n!$. Thus $P_n(k + 1)$ is divisible by $n!$.
 </proof>
