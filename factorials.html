@@ -1,0 +1,77 @@
+---
+layout: default
+title: Simplemath
+---
+
+<h2>Factorials</h2>
+
+<definition> The product of the first $n$ natural numbers is call $n$ <u>factorial</u>. It is denoted $n!$.
+</definition>
+
+<theorem> The product $P$ of two consecutive integers is divisible by $2! = 2$.
+</theorem>
+
+<proof> The product is of the form $P = n(n + 1)$ for some integer $n$. If $n$ is even then $n$ is divisible by $2$ and
+therefore so is $P$. Otherwise $n$ is odd and $n + 1$ is even. In that case $P$ is also divisible by $2$.
+</proof>
+
+<theorem> The product $P$ of three consecutive integers is divisible by $3! = 6$.
+</theorem>
+
+<proof> By the previous theorem, the product of the first two of the three integers is divisible by $2$. Thus the product
+of all three consecutive integers $P = n(n + 1)(n + 2)$ is divisible by $2$. </br></br>
+
+As every third integer is divisible by $3$ (starting at $0$ say), there are at most two integers in a row which are not
+divisible by $3$. Therefore, given any three integers in a row, at least one of them must be divisible by $3$. Thus $P$
+is also divisible by $3$. </br></br>
+
+Thus $P$ is divisible by $\lcm(2, 3) = 6$.
+</proof>
+
+<theorem> The product $P$ of any four consecutive integers is divisible by $4! = 24$.
+</theorem>
+
+<proof> Every fourth integer is divisible by $4$ (starting at $0$). Thus, at most three consecutive integers are not
+divisible by $4$. Therefore, at least one of the four consecutive integers is divisible by $4$. </br></br>
+
+Of the remaining three integers, at least two are consecutive. Thus that pair is divisible by $2$. Therefore the product
+of all four integers is divisible by $4\times 2 =8$. </br></br>
+
+Furthermore, the product of the first three integers of the four is divisible by $3$. We therefore have that the product 
+of all four integers is divisible by $\lcm(8, 3) = 24$.
+</proof>
+
+<theorem> The product $P$ of any five consecutive integers is divisible by $5! = 120$.
+</theorem>
+
+<proof> As every fifth integer is divisible by $5$, one of the five integers is divisible by $5$. By the previous theorem
+the first four integers are divisible by $24$. Thus the product of all five is divisible by $\lcm(24, 5) = 120$.
+</proof>
+
+<theorem> The product $P$ of any six consecutive integers is divisibly by $6! = 720$.
+</theorem>
+
+<proof> By a previous result, the product of the first three integers are divisible by $6$. The product of the remaining 
+three are also divisible by $6$. Thus the product of all six integers is divisible by $6 \times 6 = 36$. </br>
+
+Also by a previous result, the first five integers are divisible by $120$. Therefore the product of all six numbers is
+divisible by $\lcm(36, 120) = 720$.
+</proof>
+
+<theorem> The product of any $n$ consecutive integers is divisible by $n!$.
+</theorem>
+
+<proof> If one of the integers is $0$, the product is $0$ and therefore divisible by $n!$. </br></br>
+
+Otherwise, the integers are all positive or all negative. In the latter case we have $\pm 1$ times the product of $n$ 
+consecutive natural numbers. So it suffices to prove the result when the integers are all positive. </br></br>
+
+Let $P_n(k) = (k + 1)(k + 2)\ldots (k + n)$. We have that $P_n(0) = n!$ and thus $P_n(0)$ is divisible by $n!$. We prove
+the result we are after by induction on $n$ and $k$. We assume that it has been shown that $P_m(k)$ is divisible by $m!$
+for all $1 \leq m < n$ and all $k \geq 0$. </br></br>
+
+If also $P_n(r)$ is divisible by $n!$ for $0 \leq r \leq k$, then 
+$$P_n(k + 1) = (k + 2)(k + 3) \ldots (k + n + 1)$$ $$= (k + 2)(k + 3) \ldots ((k + 1) + n) = P_n(k) + nP_{n-1}(k + 1).$$
+By the induction hypothesis, the first term on the right is divisible by $n!$ and $P_{n-1}(k + 1)$ is divisible by 
+$(n - 1)!$. Thus the second term on the right is divisible by $(n - 1)!n = n!$. Thus $P_n(k + 1)$ is divisible by $n!$.
+</proof>
