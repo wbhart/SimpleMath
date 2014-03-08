@@ -136,8 +136,8 @@ $d = 10^m - 1$ set $Q = a_1$ and set $R = a_0 + a_1$. If $R \geq d$ increase $Q$
 repeat if necessary.
 </theorem>
 
-<proof> Start with $Q = 0$ and $R = A$. We have $A = dQ + R$. Upon setting $Q = a_1$ and $R = a_0 + a_1$ we have
-$dQ + R = 10^ma_1 - a_1 + a_0 + a_1 = A$. At this point $0 \leq R \leq 2\times(10^m - 1) \leq 2d$.
+<proof> Upon setting $Q = a_1$ and $R = a_0 + a_1$ we have $dQ + R = 10^ma_1 - a_1 + a_0 + a_1 = A$. At this point 
+$0 \leq R \leq 2\times(10^m - 1) = 2d$.
 </br></br>
 
 If $R \geq d$, let $Q' = Q + 1$ and $R' = R - d$. Then $dQ' + R' = dQ + d + R - d = A$. However, now $0 \leq R' \leq d$.
@@ -162,8 +162,8 @@ As we computed $Q$ without divisions, only the division $R/d$ remains to compute
 $d = 10^m + 1$ set $Q = a_1$ and set $R = a_0 - a_1$. If $R < 0$ decrease $Q$ by $1$ and increase $R$ by $d$.
 </theorem>
 
-<proof> Start with $Q = 0$ and $R = A$. We have $A = dQ + R$. Upon setting $Q = a_1$ and $R = a_0 - a_1$ we have
-$dQ + R = 10^ma_1 + a_1 + a_0 - a_1 = A$. At this point $-d < R < d$.
+<proof> Upon setting $Q = a_1$ and $R = a_0 - a_1$ we have $dQ + R = 10^ma_1 + a_1 + a_0 - a_1 = A$. At this point 
+$-d < R < d$.
 </br></br>
 
 If $R < 0$, let $Q' = Q - 1$ and $R' = R + d$. Then $dQ' + R' = dQ - d + R + d = A$. However, now $0 \leq R' < d$.
