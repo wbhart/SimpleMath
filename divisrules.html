@@ -94,3 +94,24 @@ $A = a_0 + 10a_1 + 100a_2 + \cdots + 10^ka_k$ is divisible by $d$ if $m_0a_0 + m
 <proof> We have that $A \equiv a_0m_0 + a_1m_1 + \cdots a_km_k \pmod{d}$. Then $A$ is divisible by $d$ iff 
 $A \equiv 0 \pmod{d}$, which gives the required result.
 </proof>
+
+<theorem> (D'Alombert) If $A = 10^na_n + 10^{n - 1}a_{n - 1} + \cdots + a_0$ is divisible by $10 - b$ then so is 
+$B = b^na_n + b^{n - 1}a_{n - 1} + \cdots + a_0$.
+</theorem>
+
+<proof> Consider $f(x) = a_nx^n + a_{n - 1}x^{n - 1} + \cdots + a_0$. We have that $A = f(10)$ and $B = f(b)$. However,
+$f(10) - f(b)$ is divisible by $10 - b$ as $a_i(10^i - b^i) = a_i(10 - b)(10^{i - 1} + 10^{i - 2}b + \cdots + b^{i - 1})$ 
+is divisible by $10 - b$ for all $i$. </br></br>
+
+Therefore, if $f(10)$ is divisible by $10 - b$, so is $f(b)$.
+</proof>
+
+<theorem> (D'Alombert) If $A = 10^na_n + 10^{n - 1}a_{n - 1} + \cdots + a_0$ is divisible by $10 + b$ then so is 
+$B = (-b)^na_n + (-b)^{n - 1}a_{n - 1} + \cdots + a_0$.
+</theorem>
+
+<proof> With $f(x)$ defined as in the previous theorem, we have that $A = f(10)$ and $B = f(-b)$. By the same argument as
+the previous theorem we have that $A - B$ is divisible by $10 - (-b) = 10 + b$. Thus is $A$ is divisible by $10 + b$, so
+is $B$.
+</proof>
+
