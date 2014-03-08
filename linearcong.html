@@ -1,0 +1,68 @@
+---
+layout: default
+title: Simplemath
+---
+
+<h2>Linear congruence equations</h2>
+
+<definition> A <u>linear congruence equation</u> is an equation in an unknown $x$ of the form
+$$ax = b \pmod{m},$$
+for integers $a, b$.
+</definition>
+
+<theorem> The linear congruence equation $ax = b \pmod{m}$ has a solution iff $b$ is divisible by $\gcd(a, n)$.
+</theorem>
+
+<proof> The condition is necessary, for we have $ax + km = b$ for some integer $k$, so that $b$ is divisible by 
+$\gcd(a, n)$. </br></br>
+
+To show the condition is sufficient, let $d = \gcd(a, m)$ and $b = b'd$. By the extended euclidean algorithm we can find
+integers $s$ and $t$ such that $as + mt = d$. Multiplying through by $b'$ and letting $k = tb'$ we have that $x = sb'$
+is a solution of $ax + km = b$.
+</proof>
+
+<theorem> If $x = x_0$ is a solution to $ax = b \pmod{m}$ then all solutions are given by the set 
+$$S = \{x_0 + km/d \;|\; k \in \Z\},$$
+where $d = \gcd(a, m)$.
+</theorem>
+
+<proof> To show that every element $x = x_0 + km/d$ of $S$ is a solution, recall that $a$ is divisible by $d$. Thus 
+$akm/d$ is a multiple of $m$. Thus $ax \equiv ax_0 + akm/d \equiv ax_0 \equiv b \pmod{m}$. </br></br>
+
+Now suppose that $x_0$ and $x_1$ are both solutions. We will show that they differ by a multiple of $m/d$. </br></br>
+
+We have that $ax_0 + k_0m = b = ax_1 + k_1m$ for some integers $k_0, k_1$. Thus $a(x_0 - x_1) = m(k_1 - k_0)$. Writing
+$a = a'd$ we have $d \;|\; m$ and $a' \;|\; (k_1 - k_0)$. Thus, writing $k_1 - k_0 = ka'$ we have $x_0 - x_1 = mk/d$ as
+required.
+</proof>
+
+<theorem> The equation
+$$a_1x_1 + a_2x_2 + \cdots + a_nx_n \equiv b \pmod{m}$$
+is soluble iff $b$ is divisible by $d = \gcd(a_1, a_2, \ldots, a_n, m)$.
+</theorem>
+
+<proof> The proof that $b$ must be divisible by $d$ is the same as for the case $n = 1$ above. </br></br>
+
+We show that the condition is sufficient by induction on $n$. In fact, we can set $x_n = 1$. As $b - a_n$ is divisible by
+$d$, we have by induction that there is a solution to 
+$$a_1x_1 + a_2x_2 + \cdots + a_{n-1}x_{n-1} \equiv b - a_n \pmod{m}.$$
+</proof>
+ 
+<theorem> The equation 
+$$a_1x_1 + a_2x_2 + \cdots + a_nx_n \equiv b \pmod{m}$$
+has either no solutions or $m^{n-1}d$ solutions modulo $m$.
+</theorem>
+
+<proof> We prove the result by induction on $n$, the case $n = 1$ following immediately by a previous theorem. </br></br>
+
+Let $d' = \gcd(a_1, a_2, \ldots, a_{n-1}, m)$. For 
+$$a_1x_1 + a_2x_2 + \cdots + a_{n-1}x_{n-1} \equiv b - a_nx_n \pmod{m}$$
+to have a solution, we must have $d' \;|\; b - a_nx_n$. Multiplying through by $m/d'$ we have 
+$$bm/d' \equiv a_nx_nm/d' \pmod{d'm/d'}.$$ By the induction hypothesis this has 
+$$\gcd(a_nm/d', d'm/'d) = m/d'\gcd(a_n, d') = md/d'$$ distinct solutions modulo $m$. </br></br>
+
+For each of these solutions $x_n$, by induction, 
+$$a_1x_1 + a_2x_2 + \cdots + a_{n-1}x_{n-1} \equiv b - a_nx_n \pmod{m}$$
+has $m^{n-2}d'$ solutions modulo $m$. Thus the total number of solutions to the original equation is 
+$mdm^{n-2}d'/d' = m^{n-1}d$.
+</proof>
