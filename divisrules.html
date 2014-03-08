@@ -86,3 +86,11 @@ The converse holds by reversing the argument if we can show that $m$ and $d$ are
 factor bigger than $1$, so do $10m$ and $d$, i.e. $\gcd(kd + 1, d) \neq 1$. As this is not possible, we must have that
 $m$ and $d$ are coprime.
 </proof>
+
+<theorem> (Pascal) If $1 \equiv m_0 \pmod{d}$, $10 \equiv m_1 \pmod{d}$, $100 \equiv m_2 \pmod{d}$, $\ldots$, then 
+$A = a_0 + 10a_1 + 100a_2 + \cdots + 10^ka_k$ is divisible by $d$ if $m_0a_0 + m_1a_1 + \cdots + m_ka_k$ is.
+</theorem>
+
+<proof> We have that $A \equiv a_0m_0 + a_1m_1 + \cdots a_km_k \pmod{d}$. Then $A$ is divisible by $d$ iff 
+$A \equiv 0 \pmod{d}$ which gives the required result.
+</proof>
