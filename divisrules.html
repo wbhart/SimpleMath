@@ -87,6 +87,14 @@ factor bigger than $1$, so do $10m$ and $d$, i.e. $\gcd(kd + 1, d) \neq 1$. As t
 $m$ and $d$ are coprime.
 </proof>
 
+<theorem> (Loir) Let $p < 100$ be prime and coprime to $10$. Suppose that $mp = 100k + 1$ for some $m$. Then 
+$A = 100a + r$ is divisible by $p$ if $a - rk$ is.
+</theorem>
+
+<proof> We see that $rmp = 100rk + r$. This is a multiple of $p$. Thus if $A$ is a multiple of $p$ so is 
+$A - rmp = 100(a - rk)$. As $\gcd(10, p) = 1$ we have that $A$ is divisible by $p$ iff $a - rk$ is.
+</proof>
+
 <theorem> (Pascal) If $1 \equiv m_0 \pmod{d}$, $10 \equiv m_1 \pmod{d}$, $100 \equiv m_2 \pmod{d}$, $\ldots$, then 
 $A = a_0 + 10a_1 + 100a_2 + \cdots + 10^ka_k$ is divisible by $d$ if $m_0a_0 + m_1a_1 + \cdots + m_ka_k$ is.
 </theorem>
