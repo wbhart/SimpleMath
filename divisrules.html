@@ -242,14 +242,27 @@ by $10$. As $\gcd(d, 10) = 1$, $A - rdm$ is divisible by $d$ iff $(A - rdm)/10$ 
 $A$ is.
 </proof>
 
+<theorem> (Ripert) If $d\alpha - \delta a$ is divisible by $m = 10\delta + \alpha$ with $\gcd(\alpha, m) = 1$ then 
+$10d + a$ is divisible by $m$.
+</theorem>
+
+<proof> We have $d\alpha \equiv \delta a \pmod{m}$. Thus 
+$\alpha(10d + a) \equiv 10\delta a + \alpha a \equiv 0 \pmod{m}$. </br></br>
+
+As $\gcd(\alpha, m) = 1$, we must have $10d + a \equiv 0 \pmod{m}$.
+</proof>
+
 <theorem> (Liljevalch) Suppose $\alpha 10^k - \beta$ is divisible by $m$ for some $m$ coprime to $10$. Then 
-$a - b 10^k$ divisible by $m$ implies $\alpha a - \beta b$ is too.
+$a - b 10^k$ divisible by $m$ implies $\alpha a - \beta b$ is too. The converse is true if $\gcd(\beta, m) = 1$.
 </theorem>
 
 <proof> Suppose $\alpha 10^k - \beta = mx$ for some $x$ and $a - b 10^k = mx'$ for some $x'$. Then 
 $a\alpha 10^k \equiv b\beta 10^k \mod{m}$. </br></br>
 
-As $\gcd(m, 10) = 1$ we have $a\alpha \equiv b\beta \mod{m}$. 
+As $\gcd(m, 10) = 1$ we have $a\alpha \equiv b\beta \mod{m}$. </br></br>
+
+Conversely if $a\alpha \equiv b\beta \mod{m}$ then $a\alpha 10^k \equiv b\beta 10^k \mod{m}$. As 
+$\alpha 10^k \equiv \beta \pmod{m}$ and $\gcd(\beta, m) = 1$ we have $a \equiv b 10^k \pmod{m}$.
 </proof>
 
 <theorem> (Catalan) Suppose that $\gcd(a, a') = 1$ and $\gcd(b, b') = 1$. Let $N = aa' + bb'$. Suppose that 
