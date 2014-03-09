@@ -199,6 +199,16 @@ $A/d = Q(10^m + 1)/d + R/d = Qc + R/d$. </br></br>
 As we computed $Q$ without divisions, only the division $R/d$ remains to compute the quotient $A/d$.
 </proof>
 
+<theorem> (Malengreau) Let $d$ be coprime with $10$. Suppose $c = (10^r - 1)/9$ is divisible by $d$. Let 
+$A = a_0 + a_110^r + a_210^{2r} + \cdots + a_n10^{nr}$. Let $a_i'$ be the remainder on division of $a_i$ by $c$. Then
+$A$ is divisible by $d$ if $a_0' + a_1' + \cdots + a_n'$ is.
+</theorem>
+
+<proof> We see that $10^r - 1$ is divisible by $9$, thus $c$ is an integer. Furthermore, $10^r \equiv 1 \pmod{d}$. Thus
+$A \equiv a_0 + a_1 + \cdots + a_n \pmod{d}$. But $a_i' \equiv a_i \pmod{d}$. Thus 
+$A \equiv a_0' + a_1' + \cdots + a_n' \pmod{d}$.
+</proof>
+
 <theorem> (Crelle) Let $A = a_0 + 10a_1 + 100a_2 + \cdots 10^na_n$. To test $A$ for divisibility by $d$, choose any $n$
 coprime with $d$ and let $r = 10n \pmod{d}$. Now test $a_0 + ra_1 + \cdots r^na_n$ for divisibility by $d$.
 </theorem>
