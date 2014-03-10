@@ -7,5 +7,22 @@ title: Simplemath
 
 <definition> A natural number $n$ is said to be written in <u>base</u> $b$ if it is expressed
 $$n = a_0 + a_1b + a_2b^2 + \cdots + a_mb^m,$$
-where $0 \leq a_i < b$ for all $i$.
+where $0 \leq a_i < b$ for all $i$ and $a_m \neq 0$.
 </definition>
+
+<theorem> If $b > 1$, every natural number $n$ can be expressed uniquely in base $b$.
+</theorem>
+
+<proof> We show by induction that every $0 < n < b^{m + 1}$ can be written in base $b$ in $\leq m + 1$ digits. For $m = 1$ 
+this says every $0 < n < b$ can be expressed in one digit, which follows since every $0 < b_0 < n$ is admitted. </br></br>
+
+Assume the result is true for $0 < n < b^m$. Let $b^m \leq n < b^{m + 1}$. Let $n \equiv a_0 \pmod{b}$ for some
+$0 \leq a_0 < b$. Write $n' = (n - b_0)/b$. As $n - b_0$ is divisible by $b$ we have that $n'$ is an integer. Moreover
+$b^{m - 1} \leq n' < b^m$. Thus $n'$ can be written in base $b$ as $n' = a_1 + a_2b + \cdots + a_mb^{m - 1}$ for integers 
+$0 \leq a_i < b$. Thus we have $n = a_0 + b(a_1 + a_2b + \cdots + a_mb^{m - 1}) = a_0 + a_1b + a_2b^2 + \cdots + a_mb^m.$
+
+If $n = a_0 + a_1b + \cdots + a_mb^m = c_0 + c_1b + \cdots + c_nb^n$ are two representations of $n$ then $n \equiv a_0$ and
+$n \equiv c_0 \pmod{b}$. As $0 \leq a_0, c_0 < b$ then $a_0 = c_0$. Subtracting $a_0$ from $n$ and dividing by $b$ we have
+$a_1 + \cdots + a_mb^m = c_1 + \cdots + c_nb^n$. Repeating the argument, we see both representations have the same digits.
+Thus the representations are the same, i.e. the representation of $n$ in base $b$ is unique.
+</proof>
