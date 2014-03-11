@@ -27,12 +27,67 @@ $a_1 + \cdots + a_mb^m = c_1 + \cdots + c_nb^n$. Repeating the argument, we see 
 Thus the representations are the same, i.e. the representation of $n$ in base $b$ is unique.
 </proof>
 
-<definition> A <u>rational</u> number is a number which can be written $a/b$ for some integers $a, b$ with $b \neq 0$. In
-base $b$ a rational number $m$ can be expressed 
-$$m = b^na_n + \cdots + ba_1 + a_0 + b^{-1}a_{-1} + b^{-2}a_{-2} + \cdots,$$
-which is often abbreviated by juxtaposing the digits
-$$m = a_n \ldots a_1 a_0 . a_{-1} a_{-2}\ldots,$$ 
-where the point after the the digit $a_0$ is referred to as the <u>radix point</u> (<u>decimal point</u> if the base 
-$b = 10$).
+<definition> A <u>rational</u> number is a number which can be written $a/b$ for some integers $a, b$ with $b \neq 0$. We
+say that a fraction $a/b$ is <u>proper</u> if $b > 0$ and $0 \leq a < b$. A fraction $a/b$ is in <u>lowest terms</u> if
+$\gcd(a, b) = 1$.
 </definition>
 
+<theorem> In base $b$ a rational number $m$ can be expressed 
+$$m = b^na_n + \cdots + ba_1 + a_0 + b^{-1}a_{-1} + b^{-2}a_{-2} + \cdots,$$
+for some digits $0 \leq a_i < b$ and $b_n \neq 0$. 
+</theorem>
+
+<proof> If $m = c/d$ for some positive integer $d$ we can write $m = r + s/d$ for some $0 \leq s < d$. The radix 
+representation of $r$ gives the digits of $m$ before the radix point. We then have $0 \leq s/d < 1$. </br></br>
+
+Write $s_0 = s$. We have $0 \leq bs_0/d < b$. Thus we can write $bs_0/d = a_{-1} + s_{-1}/d$ for some 
+$0 \leq s_{-1} < d$. Repeating the argument we compute successive digits $a_{-1}, a_{-2}, \ldots$ of $s/d$. By 
+construction $s/d = b^{-1}a_{-1} + b^{-2}a_{-2} + \cdots$. 
+</proof>
+
+<definition> If $m$ is a rational number, we usually write the value
+$$m = b^na_n + \cdots + ba_1 + a_0 + b^{-1}a_{-1} + b^{-2}a_{-2} + \cdots,$$
+by juxtaposing the digits
+$$m = a_n \ldots a_1 a_0 . a_{-1} a_{-2}\ldots,$$ 
+where the point after the the digit $a_0$ is referred to as the <u>radix point</u> (<u>decimal point</u> if the base 
+$b = 10$). We call this <u>radix representation.</u>
+</definition>
+
+<theorem> The radix representation of rational numbers is not unique.
+</theorem>
+
+<proof> We will show that if $s = (b-1)b^{-1} + (b-1)b^{-2} + \cdots$ then $s = 1$. </br></br>
+
+Note that $bs = (b - 1) + (b-1)b^{-1} + (b-1)b^{-2} + \cdots = b - 1 + s$. Thus $(b - 1)s = (b - 1)$. As $b > 1$ we have
+that $s = 1$.
+</proof>
+
+<definition> A radix representation which repeats the same sequence of digits over and over, forever, is said to be
+<u>recurring</u>. If the representation consists entirely of the repeating digits, the representation is said to be
+<u>purely recurring</u>. If the representation is purely recurring with the exception of finitely many digits, it is said
+to be <u>eventually recurring</u>.
+</definition>
+
+<theorem> A number of the form $s/(b^n - 1)$ for $s < b^n - 1$ is purely recurring.
+</theorem>
+
+<proof> Let $u = b^{-n} + b^{-2n} + \cdots$. We have that $(b^n - 1)u = (u + 1) - u = 1$. Thus $u$ gives the radix 
+representation of $1/(b^n - 1)$. If $s < b^n - 1$, it has $n$ digits and so $su = s/(b^n - 1)$ has a purely recurring 
+representation. 
+</proof>
+
+<theorem> The radix representation of a rational number $c/d$ in base $b$ is eventually recurring.
+</theorem>
+
+<proof> We note $c/d$ can be written $r + s/d$ for $0 \leq s < d$. The value $r$ only affects the part of the radix 
+representation before the radix point and so can be ignored. It thus suffices to restrict to the case $c < d$. </br></br>
+
+The number $c/d$ has an eventually recurring representation iff $b^kc/d$ with $k \geq 0$ does, since multiplying by $b^k$
+simply shifts the digits. But we can find a $k$ such that $b^kc/d$ written in lowest terms has $\gcd(b, d) = 1$. We will
+show that $b^kc/d$ can be written in the form $a/(b^n - 1)$ and is thus eventually recurring. </br></br>
+
+Consider the values $b^n - 1 \pmod{d}$, for $n \geq 1$. As $d$ is finite, there exist values $n_0 < n_1$ such that
+$b^{n_0} \equiv b^{n_1} \pmod{d}$. As $\gcd(b, d) = 1$ we can divide through by $b^{n_0}$. Thus 
+$b^{n_1 - n_0} = 1 \pmod{d}$. But this means that $d$ divides $b^{n_1 - n_0} - 1$, i.e. $b^n - 1 = vd$ for some $v$, 
+where $n = n_1 - n_0$. But then $b^kc/d = b^kcv/(b^n - 1)$.
+</proof>
