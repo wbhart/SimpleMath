@@ -121,3 +121,18 @@ with $a_m \neq 0$.
 
 <theorem> Every natural number $n$ can be expressed uniquely in a mixed radix system.
 </theorem>
+
+<proof> We show by induction that $m$ digits can express every $b_{m - 1} \leq n < r_{m - 1}b_{m - 1} = b_m$. </br></br>
+
+The basecase states that every number in the range $1 \leq n < b_1$ can be expressed by a one digit number. This is true
+since $0 < a_0 < r_0 = b_1/b_0 = b_1$. </br></br>
+
+Any $b_{m - 1} \leq n < r_{m - 1}b_{m - 1} = b_m$ can be written with the division algorithm for $0 \leq r < b_{m - 1}$
+as $n = b_{m - 1}a_{m - 1} + r$ where  and $1 \leq a_{m - 1} < r_{m - 1}$. When $r = 0$ we have
+$n = 0 + 0b_1 + \cdots + 0b_{m - 2} + a_{m - 1}b_{m - 1}$. Else, by the induction hypothesis, $r$ can be written
+$r = a_0b_0 + a_1b_1 + a_2b_2 + \cdots + a_{m - 2}b_{m - 2}$ so that we can write
+$n = a_0b_0 + a_1b_1 + a_2b_2 + \cdots + a_{m - 1}b_{m - 1}$. </br></br>
+
+Uniqueness follows by a similar argument to the single radix case after taking $n$ modulo $r_0$, subtracting $a_0$ and
+dividing by $r_0$, taking the result modulo $r_1$, subtracting $a_1$ and dividing by $r_1$, etc.
+</proof>
