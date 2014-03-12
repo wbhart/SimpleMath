@@ -112,3 +112,12 @@ $b^{n_0} \equiv b^{n_1} \pmod{d}$. As $\gcd(b, d) = 1$ we can divide through by 
 $b^{n_1 - n_0} = 1 \pmod{d}$. But this means that $d$ divides $b^{n_1 - n_0} - 1$, i.e. $b^n - 1 = vd$ for some $v$, 
 where $n = n_1 - n_0$. But then $b^kc/d = b^kcv/(b^n - 1)$.
 </proof>
+
+<definition> A natural number $n$ is said to be written in a <u>mixed radix system</u> if it is expressed
+$$n = a_0b_0 + a_1b_1 + a_2b_2 + \cdots + a_mb_m,$$
+where $b_0 = 1$ and $b_i$ dividing $b_{i + 1}$ for all $i$, with radices $r_i = b_{i+1}/b_i > 1$ and $0 \leq a_i < r_i$, 
+with $a_m \neq 0$. 
+</definition>
+
+<theorem> Every natural number $n$ can be expressed uniquely in a mixed radix system.
+</theorem>
