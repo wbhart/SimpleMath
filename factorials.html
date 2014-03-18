@@ -75,3 +75,28 @@ $$P_n(k + 1) = (k + 2)(k + 3) \ldots (k + n + 1)$$ $$= (k + 2)(k + 3) \ldots ((k
 By the induction hypothesis, the first term on the right is divisible by $n!$ and $P_{n-1}(k + 1)$ is divisible by 
 $(n - 1)!$. Thus the second term on the right is divisible by $(n - 1)!n = n!$. Thus $P_n(k + 1)$ is divisible by $n!$.
 </proof>
+
+<definition> Given a real number $r$, the largest integer less than or equal to $r$ is called the <u>floor</u> of $r$. We
+write $\lfloor r \rfloor$ for the floor of $r$. The smallest integer greater than or equal to $r$ is called the 
+<u>ceiling</u> of $r$, denoted $\lceil r \rceil$.</definition>
+
+<theorem> Let $p$ be a prime. The highest power of $p$ dividing $n!$ for $n$ a natural number is $p^\alpha$ where
+$$\alpha = \lfloor \frac{n}{p} \rfloor + \lfloor \frac{n}{p^2} \rfloor + \lfloor \frac{n}{p^3} \rfloor + cdots,$$
+where the sum is continued to the largest power of $p$ less than or equal to $n$.
+</theorem>
+
+<proof> Each multiple of $p$ in the factors $1, 2, \ldots n$ of the factorial contributes at least one multiple of $p$
+to the power $p^\alpha$. There are precisely $\lfloor n/p \rfloor$ such multiples of $p$. </br></br>
+
+Each multiple of $p^2$ contributes at least $p^2$ to the power $p^\alpha$, and there are precisely 
+$\lfloor n/p^2 \rfloor$ multiples of $p$ amongst $1, 2, \ldots, n$. Since we already counted all the multiples of $p$,
+the multiples of $p^2$ contribute a further factor of $p$ each to $p^\alpha$. </br></br>
+
+Similarly, each multiple of $p^3$ contributes $p^3$ to $p^\alpha$. There are $\lfloor n/p^3 \rfloor$ multiples of $p^3$,
+but we already counted all multiples of $p^2$, so each multiple of $p^3$ contributes only another factor of $p$ to 
+$p^\alpha$. </br></br>
+
+The process terminates when we reach powers of $p$ that are already bigger than $n$. At this point there are no further
+contributions to $p^\alpha$. Therefore the sum is as given.
+</proof>
+
