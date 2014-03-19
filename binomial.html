@@ -41,11 +41,10 @@ the coefficient of $x^{n - i}{y^i}$ is $\binom{n - 1}{i} + \binom{n - 1}{i - 1}$
 $$\binom{n}{i} = \frac{n!}{(n - i)!i!}.$$
 </theorem>
 
-<proof> It suffices to show that the value in the theorem satisfies the conditions of the previous theorem since these
-completely characterise the binomial coefficients.</br></br>
+<proof> Let us write $C(n, i) = \frac{n!}{(n - i)!i!}$. It suffices to show that $C(n, i)$ satisfies the conditions of 
+the previous theorem since these completely characterise the binomial coefficients.</br></br>
 
-Let us write $C(n, i) = \frac{n!}{(n - i)!i!}$. We have that for all $n$, $C(n, 0) = \frac{n!}{n!0!} = 1$. Similarly,
-$C(n, n) = \frac{n!}{0!n!} = 1$. </br></br>
+We have that for all $n$, $C(n, 0) = \frac{n!}{n!0!} = 1$. Similarly, $C(n, n) = \frac{n!}{0!n!} = 1$. </br></br>
 
 Finally 
 $$C(n - 1, i - 1) + C(n - 1, i) = \frac{(n - 1)!}{(n - i)!(i - 1)!} + \frac{(n - 1)!}{(n - i - 1)!i!}$$
