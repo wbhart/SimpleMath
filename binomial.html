@@ -36,3 +36,18 @@ We have that $(x + y)^n = (x + y)^{n-1}(x + y)$. The $x^{n - i}y^i$ term is $x$ 
 $\binom{n - 1}{i}x^{n - i - 1}y^i$ plus $y$ times the term $\binom{n - 1}{i - 1}x^{n - i}y^{i - 1}$. Thus, $\binom{n}{i}$,
 the coefficient of $x^{n - i}{y^i}$ is $\binom{n - 1}{i} + \binom{n - 1}{i - 1}$.
 </proof>
+
+<theorem> For $n \geq 0$ and $0 \leq i \leq n$ we have that 
+$$\binom{n}{i} = \frac{n!}{(n - i)!i!}.$$
+</theorem>
+
+<proof> It suffices to show that the value in the theorem satisfies the conditions of the previous theorem. </br></br>
+
+Let us write $C(n, i) = \frac{n!}{(n - i)!i!}$. We have that for all $n$, $C(n, 0) = \frac{n!}{n!0!} = 1$. Similarly,
+$C(n, n) = \frac{n!}{0!n!} = 1$. </br></br>
+
+Finally 
+$$C(n - 1, i - 1) + C(n - 1, i) = \frac{(n - 1)!}{(n - i)!(i - 1)!} + \frac{(n - 1)!}{(n - i - 1}!i!}
+= \frac{(n - 1)!(i + (n - i))}{(n - i)!i!} = \frac{n!}{(n - i)!i!}.$$
+</proof>
+
