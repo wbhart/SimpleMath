@@ -60,6 +60,19 @@ $$\sum_{i = 0}^n \binom{n}{i} = 2^n.$$
 $$\sum_{i = 0}^n \binom{n}{i} = (1 + 1)^n = 2^n.$$
 </proof>
 
+<theorem> For $n \geq 0$ we have
+$$\sum_{i = 0}^n \binom{n}{i} = n2^{n - 1}.$$
+</theorem>
+
+<proof> We differentiate the expression 
+$$(x + 1)^n = \sum_{i = 0}^n \binom{n}{i}x^i.$$
+This yields
+$$n(x + 1)^{n - 1} = \sum_{i = 1}^n i\binom{n}{i}x^{i - 1}.$$
+
+Substituting $x = 1$ into the expression yields 
+$$n2^{n - 1} = \sum_{i = 1}^n i\binom{n}{i} = \sum_{i = 0}^n i\binom{n}{i}.$$
+</proof>
+
 <theorem> For every natural number $n$ and $0 < i \leq n$ we have
 $$\frac{n - 2i}{n}\binom{n}{i} = \binom{n - 1}{i} - \binom{n - 1}{i - 1}.$$
 </theorem>
