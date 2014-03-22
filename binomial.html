@@ -92,10 +92,21 @@ $$\binom{n}{i}\binom{n - i}{j} = \frac{n!}{i!(n - i)!}\frac{(n - i)!}{j!(n - i -
 = \frac{n!}{j!(n - j)!}\frac{(n - j)!}{i!(n - i - j)!} = \binom{n}{j}\binom{n - j}{i}.$$
 </proof>
 
-<theorem> For $n \geq m \geq 0$, $k \geq 0$ and $k + m \leq m$ we have
-$$\sum_{i = 0}^k \binom{m}{k}\binom{n - m}{k - i} = \binom{n}{k}.$$
+<theorem> For $n \geq m \geq 0$ and $k + m \leq m$ with $k \geq 0$, we have
+$$\sum_{i = 0}^k \binom{m}{i}\binom{n - m}{k - i} = \binom{n}{k}.$$
 </theorem>
 
 <proof> Consider the coefficient of $x^k$ in $(1 + x)^n = (1 + x)^m(1 + x)^{n - m}$. On the left side we have 
 $\binom{n}{k}$. On the right side we have $\sum_{i = 0}^k \binom{m}{i}\binom{n - m}{k - i}$.
+</proof>
+
+<theorem> For $n \geq 0$ we have
+$$\sum_{i = 0}^n \binom{n}{i}^2 = \binom{2n}{n}.$$
+</theorem>
+
+<proof> In the previous theorem, replace $n$ with $2n$, $k$ with $n$ and $m$ with $n$. This yields
+$$\sum_{i = 0}^n \binom{n}{i}\binom{n}{n - i} = \binom{2n}{n}.$$
+
+The result follows on noting that $\binom{n}{i} = \binom{n}{n - i}$.
+
 </proof>
