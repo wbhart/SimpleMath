@@ -108,5 +108,27 @@ $$\sum_{i = 0}^n \binom{n}{i}^2 = \binom{2n}{n}.$$
 $$\sum_{i = 0}^n \binom{n}{i}\binom{n}{n - i} = \binom{2n}{n}.$$
 
 The result follows on noting that $\binom{n}{i} = \binom{n}{n - i}$.
+</proof>
 
+<definition> Let $F(1) = 1$, $F(2) = 1$ and $F(i + 1) = F(i) + F(i - 1)$ for all $i \geq 2$. The sequence of numbers
+$F(1) = 1$, $F(2) = 1$, $F(3) = 2$, $F(4) = 3$, $F(5) = 5$, $\ldots$ is called the <u>Fibonacci sequence</u>.
+</definition>
+
+<theorem> For $n \geq 0$ we have
+$$\sum_{i = 0}^{\lfloor \frac{n}{2} \rfloor} \binom{n - i}{i} = F(n + 1).$$
+</theorem>
+
+<proof> We proceed by induction. For $n = 0, 1$ the left hand is $1$, and indeed $F(1) = F(2) = 1$. </br></br>
+
+Assume the result is true for $F(1)$, $F(2)$, $\ldots$, $F(n)$. Then we have
+$$F(n + 1) = F(n) + F(n - 1) = \sum_{i = 0}^{\lfloor \frac{n - 2}{2} \rfloor} \binom{n - 2 - i}{i} + 
+\sum_{i = 0}^{\lfloor \frac{n - 1}{2} \rfloor} \binom{n - 1 - i}{i}.$$
+
+But $\binom{n - 1 - i}{i} + \binom{n - 2 - (i - 1)}{i - 1} = \binom{n - i}{i}$. So if $n - 1$ is even, the value above is 
+$$1 + \sum_{i = 1}^{\lfloor \frac{n - 1}{2} \rfloor} \binom{n - i}{i} 
+= \sum_{i = 0}^{\lfloor \frac{n}{2} \rfloor} \binom{n - i}{i}.$$
+
+Similarly, if $n - 1$ is odd, the value is
+$$1 + \binom{n - 2 - \frac{n - 2}{2}}{\frac{n - 2}{2}} + \sum_{i = 1}^{\lfloor \frac{n - 1}{2} \rfloor} \binom{n - i}{i}
+= \sum_{i = 0}^{\lfloor \frac{n}{2} \rfloor} \binom{n - i}{i}.$$
 </proof>
