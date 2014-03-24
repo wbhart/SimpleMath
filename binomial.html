@@ -149,3 +149,25 @@ Similarly, if $n - 1$ is odd, the value is
 $$1 + \binom{\frac{n - 2}{2}}{\frac{n - 2}{2}} + \sum_{i = 1}^{\lfloor \frac{n - 1}{2} \rfloor} \binom{n - i}{i}
 = \sum_{i = 0}^{\lfloor \frac{n}{2} \rfloor} \binom{n - i}{i}.$$
 </proof>
+
+<theorem> If $f(x) = \sum_{i = 0}^n a_ix^i$ and $g(x) = \sum_{i = 0}^n b_ix^i$ then $\sum_{i = 0}^n _ib_i$ is the
+constant term of $f(x)g(x^{-1})$.
+</theorem>
+
+<proof> We have $f(x)g(x^{-1}) = (\sum_{i = 0}^n a_ix^i)(sum_{j = 0}^n b_jx^{-j})$. The constant term consists of all the
+product terms with $i = j$, i.e. $\sum_{i = 0}^n a_ib_i$.
+</proof>
+
+<theorem> For $n \geq 0$ we have
+$$\sum_{i = 0}^2n (-1)^i \binom{2n}{i}^2 = (-1)^n \binom{2n}{n}.$$
+</theorem>
+
+<proof> We apply the previous theorem with $f(x) = \sum_{i = 0}^{2n} (-1)^i\binom{2n}{i}x^i$ and 
+$g(x) = \sum_{i = 0}^{2n} \binom{2n}{i}x^i$ (replacing $n$ with $2n$ in the theorem). The left hand side is then the 
+constant term in $f(x)g(x^{-1})$. But we see $f(x) = $(x - 1)^{2n}$ and $g(x) = (x + 1)^{2n}$. Thus $f(x)g(x^{-1})$ is
+$(x - 1)^2n (x^{-1} + 1)^{2n}$. </br></br>
+
+The constant term in this expression is the coefficient of $x^{2n}$  in 
+$$x^{2n}f(x)g(x^{-1}) = (x - 1)^2n (x + 1)^{2n} = (x^2 - 1)^{2n},$$
+which is $(-1)^n \binom{2n}{n}$.
+</proof>
