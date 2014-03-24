@@ -127,6 +127,16 @@ $$\sum_{i = 0}^n \binom{n}{i}\binom{n}{n - i} = \binom{2n}{n}.$$
 The result follows on noting that $\binom{n}{i} = \binom{n}{n - i}$.
 </proof>
 
+<theorem> For $n \geq 0$ we have
+$$\sum_{i = 0}^n \binom{2n}{i}\binom{n}{i} = \binom{3n}{n}.$$
+</theorem>
+
+<proof> In Vandermonde's theorem, replace $n$ with $3n$, set $m = 2n$ and $k = n$. This yields
+$$\sum_{i = 0}^n \binom{2n}{i}\binom{n}{n - i} = \binom{3n}{n}.$$
+
+The result now follows by noting that $\binom{n}{n - i} = \binom{n}{i}$.
+</proof>
+
 <definition> Let $F(1) = 1$, $F(2) = 1$ and $F(i + 1) = F(i) + F(i - 1)$ for all $i \geq 2$. The sequence of numbers
 $F(1) = 1$, $F(2) = 1$, $F(3) = 2$, $F(4) = 3$, $F(5) = 5$, $\ldots$ is called the <u>Fibonacci sequence</u>.
 </definition>
