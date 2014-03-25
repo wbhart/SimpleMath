@@ -69,6 +69,17 @@ $$\binom{n}{k} = \frac{n}{k}\binom{n - 1}{k - 1}.$$
 $$\binom{n}{k} = \frac{n!}{k!(n - k)!} = \frac{n}{k}\frac{(n - 1)!}{(k - 1)!(n - k)!} = \binom{n - 1}{k - 1}.$$
 </proof>
 
+<theorem> For $0 \leq 2k \leq n$ we have
+$$\binom{n - k}{k}\frac{n}{n - k} = \binom{n - k}{k} + \binom{n - k - 1}{k - 1}.$$
+</theorem>
+
+<proof> We have
+$$\binom{n - k}{k}\frac{n}{n - k} = \frac{(n - k)!}{k!(n - 2k)!}\frac{n}{n - k} 
+= \frac{(n - k)!}{k!(n - 2k)!}\frac{n - k}{n - k} + \frac{(n - k)!}{k!(n - 2k)!}\frac{k}{n - k}$$
+$$= \frac{(n - k)!}{k!(n - 2k)!} + \frac{(n - k - 1)!}{(k - 1)!(n - 2k)!} 
+= \binom{n - k}{k} + \binom{n - k - 1}{k - 1}.$$
+</proof>
+
 <theorem> For $n \geq 0$ we have
 $$\sum_{i = 0}^n \binom{n}{i} = 2^n.$$
 </theorem>
