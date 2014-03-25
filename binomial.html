@@ -80,6 +80,16 @@ $$= \frac{(n - k)!}{k!(n - 2k)!} + \frac{(n - k - 1)!}{(k - 1)!(n - 2k)!}
 = \binom{n - k}{k} + \binom{n - k - 1}{k - 1}.$$
 </proof>
 
+<theorem> For $n, k \geq 0$ we have
+$$\binom{n + k}{k}\frac{1}{n + k} = \frac{1}{n}\left(\binom{n + k}{k} - \binom{n - k - 1}{k - 1}\right).$$ 
+</theorem>
+
+<proof> We have
+$$\binom{n + k}{k}\frac{n}{n + k} = \frac{(n + k)!}{k!n!}\frac{n}{n + k} 
+= \frac{(n + k)!}{k!n!}\frac{n + k}{n + k} - \frac{(n + k)!}{k!n!}\frac{k}{n + k}$$
+$$= \frac{(n + k)!}{k!n!} - \frac{(n + k - 1)!}{(k - 1)!n!} = \binom{n + k}{k} - \binom{n + k - 1}{k - 1}.$$
+</proof>
+
 <theorem> For $n \geq 0$ we have
 $$\sum_{i = 0}^n \binom{n}{i} = 2^n.$$
 </theorem>
