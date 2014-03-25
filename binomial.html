@@ -181,3 +181,22 @@ The constant term in this expression is the coefficient of $x^{2n}$  in
 $$x^{2n}f(x)g(x^{-1}) = (x - 1)^{2n} (x + 1)^{2n} = (x^2 - 1)^{2n},$$
 which is $(-1)^n \binom{2n}{n}$.
 </proof>
+
+<definition> For $n < 0$ and $0 \leq k \leq |n|$ we define
+$$\binom{n}{k} = \frac{n(n - 1)\ldots (n - k + 1)}{k!} = (-1)^k \binom{k - n - 1}{k}.$$
+</definition>
+
+<theorem> For $n < 0$ we have
+$$(1 + x)^n = \sum_{i = 0}^\infty \binom{n}{i} x^i.$$
+</theorem>
+
+<proof> By the ratio test, the radius of convergence of the series is $1$. Thus the series is differentiable for 
+$|x| < 1$. </br></br>
+
+Let $f(x)$ be the series on the right. Then we have
+$$f'(x) = \sum_{i = 1}^\infty \binom{n}{i} i x^{i - 1}.$$
+
+Thus $(1 + x)f'(x) = nf(x)$. Therefore $\frac{d}{dx}(f(x)/(1 + x)^n) = -n(1 + x)^{-n - 1}f(x) + (1 + x)^{-n}f'(x) = 0$.
+But this means $f(x) = c(1 + x)^n$ for some constant $c$. Substituting $x = 0$ gives us $c = 1$.
+</proof>
+
