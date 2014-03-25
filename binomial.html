@@ -52,6 +52,15 @@ $$= \frac{(n - 1)!(i + (n - i))}{(n - i)!i!} = \frac{n!}{(n - i)!i!} = C(n, i).$
 Thus we must have $C(n, i) = \binom{n}{i}$.
 </proof>
 
+<theorem> For $0 \leq j \leq k \leq n$ we have
+$$\binom{n}{k}\binom{k}{j} = \binom{n}{j}\binom{n - j}{k - j}.$$
+</theorem>
+
+<proof> We have
+$$\binom{n}{k}\binom{k}{j} = \frac{n!}{(n - k)!k!}\frac{k!}{(k - j)!j!} 
+= \frac{n!}{j!(n - j)!}\frac{(n - j)!}{(k - j)!(n - k)!} = \binom{n}{j}\binom{n - j}{k - j}.$$
+</proof>
+
 <theorem> For $n \geq 0$ we have
 $$\sum_{i = 0}^n \binom{n}{i} = 2^n.$$
 </theorem>
