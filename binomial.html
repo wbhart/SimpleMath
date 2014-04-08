@@ -220,24 +220,39 @@ $$x^{2n}f(x)g(x^{-1}) = (x - 1)^{2n} (x + 1)^{2n} = (x^2 - 1)^{2n},$$
 which is $(-1)^n \binom{2n}{n}$.
 </proof>
 
-<definition> For $n < 0$ and $0 \leq k \leq |n|$ we define
+<definition> Given two formal power series $f(x) = \sum_{i = 0}^\infty a_ix^i$ and $g(x) = \sum_{i = 0}^\infty b_ix^i$,
+we say that $g(x) = f(x)^{-1}$ if $f(x)g(x) = 1$ as formal series.
+</definition>
+
+<theorem> We have that
+$$(1 + x)^{-1} = \sum_{i = 0}^\infty (-1)^i x^i.$$
+</theorem>
+
+<proof> We have
+$$(1 + x)\sum_{i = 0}^\infty (-1)^i x^i = 1 + x - x + x^2 - x^2 + \cdots = 1.$$
+</proof>
+
+<theorem> For $n < 0$ we have
+$$(1 + x)^n = \sum_{i = 0}^\infty (-1)^i \binom{i - n - 1}{i} x^i.$$
+</theorem>
+
+<proof> We prove the result by induction. For $n = -1$, by the previous result, it suffices to show that 
+$\binom{i - n - 1}{i} = 1$. But this is true because for $n = -1$ we have $i - n - 1 = i$. </br>
+
+We now show that 
+$$(1 + x)\sum_{i = 0}^\infty (-1)^i \binom{i - n - 1}{i} x^i = \sum_{i = 0}^\infty (-1)^i \binom{i - n - 2}{i} x^j.$$
+
+The coefficient of $x^i$ on the left, for $i > 0$ is 
+$$(-1)^i \binom{i - n - 1}{i} + (-1)^{i - 1} \binom{i - n - 2}{i - 1}.$$ But this has the value
+$$(-1)^i \binom{i - n - 2}{i} \left(\frac{i - n - 1}{-n - 1} - \frac{i}{-n - 1}\right) = (-1)^i \binom{i - n - 2}{i}.$$
+
+The coefficient of $x^0$ on both sides is $1$, thus the two sides are equal, completing the induction.
+</proof>
+
+<definition> For $n < 0$ we define
 $$\binom{n}{k} = \frac{n(n - 1)\ldots (n - k + 1)}{k!} = (-1)^k \binom{k - n - 1}{k}.$$
 </definition>
 
-<theorem> For $n < 0$ we have
-$$(1 + x)^n = \sum_{i = 0}^\infty \binom{n}{i} x^i.$$
-</theorem>
-
-<proof> Let $f(x)$ be the series on the right. 
-By the ratio test, the radius of convergence of the series is $1$. Thus the series is differentiable for $|x| < 1$. 
-</br></br>
-
-Then we have
-$$f'(x) = \sum_{i = 1}^\infty \binom{n}{i} i x^{i - 1}.$$
-
-Thus $(1 + x)f'(x) = nf(x)$. Therefore 
-$$\frac{d}{dx}(f(x)/(1 + x)^n) = -n(1 + x)^{-n - 1}f(x) + (1 + x)^{-n}f'(x) = 0.$$
-
-But this means $f(x) = c(1 + x)^n$ for some constant $c$. Substituting $x = 0$ gives us $c = 1$.
-</proof>
-
+<corollary> For $n < 0$ we have
+$$(x + 1)^n = \sum_{i = 0}^\infty \binom{n}{i} x^i.$$
+</corollary>
