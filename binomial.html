@@ -258,7 +258,7 @@ We call these the <u>extended binomial coefficients</u>
 $$(x + 1)^n = \sum_{i = 0}^\infty \binom{n}{i} x^i.$$
 </corollary>
 
-<theorem> For $n \geq 0$ we have
+<theorem> (Progressive binomial coefficients) For $n \geq 0$ we have
 $$(1 - x)^{-n - 1} = \sum_{i = 0}^\infty \binom{n + i}{i} x^i.$$
 </theorem>
 
@@ -301,4 +301,38 @@ $$x^a(1 - x)^{-a - 1} = \sum_{i = 0}^\infty a_ix^i.$$
 By the partial sum formula above we therefore have that the value we are after
 $$\sum_{i = 0}^n a_i = [x^n] x^a(1 - x)^{-a - 2} = [x^{n + 1}] x^{a + 1}(1 - x)^{-a - 2},$$
 which by what we said above is given by $\binom{n + 1}{a + 1}$.
+</proof>
+
+<theorem> (Composition of power series) Let $f(x) = \sum_{i = 0}^\infty a_i x^i$ and 
+$g(x) = \sum_{i = 0}^\infty b_i x^i$ be power series, then
+$$f(g(x)) = \sum_{i = 0}^\infty a_i g(x)^n.$$
+</theorem>
+
+<proof> The result follows by substituting $g(x)$ for $x$ in the power series expression for $f(x)$.
+</proof>
+
+<theorem> (Sum of powers) Let $g(x) = sum_{i = 0}^\infty b_i x^i$ be a power series, then
+$$\sum_{k = 0}^\infty g(x)^k = \frac{1}{1 - g(x)}.$$
+</theorem>
+
+<proof> In the previous theorem, we set $f(x) = 1/(1 - x)$ which has power series $f(x) = \sum_{i = 0}^\infty x^i$. The
+result then follows because $1/(1 - g(x))$ is $f(g(x))$.
+</proof>
+
+<theorem> For $n \geq 0$ we have
+$$\sum_{k = 0}^n \binom{4n}{4k} = \frac{1}{4}\left(16^n + (-1)^n2^{2n + 1}\right).$$
+</theorem>
+
+<proof> From the progressive binomial coefficient theorem we have
+$$\binom{4n, 4k} = \binom{4n, 4n - 4k} = [t^{4n - 4k}] \frac{1}{(1 - t)^(4k + 1)}$$
+$$= [t^{4n - 4k}] \frac{1}{1 - t} \frac{1}{(1 - t)^{4k}} = [t^{4n}] \frac{1}{1 - t} \frac{t^{4k}}{(1 - t)^{4k}}.$$
+
+Thus by the sum of powers theorem we have
+$$\sum_{k = 0}^n \binom{4n, 4k} = sum_{k = 0}^n [t^{4n}] \frac{1}{1 - t}  \frac{t^{4k}}{(1 - t)^{4k}}$$
+$$= [t^{4n}] \frac{1}{1 - t} \sum_{k = 0}^n \left(\frac{t}{1 - t}\right)^4k$$
+$$= [t^{4n}] \frac{1}{1 - t} \left[\frac{1}{1 - u} | u = \left(\frac{t}{1 - t}\right)^4].$$
+
+But the latter yields the right side of the theorem as follows
+$$[t^{4n}] \frac{(1 - t)^3}{1 - 4t + 6t^2 - 4t^3} = [t^{4n}] \frac{(1 - t)^3}{(1 - 2t)(1 - 2t + 2t^3)}
+$$= [t^{4n}] \frac{1}{4}\left(\frac{1}{1-2t} + \frac{2 - 2t}{1 - 2t + 2t^2} + \frac{1}{4}\right).$$
 </proof>
