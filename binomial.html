@@ -271,7 +271,34 @@ where the final equality follows from the above corollary.
 $$\sum_{i = 0}^\infty \binom{n + i}{i} \frac{1}{2^i} = 2^{n + 1}.$$
 </corollary>
 
-<definition> A <u>rational function</u> is a quotient of polynomials $f(t)/g(t)$ where $g(t) \neq 0$. We will write
-$$[t^n] \frac{f(t)}{g(t)}$$
-for the coefficient of the term $t^n$ in the formal power series expansion of $f(t)/g(t)$.
+<definition> A <u>rational function</u> is a quotient of polynomials $f(x)/g(x)$ where $g(x) \neq 0$. We will write
+$$[x^n] \frac{f(x)}{g(x)}$$
+for the coefficient of the term $x^n$ in the formal power series expansion of $f(x)/g(x)$.
 </definition>
+
+<theorem> (Partial sum formula) Let $f(x) = \sum_{i = 0}^\infty a_i x^i$, then
+$$\sum_{i = 0}^n a_i = [x^n] \frac{f(x)}{1 - x}.$$
+</theorem>
+
+<proof> We have
+$$\frac{f(x)}{1 - x} = (\sum_{i = 0}^\infty a_i x^i)(\sum_{i = 0}^\infty x^i).$$
+The $x^n$ term of this is given by $\sum_{i = 0}^n a_i$.
+</proof>
+
+<theorem> For $0 \leq a \leq n$ we have
+$$\sum_{k = a}^n \binom{k}{a} = \binom{n + 1}{a + 1}.$$
+</theorem>
+
+<proof> By a previous theorem
+$$(1 - x)^{-a - 1} = \sum_{i = 0}^\infty \binom{a + i}{i} x^i = \sum_{i = 0}^\infty \binom{a + i}{a} x^i.$$
+
+Thus 
+$$x^a(1 - x)^{-a - 1} = \sum_{i = 0}^\infty \binom{a + i}{a} x^{a + i}.$$
+
+If we let $a_i = 0$ for $i < a$ and $a_i = \binom{i}{a}$, then 
+$$x^a(1 - x)^{-a - 1} = \sum_{i = 0}^\infty a_ix^i.$$
+
+By the partial sum formula above we therefore have that the value we are after
+$$\sum_{i = 0}^n a_i = [x^n] x^a(1 - x)^{-a - 2} = [x^{n + 1}] x^{a + 1}(1 - x)^{-a - 2},$$
+which by what we said above is given by $\binom{n + 1}{a + 1}$.
+</proof>
