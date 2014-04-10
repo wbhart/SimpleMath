@@ -251,23 +251,23 @@ The coefficient of $x^0$ on both sides is $1$, thus the two sides are equal, com
 
 <definition> For $n < 0$ we define
 $$\binom{n}{k} = \frac{n(n - 1)\ldots (n - k + 1)}{k!} = (-1)^k \binom{k - n - 1}{k}.$$
+We call these the <u>extended binomial coefficients</u>
 </definition>
 
 <corollary> For $n < 0$ we have
 $$(x + 1)^n = \sum_{i = 0}^\infty \binom{n}{i} x^i.$$
 </corollary>
 
+<theorem> For $n \geq 0$ we have
+$$(1 - x)^{-n - 1} = \sum_{i = 0}^\infty \binom{n + i}{i} x^i.$$
+</theorem>
+
+<proof> From the definition of the extended binomial coefficients, we have
+$$\sum_{i = 0}^\infty \binom{n + i}{i} x^i = \sum_{i = 0}^\infty \binom{-n - 1}{i} (-1)^ix^i = (1 - x)^{-n - 1},$$
+where the final equality follows from the above corollary.
+</proof>
+
 <definition> A <u>rational function</u> is a quotient of polynomials $f(t)/g(t)$ where $g(t) \neq 0$. We will write
 $$[t^n] \frac{f(t)}{g(t)}$$
 for the coefficient of the term $t^n$ in the formal power series expansion of $f(t)/g(t)$.
 </definition>
-
-<theorem> We have
-$$(1 - x)^{-n - 1} = \sum_{i = 0}^\infty \binom{n + i}{i} x^i.$$
-</theorem>
-
-<proof> We have
-$$\sum_{i = 0}^\infty \binom{n + i}{i} x^i = \sum_{i = 0}^\infty \binom{-n - 1}{i} (-1)^ix^i = (1 - x)^{-n - 1},$$
-by the above corollary.
-</proof>
-
