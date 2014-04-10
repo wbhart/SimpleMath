@@ -323,8 +323,7 @@ result then follows because $1/(1 - g(x))$ is $f(g(x))$.
 $$\sum_{k = 0}^n \binom{4n}{4k} = \frac{1}{4}\left(16^n + (-1)^n2^{2n + 1}\right).$$
 </theorem>
 
-<proof> From the progressive binomial coefficient theorem we have
-$$\binom{4n}{4k} = \binom{4n}{4n - 4k} = [t^{4n - 4k}] \frac{1}{(1 - t)^{4k + 1}}$$
+<proof> From the progressive binomial coefficient theorem we have $$\binom{4n}{4k} = \binom{4n}{4n - 4k}$$ 
 $$= [t^{4n - 4k}] \frac{1}{1 - t} \frac{1}{(1 - t)^{4k}} = [t^{4n}] \frac{1}{1 - t} \frac{t^{4k}}{(1 - t)^{4k}}.$$
 
 Thus by the sum of powers theorem we have
@@ -332,7 +331,8 @@ $$\sum_{k = 0}^n \binom{4n}{4k} = \sum_{k = 0}^n [t^{4n}] \frac{1}{1 - t}  \frac
 $$= [t^{4n}] \frac{1}{1 - t} \sum_{k = 0}^n \left(\frac{t}{1 - t}\right)^{4k}$$
 $$= [t^{4n}] \frac{1}{1 - t} \left[\frac{1}{1 - u} \;|\; u = \left(\frac{t}{1 - t}\right)^4\right].$$
 
-But the latter yields the right side of the theorem as follows
-$$[t^{4n}] \frac{(1 - t)^3}{1 - 4t + 6t^2 - 4t^3} = [t^{4n}] \frac{(1 - t)^3}{(1 - 2t)(1 - 2t + 2t^2)}$$
-$$= [t^{4n}] \frac{1}{4}\left(\frac{1}{1 - 2t} + \frac{2 - 2t}{1 - 2t + 2t^2} + \frac{1}{4}\right).$$
+But the latter yields the right side of the theorem as follows 
+$$[t^{4n}] \frac{(1 - t)^3}{1 - 4t + 6t^2 - 4t^3} = [t^{4n}] \frac{(1 - t)^3}{(1 - 2t)(1 - 2t + 2t^2)}$$ 
+$$= [t^{4n}] \frac{1}{4}\left(\frac{1}{1 - 2t} + \frac{2 - 2t}{1 - 2t + 2t^2} + \frac{1}{4}\right) 
+= [t^{4n}] \frac{1}{4}\left(\frac{1}{1 - 2t} + \frac{2 - 6t + 8t^2 - 4t^3}{1 + 4t^4} + \frac{1}{4}\right).$$
 </proof>
