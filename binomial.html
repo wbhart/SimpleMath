@@ -370,3 +370,16 @@ Thus, by the composition of power series theorem we have
 $$2^n [t^n] \frac{1}{1 - t} \left[\frac{1}{1 + u/4} \;\bigg|\; u = \frac{t^2}{1 - t}\right]$$ 
 $$= 2^n [t^n] \frac{1}{1 - t + t^2/4} = [t^n] \frac{1}{(1 - t)^2} = \binom{-2}{n} (-1)^n = n + 1.$$
 </proof>
+
+<theorem> For $n > 0$ we have
+$$\sum_{k = 0}^n (-1)^k \binom{2n - k}{k} 4^{-k} = \frac{2n + 1}{4^n}.$$
+</theorem>
+
+<proof> We have
+$$\binom{2n - k}{k} = \binom{2n - k}{2n - 2k} = \binom{-2n + k + 2n - 2k - 1}{2n - 2k} = \binom{-k - 1}{2n - 2k}$$
+$$= [t^{2n - 2k}] \frac{1}{(1 - t)^{k + 1}} = [t^{2n}] \frac{1}{1 - t} \left(\frac{t^2}{1 - t})^k.$$
+
+Thus by the composition of power series theorem, the left hand side of the theorem equals
+$$[t^{2n}] \frac{1}{1 - t} \left[\frac{1}{1 + u/4} \;\bigg|\; u = \frac{t^2}{1 - t}\right]$$
+$$= [t^{2n}] \frac{1}{(1 - t/2)^2} = \binom{-2}{2n}\left(\frac{-1}{2}\right)^{2n} = \frac{2n + 1}{4^n}.$$
+</proof>
