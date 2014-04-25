@@ -340,3 +340,16 @@ $$= [t^{4n}] \frac{1}{4}\left(\frac{1}{1 - 2t} + \frac{2 - 2t}{1 - 2t + 2t^2} + 
 <theorem> For $n > 0$ we have
 $$\sum_{k = 0}^{n/2} (-1)^k \binom{n - k}{k} \frac{4^{n - k}}{n - k} = \frac{2^{n+1}}{n}.$$
 </theorem>
+
+<proof> The left hand side is equal to
+$$4^n \sum_{k = 0}^{n/2} \left(\frac{-1}{4}\right)^k \frac{(n - k - 1)!}{k!(n - 2k)!}$$
+$$=\frac{4^n}{n}\sum_{k = 0}^\infty\left(\frac{-1}{4}\right)^k\left(\binom{n - k}{k} + \binom{n - k - 1}{k - 1}\right).$$
+
+Now we have that
+$$\binom{n - k}{k} = \binom{n - k}{n - 2k} = \binom{- n + k + n - 2k - 1}{n - 2k} = \binom{-k - 1}{n - 2k}$$ 
+$$= [t^{n - 2k}] \frac{1}{(1 - t)^{1 + k}} = [t^n] 1 / (1 - t) \left(\frac{t^2}{1 - t}\right)^k.$$
+
+Thus by the composition of power series theorem, we have that the left side of the theorem is equal to
+$$=\frac{4^n}{n} [t^n] \frac{2 - t}{1 - t}\left[\frac{1}{1 + u/4} \;\bigg|\; u = \frac{t^2}{1 - t}\right]$$
+$$= \frac{4^n}{n} [t^n] \frac{2 - t}{(1 - t/2)^2} = \frac{2\cdot 4^n}{n} \frac{1}{1 - t/2} = \frac{2^{n + 1}{n}.$$
+</proof>
