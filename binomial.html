@@ -305,7 +305,7 @@ which by what we said above is given by $\binom{n + 1}{a + 1}$.
 
 <theorem> (Composition of power series) Let $f(x) = \sum_{i = 0}^\infty a_i x^i$ and 
 $g(x) = \sum_{i = 0}^\infty b_i x^i$ be power series, then
-$$f(g(x)) = \sum_{i = 0}^\infty a_i g(x)^n.$$
+$$f(g(x)) = \sum_{i = 0}^\infty a_i g(x)^i.$$
 </theorem>
 
 <proof> The result follows by substituting $g(x)$ for $x$ in the power series expression for $f(x)$.
@@ -348,6 +348,8 @@ $$=\frac{4^n}{n}\sum_{k = 0}^\infty\left(\frac{-1}{4}\right)^k\left(\binom{n - k
 Now we have that
 $$\binom{n - k}{k} = \binom{n - k}{n - 2k} = \binom{- n + k + n - 2k - 1}{n - 2k} = \binom{-k - 1}{n - 2k}$$ 
 $$= [t^{n - 2k}] \frac{1}{(1 - t)^{1 + k}} = [t^n] \frac{1}{1 - t} \left(\frac{t^2}{1 - t}\right)^k.$$
+
+Similarly $$\binom{n - k - 1}{k - 1} = \binom{-k}{n - 2k} = [t^n] \left(\frac{t^2}{1 - t}\right)^k.$$
 
 Thus by the composition of power series theorem, we have that the left side of the theorem is equal to
 $$=\frac{4^n}{n} [t^n] \frac{2 - t}{1 - t}\left[\frac{1}{1 + u/4} \;\bigg|\; u = \frac{t^2}{1 - t}\right]$$
