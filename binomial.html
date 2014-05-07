@@ -494,3 +494,12 @@ $$[t^{2n}] \frac{1}{(1 - t)^2} \left[\frac{1}{1 - u} \;\bigg|\; u = \frac{t^2}{(
 = [t^{2n}] \frac{1}{1 - 2t} = 2^{2n} = 4^n.$$
 </proof>
 
+<theorem> If $f(x) = \sum_{i = 0}^\infty a_i x^i$ and $g(x) = \sum_{i = 0}^\infty b_i x^i$ are two power series, then
+$$\sum_{i = 0}^n a_i b_{n - i} = [t^n] f(t)g(t).$$
+</theorem>
+
+<proof> The contribution to the $t^n$ term comes from the sum of the products of the $t^i$ term of $f(t)$ with the 
+$t^{n - i}$ term of $g(t)$ for $0 \leq i \leq n$. The sum of such contributions is given by the left hand side of the 
+theorem.
+</proof> 
+
