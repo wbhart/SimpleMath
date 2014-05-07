@@ -466,3 +466,17 @@ $$[t^{2n}] \frac{t}{(1 - t)^2} \left[\frac{1}{1 - u} \;\bigg|\; u = \frac{t^2}{(
 = [t^{2n - 1}] \frac{1}{1 - 2t} = 2^{2n - 1}.$$
 </proof>
 
+<theorem> For $n > 0$ we have
+$$\sum_{k = 0}^n \binom{2n}{2k} = 2^{2n - 1}.$$
+</theorem>
+
+<proof> We have that
+$$\binom{2n + 1}{2k} = \binom{2n + 1}{2n - 2k + 1} = \binom{-2n - 1 + 2n - 2k + 1 - 1}{2n - 2k + 1} 
+= \binom{-2k - 1}{2n - 2k + 1}$$
+$$= [t^{2n - 2k + 1}] \frac{1}{(1 - t)^{2k + 1}} = [t^{2n + 1}] \frac{1}{1 - t} \left(\frac{t^2}{(1 - t)^2}\right)^k.$$
+
+Thus by the composition of power series theorem, the left side of the theorem is equal to
+$$[t^{2n + 1}] \frac{1}{1 - t} \left[\frac{1}{1 - u} \;\bigg|\; u = \frac{t^2}{(1 - t)^2}\right] 
+= [t^{2n + 1}] \frac{1 - t}{1 - 2t} = 2^{2n + 1} - 2^{2n} = 4^n.$$
+</proof>
+
