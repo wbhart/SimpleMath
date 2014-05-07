@@ -519,3 +519,20 @@ Thus by the convolution of power series, we have that the left side of the theor
 $$[t^n] \frac{1}{(1 - t)^{a + 1}} \frac{1}{(1 - t)^{b + 1}} = [t^n] \frac{1}{(1 - t)^{a + b + 2}}
 = \binom{-a - b - 2}{n}(-1)^n = \binom{a + b + n + 1}{n}.$$
 </proof>
+
+<theorem> For $a, b \geq 0$ with $a + b \geq n$ we have
+$$\sum_{k = a}^{n - b} \binom{k}{a}\binom{n - k}{b} = \binom{n + 1}{a + b + 1}.$$
+</theorem>
+
+<proof> We have that
+$$\binom{k}{a} = \binom{k}{k - a} = (-1)^{k - a}\binom{-k + k - a - 1}{k - a} = (-1)^{k - a}\binom{-a - 1}{k - a}$$
+$$= [t^{k - a}] \frac{1}{(1 - t)^{a + 1}} = [t^k] \frac{1}{1 - t} \left(\frac{t}{1 - t}\right)^a.$$
+
+Replacing $k$ with $n - k$ and $a$ with $b$ we see that
+$$\binom{n - k}{b} = [t^{n - k}] \frac{1}{1 - t} \left(\frac{t}{1 - t}\right)^b.$$
+
+Thus by the convolution of power series theorem
+$$\sum_{k = a}^{n - b} \binom{k}{a}\binom{n - k}{b} = [t^n] \frac{t^a}{(1 - t)^{a + 1}}\frac{t^b}{(1 - t)^{b + 1}}$$
+$$= [t^n] \frac{t^{a + b}}{(1 - t)^{a + b + 2}} = \binom{-a - b - 2}{n - a - b}(-1)^{n - a - b} 
+= \binom{n + 1}{a + b + 1}.$$
+</proof>
