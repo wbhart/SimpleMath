@@ -383,3 +383,21 @@ Thus by the composition of power series theorem, the left hand side of the theor
 $$[t^{2n}] \frac{1}{1 - t} \left[\frac{1}{1 + u/4} \;\bigg|\; u = \frac{t^2}{1 - t}\right]$$
 $$= [t^{2n}] \frac{1}{(1 - t/2)^2} = \binom{-2}{2n}\left(\frac{-1}{2}\right)^{2n} = \frac{2n + 1}{4^n}.$$
 </proof>
+
+<theorem> For $n > 0$ we have
+$$\sum_{k = 0}^n \binom{2n - k}{k} = F_{2n+1}.$$
+</theorem>
+
+<proof> As in the previous theorem
+$$\binom{2n - k}{k} = [t^{2n}] \frac{1}{1 - t} \left(\frac{t^2}{1 - t}\right)^k.$$
+
+Thus, by the composition of power series theorem, the left hand side of the theorem equals
+$$[t^{2n}] \frac{1}{1 - t} \left[\frac{1}{1 -u} \;\bigg|\; u = \frac{t^2}{1 - t}\right]$$
+$$[t^{2n}] \frac{1}{1 - t - t^2}.$$
+
+Letting $f(t) = \frac{1}{1 - t - t^2}$ we have that 
+$$f(t) = 1 + t(1 + t) + t^2(1 + t)^2 + \cdots = 1 + t + a_2t^2 + a_3t^3 + \cdots$$
+
+Setting $a_0 = a_1 = 1$ and noting that $(1 - t - t^2)f(t) = 1$ we see that $a_i = a_{i - 1} + a_{i - 2}$ for $i \geq 2$.
+Thus $a_i = F_{i + 1}$. Thus $[t^{2n}] \frac{1}{1 - t - t^2} = F_{2n + 1}$.
+</proof>
