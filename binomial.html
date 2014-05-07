@@ -400,3 +400,20 @@ $$f(t) = 1 + t(1 + t) + t^2(1 + t)^2 + \cdots = 1 + t + a_2t^2 + a_3t^3 + \cdots
 Setting $a_0 = a_1 = 1$ and noting that $(1 - t - t^2)f(t) = 1$ we see that $a_i = a_{i - 1} + a_{i - 2}$ for $i \geq 2$.
 Thus $a_i = F_{i + 1}$. Thus $[t^{2n}] \frac{1}{1 - t - t^2} = F_{2n + 1}$.
 </proof>
+
+<theorem> For $n > 0$ we have
+$$\sum_{k = 0}^n \binom{n + k}{2k}2^{n - k} = \frac{2^{2n + 1} + 1}{3}.$$
+</theorem>
+
+<proof> We have that 
+$$\binom{n + k}{2k} = \binom{n + k}{n - k} = \binom{-n - k + n - k - 1}{n - k} = \binom{-2k - 1}{n - k}$$
+$$= [t^{n - k}] \frac{1}{(1 - t)^{2k + 1}} = [t^n] \frac{1}{1 - t} \left(\frac{t}{(1 - t)^2}\right)^k.$$
+
+Thus by the composition of power series theorem, the left side of the theorem equals
+$$2^n[t^n] \frac{1}{1 - t} \left[\frac{1}{1 + u/2} \;\bigg|\; u = \frac{t}{(1 - t)^2}\right]$$
+$$= 2^n[t^n] \frac{1 - t}{(1 - 2t)(1 - t/2)}.$$
+
+Letting $v = 2t$ this expression equals 
+$$[u^n] \frac{1 - 2u}{(1 - 4u)(1 - u)} = [u^n]\frac{1}{3}\left(\frac{2}{1 - 4u} + \frac{1}{1- u}\right)
+= \frac{2^{2n + 1} + 1}{3}.$$ 
+</proof>
