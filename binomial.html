@@ -564,3 +564,17 @@ $$\binom{a}{n + k} = [t^{n + k}] (1 + t)^a.$$
 By the convolution of power series theorem, the left side of the theorem is given by
 $$[t^{2n}] (1 + t)^{2a} = \binom{2a}{2n}.$$
 </proof>
+
+<theorem> For $a \geq 2n \geq 0$ we have
+$$\sum_{k = -n}^{n - 1} \binom{a}{n - 1 - k}\binom{a}{n + k} = \binom{2a}{2n - 1}.$$
+</theorem>
+
+<proof> We have that
+$$\binom{a}{n - 1 - k} = [t^{n - 1 - k}] (1 + t)^a$$
+
+and
+$$\binom{a}{n + k} = [t^{n + k}] (1 + t)^a.$$
+
+By the convolution of power series theorem, the left side of the theorem is given by
+$$[t^{2n - 1}] (1 + t)^{2a} = \binom{2a}{2n - 1}.$$
+</proof>
