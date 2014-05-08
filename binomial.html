@@ -536,3 +536,18 @@ $$\sum_{k = a}^{n - b} \binom{k}{a}\binom{n - k}{b} = [t^n] \frac{t^a}{(1 - t)^{
 $$= [t^n] \frac{t^{a + b}}{(1 - t)^{a + b + 2}} = \binom{-a - b - 2}{n - a - b}(-1)^{n - a - b} 
 = \binom{n + 1}{a + b + 1}.$$
 </proof>
+
+<theorem> For $a, b \geq 0$ with $a \geq n \geq 0$ we have
+$$\sum_{k = 0}^n \binom{n}{k}\binom{a + b - n}{a - k} = \binom{a + b}{a}.$$
+</theorem>
+
+<proof> We have that
+$$\binom{a + b - n}{a - k} = [t^{a - k}] (1 + t)^{a + b - n}$$
+
+and
+$$\binom{n}{k} = [t^k] (1 + t)^n.$$
+
+Thus by the convolution theorem, the sum on the left of the theorem is given by
+$$[t^a] (1 + t)^{a + b} = \binom{a + b}{a}.$$
+</proof>
+
