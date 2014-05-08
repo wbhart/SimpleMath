@@ -551,3 +551,16 @@ Thus by the convolution theorem, the sum on the left of the theorem is given by
 $$[t^a] (1 + t)^{a + b} = \binom{a + b}{a}.$$
 </proof>
 
+<theorem> For $a \geq 2n \geq 0$ we have
+$$\sum_{k = -n}^n \binom{a}{n - k}\binom{a}{n + k} = \binom{2a}{2n}.$$
+</theorem>
+
+<proof> We have that
+$$\binom{a}{n - k} = [t^{n - k}] (1 + t)^a$$
+
+and
+$$\binom{a}{n + k} = [t^{n + k}] (1 + t)^a.$$
+
+By the convolution of power series theorem, the left side of the theorem is given by
+$$[t^{2n}] (1 + t)^{2a} = \binom{2a}{2n}.$$
+</proof>
